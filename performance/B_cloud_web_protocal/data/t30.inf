@@ -1,0 +1,13 @@
+[t30]
+FileName1=t30_ui-icons_222222_256x240.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-icons_222222_256x240.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_30.xml
+RequestHeaderFile=t30_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t30_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,13 @@
+[t12]
+FileName1=t12_jquery-ui-1.7.2.custom.min.html
+URL1=http://www.bc_demo1.com:4900/js/core/jquery-ui-1.7.2.custom.min.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_12.xml
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

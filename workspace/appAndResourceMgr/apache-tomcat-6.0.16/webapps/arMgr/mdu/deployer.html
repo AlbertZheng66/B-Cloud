@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发布管理</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+	
+</script>
+
+</head>
+
+<body>
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">发布管理中心</TD>
+	    </TR>
+	</TABLE>
+	<div id="deployer"  width="100%">
+             <ul>
+                 <li><a href="#phyServers"><span>物理服务器</span></a></li>
+                 <li><a href="#asServers"><span>应用服务器</span></a></li>
+                 <li><a href="#tdServers"><span>任务分配器</span></a></li>
+             </ul>
+             <div id="phyServers"  width="100%"><iframe src="phy_server_deployer.html" frameborder="0" style="width: 100%;height: 80%"></iframe></div>
+	     <div id="asServers"  width="100%"><iframe src="app_server_deployer.html" frameborder="0" style="width: 100%;height: 80%"></iframe></div>
+	     <div id="tdServers"  width="100%"><iframe src="task_dispatcher_deployer.html" frameborder="0" style="width: 100%;height: 80%"></iframe></div>
+        </div>
+    
+		
+</body>
+<script>
+
+var deployer = $('#deployer').tabs();
+</script>
+</html>

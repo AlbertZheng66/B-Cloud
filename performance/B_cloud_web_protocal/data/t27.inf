@@ -1,0 +1,13 @@
+[t27]
+FileName1=t27_read.html
+URL1=http://www.bc_demo1.com:4900/base/read.getParams?name=contextPath
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_27.xml
+RequestHeaderFile=t27_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t27_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

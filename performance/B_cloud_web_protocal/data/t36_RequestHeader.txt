@@ -1,0 +1,12 @@
+POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.aa.LoginService","methodName":"login","serviceObject":{"className":"com.xt.gt.demo.aa.LoginService","invokedMethods":[]},"type":null,"params":[{"userName":"admin","passwd":"admin"}]} HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://www.bc_demo1.com:4900/base/test_table_template.html
+Accept: application/json, text/javascript, */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)
+Host: www.bc_demo1.com:4900
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+

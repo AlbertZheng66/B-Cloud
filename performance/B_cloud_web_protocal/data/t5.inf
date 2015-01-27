@@ -1,0 +1,13 @@
+[t5]
+FileName1=t5_banner.jpg
+URL1=http://www.bc_demo1.com:4900/images/banner.jpg
+Total=1
+ContentType=image/jpeg
+SnapshotXmlFile=snapshot_5.xml
+RequestHeaderFile=t5_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t5_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

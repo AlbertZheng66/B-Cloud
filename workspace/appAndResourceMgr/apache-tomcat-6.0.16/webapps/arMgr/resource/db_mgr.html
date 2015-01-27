@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>资源管理--数据库服务</title>
+		<script type="text/javascript" src="../js/boot.js"></script>
+		<script>    
+    		// 加载JS 文件
+    		Loader.importJS();
+			// 加载CSS 文件
+    		Loader.importCSS();
+		</script>
+    </head>
+    <body>
+	
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" >已注册的数据库组列表</TD>
+	    </TR>
+	</TABLE>		
+	
+		<table class='listTable' id="dbGroups" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="id" > 编码</td>
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="description">描述信息</td>
+                <td class='listTableTitle' name="valid">是否可用</td>
+                <td class='listTableTitle' name="dbName">数据库名称</td>
+                <td class='listTableTitle' name="userName">数据库用户</td>
+                <td class='listTableTitle' name="passwd">数据库密码</td>
+                <td class='listTableTitle' name="url">数据库连接地址</td>
+                <td class='listTableTitle' name="driverClass">数据库驱动类</td>
+                <td class='listTableTitle' name="dbSchema">模式</td>
+                <td class='listTableTitle' name="state">状态</td>
+                <td class='listTableTitle' name="createTime">创建时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a id='register' href="#">注册</a>
+                <a id='remove' href="#">删除</a>
+                <a id='invalid' href="#">停用</a>
+                <a id='valid' href="#">重新启用</a>
+			</TD>
+		</TR>
+	</TABLE>
+
+		<br/>
+		<br/>
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" >数据库资源列表</TD>
+	    </TR>
+	</TABLE>	
+
+        <table class='listTable' id="dbSources" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name" > 数据库名称</td>
+                <td class='listTableTitle' name="ip">服务器地址</td>
+                <td class='listTableTitle' name="port">端口号</td>
+                <td class='listTableTitle' name="description">描述信息</td>
+                <td class='listTableTitle' name="valid">是否可用</td>
+                <td class='listTableTitle' name="master">是否是主库</td>
+                <td class='listTableTitle' name="state">当前状态</td>
+                <td class='listTableTitle' name="createTime">创建时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>	
+    
+    <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a id='registerSource' href="#">注册</a>
+                <a id='removeSource' href="#">删除</a>
+                <a id='invalidSource' href="#">停用</a>
+                <a id='validSource' href="#">重新启用</a>
+                <a  href="resource_mgr.html">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+	             
+</body>
+	
+<script>
+
+var dbGroupsTable  = null;
+var dbSourcesTable = null;
+var dbService = ServiceFactory.getService('resource.DBService');
+	
+
+
+Utils.run(function () {
+    // 表格的相关配置
+    var tableConfig = new TableConfig('resource.db.DbGroup');
+    tableConfig.createColumnsFromTemplate($('#dbGroups'));
+
+    // 表的配置参数
+    var params = {/*actionsConfig : {remove       : 'removeBtn',
+                                               removeAction : removeServer},*/
+                  methodName    : 'listGroups'
+			     };
+    // 表的修饰函数
+    var tu = new TableUtils('dbGroups', tableConfig, 'resource.DBService', 
+           params);
+    dbGroupsTable = tu.autoLoad();
+	dbGroupsTable.addRowSelectionListener(new RowSelection());
+	
+	// 实例列表
+	dbSourcesTable = new GTable('dbSources');
+	var dbSourceConfig = new TableConfig('resource.db.DbSource');
+	dbSourceConfig.createColumnsFromTemplate($('#dbSources'));
+    dbSourcesTable.decorate(dbSourceConfig, []);
+});
+
+function RowSelection () {	
+	this.onRowSelection = function(event) {
+        var selectedRowIndex = event.rowIndex;
+		if (selectedRowIndex < 0) {
+		   return;
+		}
+		
+        var dbGroup = dbGroupsTable.getRowAt(selectedRowIndex);
+        var data = dbService.listDbSources(dbGroup);
+		dbSourcesTable.reload(data);
+	}
+}
+
+
+</script>
+</html>

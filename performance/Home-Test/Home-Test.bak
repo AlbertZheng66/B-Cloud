@@ -1,0 +1,65 @@
+[General]
+Type=Web2UI
+RecordedProtocol=
+DefaultCfg=default.cfg
+AppName=
+BuildTarget=
+ParamRightBrace=}
+ParamLeftBrace={
+NewFunctionHeader=1
+LastActiveAction=C-functions.c
+CorrInfoReportDir=
+LastResultDir=
+DevelopTool=Vugen
+MajorVersion=11
+MinorVersion=0
+ParameterFile=
+GlobalParameterFile=
+LastModifyVer=11.0.0.0
+[TransactionsOrder]
+Order=""
+[ExtraFiles]
+JS-functions.js=
+C-functions.c=
+globals.h=
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+Script-View=Script-View.c
+[Recorded Actions]
+vuser_init=0
+Action=0
+vuser_end=0
+Script-View=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+Script-View=0
+[Modified Actions]
+vuser_init=0
+Action=0
+vuser_end=0
+Script-View=0
+[Interpreters]
+Script-View=no
+[ProtocolsVersion]
+Web2UI=11.0.0.0
+[RunLogicFiles]
+Default Profile=default.usp
+[StateManagement]
+1=1
+2=0
+3=0
+14=0
+15=0
+16=0
+17=0
+18=0
+19=0
+20=0
+21=0
+CurrentState=1
+VuserStateHistory= 0 65536 65552
+LastReplayStatus=0

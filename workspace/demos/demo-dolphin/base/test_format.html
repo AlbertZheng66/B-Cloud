@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+</head>
+<body>
+<h2>此页面主要演示了使用 JavaScript 函数对日期和数值类型进行格式化处理。</h2>
+<br>
+
+<h3>测试日期的格式化</h3>
+yyyy-MM-dd：<input  id="id1"> &nbsp;解析后:&nbsp;<input id='p_id1' >
+<br>
+yyyy/MM/dd：<input  id="id2"> &nbsp;解析后:&nbsp;<input id='p_id2'>
+<br>
+yyyy/MMM/dd：<input id="id21"> &nbsp;解析后:&nbsp;<input id='p_id21'>
+<br>
+yyyy/MM/dd HH:mm:ss ：<input id="id3">&nbsp;解析后:&nbsp;<input id='p_id3'>
+<br>
+yy/M/d hh:m:s ：<input id="id4">&nbsp;解析后:&nbsp;<input id='p_id4'>
+<br>
+yyyy/M/d'T'HH:mm:ss ：<input id="id5">&nbsp;解析后:&nbsp;<input id='p_id5'>
+<br>
+<script>
+Utils.run(function() {
+    var date1 = new Date();
+    $('#id1').val(DateFormat.format(date1, 'yyyy-MM-dd'));
+    $('#id2').val(DateFormat.format(date1, 'yyyy/MM/dd'));
+    $('#id21').val(DateFormat.format(date1, 'yyyy/MMM/dd'));
+    $('#id3').val(DateFormat.format(date1, 'yyyy/MM/dd HH:mm:ss'));
+    $('#id4').val(DateFormat.format(date1, 'yy/M/d H:m:s'));
+    $('#id5').val(DateFormat.format(date1, "yyyy/M/d'T'HH:mm:ss"));
+});
+</script>
+
+
+<br>
+
+<h3>测试数字的格式话</h3>
+4567.3330（#,###.00）：<input  id="id_1">&nbsp;解析后:&nbsp;<input id='p_id_1' >
+<br>
+21234567（#,###.00）：<input  id="id_2">&nbsp;解析后:&nbsp;<input id='p_id_2' >
+<br>
+0.567（#,###.00）：<input  id="id_3">&nbsp;解析后:&nbsp;<input id='p_id_3' >
+<br>
+1235678.99（#,###）：<input  id="id_4">&nbsp;解析后:&nbsp;<input id='p_id_4' >
+<br>
+12（#,###.00）：<input  id="id_5">&nbsp;解析后:&nbsp;<input id='p_id_5' >
+<br>
+567（#,###.00）：<input  id="id_6">&nbsp;解析后:&nbsp;<input id='p_id_6' >
+<br>
+
+<br /><br /><br />
+<input type='button' onclick='parse()' value='解析' >
+<script>
+
+Utils.run(function() {
+    var val = NumberFormat.format(4567.3330, '#,###.00');
+    $('#id_1').val(val);
+    $('#id_2').val(NumberFormat.format(21234567, '#,###.00'));
+    $('#id_3').val(NumberFormat.format(0.567, '#,###.00'));
+    $('#id_4').val(NumberFormat.format(1235678.99, '#,###'));
+    $('#id_5').val(NumberFormat.format(12, '#,###.00'));
+    $('#id_6').val(NumberFormat.format(567, "#,###.00"));
+});
+
+parse = function () {
+    Utils.run(function() {   
+	    
+    	$('#p_id1').val(DateFormat.parse($('#id1').val(), 'yyyy-MM-dd'));
+    	$('#p_id2').val(DateFormat.parse($('#id2').val(), 'yyyy/MM/dd'));
+    	$('#p_id21').val(DateFormat.parse($('#id21').val(), 'yyyy/MMM/dd'));
+    	$('#p_id3').val(DateFormat.parse($('#id3').val(), 'yyyy/MM/dd HH:mm:ss'));
+    	$('#p_id4').val(DateFormat.parse($('#id4').val(), 'yy/M/d H:m:s'));
+    	$('#p_id5').val(DateFormat.parse($('#id5').val(), "yyyy/M/d'T'HH:mm:ss"));
+		
+        $('#p_id_1').val(NumberFormat.parseFloat($('#id_1').val()));
+        $('#p_id_2').val(NumberFormat.parseInt($('#id_2').val()));
+        $('#p_id_3').val(NumberFormat.parseFloat($('#id_3').val()));
+        $('#p_id_4').val(NumberFormat.parseFloat($('#id_4').val()));
+        $('#p_id_5').val(NumberFormat.parseInt($('#id_5').val()));
+        $('#p_id_6').val(NumberFormat.parseInt($('#id_6').val()));
+    });
+}
+</script>
+</body></html>

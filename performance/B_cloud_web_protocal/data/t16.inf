@@ -1,0 +1,13 @@
+[t16]
+FileName1=t16_gt_table.html
+URL1=http://www.bc_demo1.com:4900/js/core/gt_table.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_16.xml
+RequestHeaderFile=t16_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t16_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

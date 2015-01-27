@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+  <system>
+       <param name="serverId"  value="serv-1" />
+       <param name="sererMgr.port"          value="38001" />
+       <param name="serverMgr.contextPath"  value="/serv1" /> 
+       <param name="appLifecycles" type="list">
+            <data value="com.xt.bcloud.resource.ServerRegister" />
+            <data value="com.xt.comm.quartz.ServerStarter" />
+            <data value="com.xt.bcloud.pf.server.mbeans.MBeansRegister" />
+            <data value="com.xt.bcloud.mdu.ProcessRegister" />
+       </param>
+       <param name="processorFactories" type="list">
+          <data value="com.xt.core.proc.impl.SessionProcessorFactory" />
+          <data value="com.xt.core.proc.impl.fs.FileServiceProcessorFactory" />
+       </param>
+	    <param name="system.inspectors" type='list'>
+          <data value="com.xt.bcloud.bg.impl.DeployedPackageInspector" />
+       </param>
+  </system>
+
+</xt-config>

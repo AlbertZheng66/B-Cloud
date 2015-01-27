@@ -1,0 +1,5 @@
+[parameter:td_host]
+Format="www.bc_demo1.com"
+Type="Host"
+OriginalValue="www.bc_demo1.com"
+ParamName="td_host"

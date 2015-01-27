@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>校验演示程序</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+<script>
+
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+
+</head>
+<body>
+<h1 style="text-align: center;">校验演示代码</h1>
+<UL>
+数据的校验方式通过以下几种（并可以根据需求自行扩展）方式加载，包括: 
+<br/>
+    <LI>直接从数据库元信息加载校验信息；</LI>
+    <LI>从 ValidationBean 标注上加载校验信息； </LI>
+    <LI>在页面上主动加载数据。          </LI>
+</UL>
+<br/>
+<!----------- edit area  ----------->
+<div >
+    <form name="queryForm" id='edit_form' >	
+            长度、非空: <input name="string1" value="1">
+            <br/>
+            <br/>
+            EMail: <input name="email" value="">
+            <br/>
+            <br/>
+            HTTP: <input name="url" value="" >
+            <br/>
+            <br/>
+            固定电话: <input name="phone" value="" >	
+            <br/>
+            <br/>
+            移动电话: <input name="mobile" value="" >	
+            <br/>
+            <br/>
+            SSN: <input name="ssn" value="" >	
+            <br/>
+            <br/>
+            中文: <input name="chinese" value="" >	
+            <br/>
+            <br/>
+            整数: <input name="int1" value="" >	
+            <br/>
+            <br/>
+            正整数: <input name="positiveInt1" value="" >	
+            <br/>
+            <br/>
+            浮点数: <input name="float1" value="" >	
+            <br/>
+            <br/>			
+            长整数: <input name="long1" value="" >	
+            <br/>
+            <br/>
+            双精度: <input name="double1" value="" >	
+            <br/>
+            <br/>
+		<a href="#" onclick="validate()">校验</a>
+    </form>
+</div>
+
+<br />
+<br />
+
+</div>
+</body>
+<script>
+
+// 校验关系类
+var vu = new Validator();
+	
+Utils.run(function () {
+    
+    // 绑定校验关系(从服务器加载校验信息)
+    vu.bindContainer('edit_form', 'po.ValidationBean');
+	
+	// 在客户端自定义校验信息
+	// vu.bidnComponent('#string1', new EmailValidator());
+ 
+});
+
+
+// 校验方法
+function validate() {
+    if (vu.validate()) {
+	    alert('校验通过');
+	} else {
+	    alert('校验失败');
+	}
+}
+
+</script>
+</html>

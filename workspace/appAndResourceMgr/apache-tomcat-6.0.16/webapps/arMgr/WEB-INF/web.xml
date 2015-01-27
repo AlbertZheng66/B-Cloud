@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <description>应用及资源管理程序。</description>
+    <display-name>ARM</display-name>
+    <filter>
+  <filter-name>encoding</filter-name>
+  <filter-class>com.xt.comm.encoding.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>contentType</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+  <filter-name>encoding</filter-name>
+  <url-pattern>/jsonClient.action</url-pattern>
+</filter-mapping>
+
+    <servlet>
+        <servlet-name>JsonClientServlet</servlet-name>
+        <servlet-class>com.xt.proxy.impl.http.json.JsonClientServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+	<servlet>
+      <servlet-name>httpStream</servlet-name>
+      <servlet-class>com.xt.proxy.impl.http.stream.HttpStreamServlet</servlet-class>
+      <load-on-startup>2</load-on-startup>
+	    <init-param>
+			<param-name>systemConf</param-name>
+			<param-value>/WEB-INF/serv-config.xml</param-value>
+		</init-param>
+    </servlet>
+	<servlet>
+        <servlet-name>restfulServlet</servlet-name>
+        <servlet-class>com.xt.proxy.impl.restful.Restful2Servlet</servlet-class>
+		<load-on-startup>3</load-on-startup>
+    </servlet>
+	 <servlet>
+        <servlet-name>ParamsServlet</servlet-name>
+        <servlet-class>com.xt.gt.html.param.ParamsServlet</servlet-class>
+		<load-on-startup>6</load-on-startup>
+    </servlet>
+	
+	
+    <servlet-mapping>
+        <servlet-name>JsonClientServlet</servlet-name>
+        <url-pattern>/jsonClient.action</url-pattern>
+    </servlet-mapping>
+	
+  <servlet-mapping>
+    <servlet-name>httpStream</servlet-name>
+    <url-pattern>/httpStream</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>restfulServlet</servlet-name>
+    <url-pattern>/r/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+        <servlet-name>ParamsServlet</servlet-name>
+        <url-pattern>*.getParams</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>应用服务器模板管理</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();
+            	
+        </script>
+
+    </head>
+
+    <body style="margin: 0;width:100%;">
+        <table class='listTable' id="asTemplates" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="version" > 版本号</td>
+                <td class='listTableTitle' name="valid">是否生效</td>
+                <!--
+                <td class='listTableTitle' name="storePath">存储位置</td>
+                <td class='listTableTitle' name="params">参数配置</td>
+                <td class='listTableTitle' name="startupCmd">启动命令模板</td>
+                <td class='listTableTitle' name="stopCmd">停止命令模板</td>
+                -->
+                <td class='listTableTitle' name="fileSize">文件大小</td>
+                <td class='listTableTitle' name="insertTime">创建时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <TABLE cellSpacing='1' id="buttonsPanel" width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a id='create'      onclick="createAsTemplate()" >创建</a>
+                    <a id='duplicate'   onclick="duplicateAsTemplate()" >复制</a>
+                    <a id='update'      onclick="updateAsTemplate()" >修改</a>
+                    <a id='remove'      onclick="removeAsTemplate()" >删除</a>
+                    <a id='generate'    onclick="generateAsTemplate()" >生成</a>
+                </TD>
+            </TR>
+        </TABLE>
+    </body>
+    <script>
+
+        // 表格的相关配置
+        var asTableConfig = new TableConfig('mdu.AppServerTemplate');
+
+        // 表的配置参数
+        var asParams = {methodName : 'listAppServerTemplates'};
+
+        var makingService = ServiceFactory.getService('mdu.service.MakingService');
+
+        var asTable = null;
+        Utils.run(function () {
+            asTableConfig.createColumnsFromTemplate($('#asTemplates'));
+            asTableConfig.renderers = {
+                params : { getRendererComponent:function(gTable,
+                    value, rowIndex, colIndex){
+                        return JSON.stringify(value);
+                    }
+                }
+            };
+            // 表的修饰函数
+            var tu = new TableUtils('asTemplates', asTableConfig, 'mdu.service.MakingService', 
+            asParams);
+            asTable = tu.autoLoad();
+        });
+
+        /**
+         * 创建一个跳转到指定页面的页面参数
+         */
+        function createAsTemplateUrl (asTemplate, methodName) {
+            var page= "template_editor.html";
+            var url = ParameterHelper.append(page, {'serverTemplate' : asTemplate, 
+                'methodName': methodName,
+                'fromPage' : "as_template_list.html"});
+            return url;
+        } 
+
+        /**
+         * 生成一个服务器模板实例
+         */
+        function generateAsTemplate() {
+            Utils.run(function() {
+                var asTemplate = getAsTemplate();
+                if (asTemplate != null) {
+                    //mduService.deployAppServerTemplate(asTemplate);
+                }
+            });
+        }
+
+        /**
+         * 更新选中的应用服务器模板
+         */
+        function updateAsTemplate() {
+            var asTemplate = getAsTemplate();
+            if (asTemplate != null) {
+                var url = createAsTemplateUrl(asTemplate, "updateAppServerTemplate");
+                document.location.href = url;
+            }    
+        }
+
+        /**
+         * 创建全新的应用服务器模板
+         */
+        function createAsTemplate() {
+            var url = createAsTemplateUrl({}, "addAppServerTemplate");
+            document.location.href = url; 
+        }
+
+        /**
+         * 返回当前选中的应用服务器模板
+         */
+        function getAsTemplate() {
+            var asTemplate = asTable.getSelectedRow();
+            if (asTemplate == null) {
+                MessageBox.alert('请选择一个需要处理的应用服务器模板。');
+            }
+            return asTemplate;
+        }
+
+        /**
+         * 移除选中的应用服务器模板
+         */
+        function removeAsTemplate() {
+            var asTemplate = getAsTemplate();    
+            if (asTemplate != null) {
+                if (MessageBox.confirm("确定删除此模板？")) {
+                    makingService.deleteAppServerTemplate(asTemplate);
+                    asTable.deleteRow(asTable.getSelectedRowNum());
+                }
+            }
+        }
+        
+        /**
+         * 复制选中的应用服务器模板
+         */
+        function duplicateAsTemplate() {
+            var asTemplate = getAsTemplate();    
+            if (asTemplate != null) {
+                // clone 一个对象
+                var newTpl = {};
+                newTpl.name = asTemplate.name;
+                newTpl.version = asTemplate.version;
+                newTpl.valid = asTemplate.valid;
+                newTpl.params = asTemplate.params;
+                newTpl.startupCmd = asTemplate.startupCmd;
+                newTpl.stopCmd = asTemplate.stopCmd;
+                var url = createAsTemplateUrl(newTpl, "addAppServerTemplate");
+                document.location.href = url; 
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>数据绑定</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+	
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<h1 style="text-align: center;">数据绑定演示程序</h1>
+<h3>  </h3>
+<form id='form1'>
+<div>
+<table> <tr><td>
+字符串:</td><td> <input name="string1" value="string1">
+</td></tr>
+
+<tr><td>
+日期: </td><td><input name="date1" value="" id='date1'>
+</td></tr>
+<tr><td>
+
+字典:</td><td>
+<select size="1" name="dictionary1" id="queryCity"></select>
+</td></tr>
+
+</table>
+</div>
+<br />
+<br />
+&nbsp;&nbsp;<a onclick="bind()" href="#">绑定（将当前Bean与控件关联起来）</a> &nbsp; &nbsp; <a onclick="showValue()" href="#">显示当前 Bean 的值</a><br>
+</form>
+<br />
+
+<script>
+
+Utils.run(function() {
+    // 绑定字典
+    DicUtils.decorateComboBox('queryCity', 'city', true, '', '全部');
+
+    // 绑定日期
+    $('#date1').datepicker({showOn:      'button',
+                        dateFormat:  'yy-mm-dd',
+                        buttonImage: '../images/calendar.gif', 
+						buttonImageOnly: true});
+});
+
+// 设置当前 Bean 的值
+var data1 = {"string1":"aaaa", "date1": new Date(), "dictionary1":'010'};
+        
+
+function bind () {
+    Utils.run(function() {
+	    BindUtils.bind(jQuery("form"), data1, {'type'      : 'po.RowBean',
+                                        		exclusions : ['string1']});
+    });
+}
+
+function showValue () {
+    var msg = "string1=" + data1["string1"] + ";\n date1="
+         	+ data1["date1"] + ";\n dictionary1=" + data1["dictionary1"];
+	alert(msg);
+}
+
+</script>
+</body></html>

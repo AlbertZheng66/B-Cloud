@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Demo-图书管理</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();    
+</script>
+</head>
+<body>
+<h3 style="text-align: center;">这个用来展示管理员编辑图书的过程。
+这个过程展示了如下几个关于表格的操作：过滤、分页、
+上传图片、编辑信息、校验等等。</h3>
+<br />
+
+
+
+<div id="queryPanel">
+    <form>
+        书名: <input name="name" value="" filterType='CONTAINS'> &nbsp; &nbsp;
+        作者: &nbsp; <input name="author" value="" filterType='STARTS_WITH'> &nbsp; &nbsp;
+        出版社: <input name="press" value="" filterType='EQUALS'><br>&nbsp;<br>&nbsp;
+        <br/>
+        <a href="#" id='queryBtn'>&#26597;&#35810;</a> &nbsp;<input type="reset">
+	</form>
+</div>
+
+<br/>
+
+<table class='tableRegion' id="books" >
+</table>
+
+<br/>
+&nbsp;<a id='addBtn' href="#">增加</a>
+&nbsp; &nbsp;<a id='removeBtn' href="#">删除</a>
+&nbsp; &nbsp;&nbsp;<a id='updateBtn' href="#">更新</a> &nbsp; &nbsp; &nbsp;
+<input type='button' href="#"  id="firstPage" value='|&lt;' />&nbsp;
+<input type='button' href="#"  id="prevPage" value='&lt;' />&nbsp;
+&nbsp;<select id="turnPage"></select>&nbsp;
+<input type='button' href="#"  id="nextPage" value='&gt;' />&nbsp;
+<input type='button' href="#"  id="lastPage" value='&gt;|' />
+
+
+</body>
+<script>
+
+// 用户可以自定义更新方法
+function update (editingRow, table, service) {
+    service.update(editingRow);
+	return true;
+}
+
+// 测试查询回调(table 是 GTable 实例)
+function onQuery (table, data, fspParameter) {
+   alert('此次加载了' + data.length + '条记录')
+   ImageHelper.showPicture('img_4', 'service.BookService', 'getCover', '0');
+}
+
+// 表的配置参数
+var params = {query : {dom : 'queryPanel',
+                       button : 'queryBtn',
+					   onQuery : onQuery}, 
+              pagination : {turnPage : $('#turnPage')},     // 采用默认的分页方式，即按照约定的按钮
+			  actionsConfig : {add : 'addBtn',
+			                   remove : 'removeBtn',
+			                   update : 'updateBtn', //updateAction : update,
+							   editForm : 'book_editor.html'}
+			};
+			
+
+			
+// 表格的相关配置
+var tableConfig = new TableConfig('po.Book');
+
+// 购买操作
+function buy (event) {
+   var row = event.row;
+   alert('您购买了图书：' + row.name + '。');
+}
+
+Utils.run(function () {
+
+    // 定义快捷方式
+    //tableConfig.shortCutConfig = 
+    //    {shortCuts : [new ShortCut('购买',  '../images/buycar.gif', buy)]};
+    //tableConfig.rolloverBgcolor = '#f6f6f6';
+    tableConfig.renderers = {cover : new ImageCellRenderer('service.BookService',                             'getCover', null, {width:25, height:25})}
+			  
+    // 表的修饰函数
+    var tu = new TableUtils('books', tableConfig, 'service.BookService', 
+           params);
+    tu.autoLoad();
+});
+
+
+</script>
+</html>

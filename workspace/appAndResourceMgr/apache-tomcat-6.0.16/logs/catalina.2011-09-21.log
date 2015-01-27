@@ -1,0 +1,120 @@
+2011-9-21 14:16:30 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 14:16:30 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 14:16:30 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 359 ms
+2011-9-21 14:16:30 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 14:16:30 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 14:16:30 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 14:16:31 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 14:16:31 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 14:16:31 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/21  config=null
+2011-9-21 14:16:31 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1041 ms
+2011-9-21 14:17:50 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 14:17:50 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 14:17:50 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 361 ms
+2011-9-21 14:17:50 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 14:17:50 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 14:17:50 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 14:17:52 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 14:17:52 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 14:17:52 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/24  config=null
+2011-9-21 14:17:52 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1844 ms
+2011-9-21 14:21:30 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 14:21:30 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 14:21:30 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 361 ms
+2011-9-21 14:21:30 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 14:21:30 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 14:21:30 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 14:21:32 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 14:21:32 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 14:21:32 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=1/20  config=null
+2011-9-21 14:21:32 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1749 ms
+2011-9-21 14:33:36 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 14:33:36 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 14:33:36 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 430 ms
+2011-9-21 14:33:36 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 14:33:36 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 14:33:36 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 14:33:37 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 14:33:37 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 14:33:37 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/20  config=null
+2011-9-21 14:33:37 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1503 ms
+2011-9-21 15:04:31 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 15:04:31 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 15:04:31 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 361 ms
+2011-9-21 15:04:31 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 15:04:31 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 15:04:31 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 15:04:33 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 15:04:33 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 15:04:33 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/21  config=null
+2011-9-21 15:04:33 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1546 ms
+2011-9-21 17:27:22 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Program Files\Windows Live\Shared;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\QuickTime\QTSystem\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27
+2011-9-21 17:27:22 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2011-9-21 17:27:22 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 527 ms
+2011-9-21 17:27:22 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2011-9-21 17:27:22 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-9-21 17:27:22 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2011-9-21 17:27:25 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2011-9-21 17:27:25 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2011-9-21 17:27:25 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/58  config=null
+2011-9-21 17:27:25 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3012 ms

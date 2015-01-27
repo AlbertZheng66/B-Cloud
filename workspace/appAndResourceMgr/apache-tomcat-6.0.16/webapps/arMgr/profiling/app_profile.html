@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>性能监控 - 服务器性能</title>
+		<script type="text/javascript" src="../js/boot.js"></script>
+		<script type="text/javascript">    
+    		// 加载JS 文件
+    		Loader.importJS();
+			// 加载CSS 文件
+    		Loader.importCSS();	
+		</script>
+    </head>
+    <body>
+        <TABLE width="100%" border="0" align="center">
+	    <TR>
+                <TD class="listPageTitleTd" >
+                    <input id="refreshFlag" type="checkbox" value="true" onchange="refreshAutomatically()" />自动刷新</TD>
+                <TD class="listPageTitleTd" >刷新时间(秒)：<input id="interval" value="180" /></TD>
+                <TD class="listPageTitleTd" >加载时间：<input id="loadedTime" value="" readonly="true" /></TD>
+	    </TR>
+	</TABLE>
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="7">可用服务器列表</TD>
+	    </TR>
+	</TABLE>		
+	
+	<table class='listTable' id="apps" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="id" > 自定义标识</td>
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="appVersion">应用版本编码</td>
+                <td class='listTableTitle' name="instanceCount">实例个数</td>
+                <!-- td class='listTableTitle' name="uptime">启动时间</td -->
+                <td class='listTableTitle' name="memoryInfo">内存占用</td>
+                <td class='listTableTitle' name="cpuInfo">CPU 资源</td>
+                <td class='listTableTitle' name="classLoadingInfo">加载类信息</td>
+                <td class='listTableTitle' name="threadInfo">线程信息</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+				             
+    </body>
+	
+<script type="text/javascript">
+
+// 表格的相关配置
+var tableConfig = new TableConfig('pf.app.AppProfilingInfo');
+tableConfig.renderers = {
+        cpuInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a> 系统负载：" 
+                                + value.systemCpuLoad +
+                                "<br /> 进程负载："  + value.processCpuTime + "</a>"}},
+        memoryInfo : { getRendererComponent:function(gTable,
+            value, rowIndex, colIndex){return "<a showMemDetails(" + rowIndex + ", " + colIndex + ")> 最大内存：" + HRFormatter.toM(value.heapMemoryUsage.max)
+                                 + "M<br /> 已使用内存："  + HRFormatter.toM(value.heapMemoryUsage.used) + "M</a>"}},
+        classLoadingInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a> 已加载数：" + value.totalLoaded + "</a>"}},
+        threadInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a> 活动进程：" + value.live 
+                                + "<br /> 最大进程数："  + value.livePeak + "</a>"}}
+    };
+
+// 表的配置参数
+var params = {actionsConfig : {},
+              methodName    : 'listApps'
+	};
+
+
+var tu = null;
+var gTable = null;
+Utils.run(function () {
+    // 表的修饰函数
+    tableConfig.createColumnsFromTemplate($('#apps'));
+    tu = new TableUtils('apps', tableConfig, 'pf.app.AppProfilingService', 
+           params);
+    gTable = tu.autoLoad();
+    setCurrentTime("#loadedTime");
+    refreshAutomatically ();
+});
+
+var tid = null;
+function refreshAutomatically () {
+    var refreshFlag = $('#refreshFlag').val();
+    if (refreshFlag) {
+        var interval = $('#interval').val() * 1000;  // the interval for refreshing
+        setInterval(refresh, interval);
+    } else {
+        if (tid != null) {
+            clearInterval(tid);
+        }
+    }
+}
+
+function refresh() {
+    if (tu != null) {
+        tu.refresh();
+        setCurrentTime("#loadedTime");
+    }
+}
+
+function showMemDetails(rowIndex, colIndex) {
+    var memInfo = gTable.getValueAt(rowIndex, colIndex);
+    MessageBox.alert(memInfo);
+}
+
+
+</script>
+</html>

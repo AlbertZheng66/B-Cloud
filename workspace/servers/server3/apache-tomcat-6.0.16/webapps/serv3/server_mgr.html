@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理</title>
+
+<script type="text/javascript" src="./js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+	
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<form id="appForm">
+	<table style="text-align: left; width: 100%;" border="1"
+			cellpadding="2" cellspacing="2">
+		<tbody>
+            <tr align="center">
+				<td colspan="4" rowspan="1" >
+                    <big><big><big>应用信息</big></big></big></td>
+            </tr>
+            <tr>
+				<td >ID:</td><td ><input name="id" width="100%" /></td>
+				<td >名称:</td><td ><input name="name" /></td>
+			</tr>
+            <tr>
+				<td >描述信息:</td><td ><input name="description" /></td>
+				<td >版本:</td><td ><input name="version" /></td>
+			</tr>
+            <tr>
+				<td >URL:</td><td ><input name="url" /></td>
+				<td ></td><td ></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+<br /><br/>
+
+<a href="#" onclick="createInstance()">创建实例</a>&nbsp;&nbsp;
+<a href="#" onclick="test()">测试</a>
+</body>
+<script>
+
+// 绑定字典
+var app = {oid:'00001', id:'app_1', name:'测试应用-1', description:'测试应用-1',           version:'0.1'};
+var serverService = ServiceFactory.getService('resource.ServerService');
+
+Utils.run(function() {
+    BindUtils.bind("appForm", app, {});
+});
+
+
+// 当前启动的服务器实例
+var cattle = null;
+
+// 创建一个服务器实例
+function createInstance () {
+    Utils.run(function() {
+	    var host = 'www.bc1.com';
+		var path = 'E:/work/xthinker/B-Cloud/workspace/servers/deploy/app1';
+	    cattle = serverService.createInstance(app, null, host, path);
+		if (cattle == null) {
+		    MessageBox.debug('服务器启动失败。');
+		} else {
+		    MessageBox.debug('服务器启动成功。');
+		}
+    });
+}
+
+
+// 测试服务器启动是否成功。
+function test () {
+    Utils.run(function() {
+	    serverService.publishApp(app, {});
+	   
+    });
+}
+
+</script>
+</html>

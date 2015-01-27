@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理</title>
+
+<script type="text/javascript" src="./js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+	
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<form id="appForm">
+	<table style="text-align: left; width: 100%;" border="1"
+			cellpadding="2" cellspacing="2">
+		<tbody>
+            <tr align="center">
+				<td colspan="4" rowspan="1" >
+                    <big><big><big>应用信息</big></big></big></td>
+            </tr>
+            <tr>
+				<td >ID:</td><td ><input name="id" width="100%" /></td>
+				<td >名称:</td><td ><input name="name" /></td>
+			</tr>
+            <tr>
+				<td >描述信息:</td><td ><input name="description" /></td>
+				<td >版本:</td><td ><input name="version" /></td>
+			</tr>
+            <tr>
+				<td >URL:</td><td ><input name="url" /></td>
+				<td ></td><td ></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+<br /><br/>
+
+<a href="#" onclick="register()">注册</a>&nbsp;&nbsp;
+<a href="#" onclick="deploy()">发布</a>
+</body>
+<script>
+
+// 绑定字典
+var app = {oid:'00001', id:'app_1', name:'测试应用-1', description:'测试应用-1',           version:'0.1'};
+var appService = ServiceFactory.getService('app.AppService');
+
+Utils.run(function() {
+    BindUtils.bind("appForm", app, {});
+});
+
+// 注册当前应用
+function register () {
+    Utils.run(function() {
+	    appService.registerApp(app);
+    });
+}
+
+// 发布当前应用
+function deploy () {
+    Utils.run(function() {
+	   appService.publishApp(app, {});
+    });
+}
+
+</script>
+</html>

@@ -1,0 +1,183 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>模板文件选择</title>
+        <script type="text/javascript" src="../js/boot.js"></script>
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();	
+        </script>
+    </head>
+
+    <body style="margin: 0;width:100%;">
+        <TABLE width="100%" border="0" align="center">
+            <TR>
+                <TD class="listPageTitleTd" colspan="4">应用模板列表</TD>
+            </TR>
+        </TABLE>
+        <table class='listTable' id="asTemplates" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="version" > 版本号</td>
+                <td class='listTableTitle' name="insertTime">创建时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <TABLE width="100%" border="0" align="center">
+            <TR>
+                <TD class="listTableTd1">
+                    <input id="selectRandomly" type="checkbox" 
+                           title="随机选择物理服务器" checked="true"
+                           onchange="selectRnd()"/>
+                    随机选择物理服务器
+                    <input id="count" type="number" title="随机选择物理服务器" value="1" />
+                    发布数量
+                </TD>
+            </TR>
+        </TABLE>
+        <br />
+        <div id="phyServersDiv" style="display: none;">
+            <TABLE width="100%" border="0" align="center">
+                <TR>
+                    <TD class="listPageTitleTd" colspan="4">物理服务器列表</TD>
+                </TR>
+            </TABLE>
+            <table class='listTable' id="phyServers" width="100%" >
+                <tr class='listTableTitle'  >
+                    <td class='listTableTitle' name="name">名称</td>
+                    <td class='listTableTitle' name="ip" > IP 地址</td>
+                    <td class='listTableTitle' name="osName">操作系统名称</td>
+                    <td class='listTableTitle' name="insertTime">创建时间</td>
+                </tr>
+                <tbody>
+                    <tr id='rowTemplate'>
+                        <td class='listTableTd1' ></td>
+                        <td class='listTableTd1' ></td>
+                        <td class='listTableTd1' ></td>
+                        <td class='listTableTd1' ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a id='ok'    onclick="ok()" >确定</a>
+                    <a id='cancel' onclick="cancel()" >取消</a>
+                </TD>
+            </TR>
+        </TABLE>
+    </body>
+    <script>
+        // 解析应用参数
+        var fromPage;
+        
+        var mduService = ServiceFactory.getService('mdu.MduService');
+            
+        var asTable = null;
+        Utils.run(function () {
+            // 解析应用参数
+            var appParams = ParameterHelper.parse(window.location.href);
+            fromPage       = appParams.fromPage;
+            if (fromPage == null) {
+                MessageBox.alert("未能读取到参数[fromPage]，返回功能将失效。");
+            }
+            var type = appParams.type;
+            // 表格的相关配置
+            var asTableConfig = new TableConfig('mdu.AppServerTemplate');
+
+            // 表的配置参数
+            var asParams = {methodName : 'listAvailableAppServers', 
+                methodParams : [type]};  // 可用的服务器的类型
+
+             
+            asTableConfig.createColumnsFromTemplate($('#asTemplates'));
+            // 表的修饰函数
+            var tu = new TableUtils('asTemplates', asTableConfig, 'mdu.MduService', 
+            asParams);
+            asTable = tu.autoLoad();
+        });
+        
+        // 随机选择时显示或者隐藏物理区域
+        function selectRnd() {
+            if (isRandomly()) {
+                $('#phyServersDiv').hide("fold", {}, 1000);
+            } else {
+                load();
+                $('#phyServersDiv').show("fold", {}, 1000);
+            }
+        }
+        
+        function isRandomly() {
+            return $('#selectRandomly').attr('checked');
+        }
+                
+        // 物理服务器列表
+        var psTable = null;
+    
+        // load the available physical servers
+        function load() {
+            // lazy loading...
+            if (psTable != null) {
+                return;
+            }
+            var psParams = {methodName : 'listAvailablePhyServers'};
+            var psTableConfig = new TableConfig('mdu.PhyServer');
+            psTableConfig.createColumnsFromTemplate($('#phyServers'));
+            psTableConfig.selectionMode = SelectionMode.MULTI;
+    
+            // 表的修饰函数
+            tu = new TableUtils('phyServers', psTableConfig, 'mdu.MduService', 
+            psParams);
+            psTable = tu.autoLoad();        
+        }
+
+
+        /**
+         * 发布一个物理服务器
+         */
+        function ok() {
+            var asTemplate = asTable.getSelectedRow();
+            if (asTemplate == null) {
+                MessageBox.alert('请选择应用服务器模板。');
+                return;
+            }
+            var phyServers = [];
+            if (!isRandomly()) {
+                if (psTable == null || psTable.getSelectedRows() == null 
+                    || psTable.getSelectedRows().length == 0) {
+                    MessageBox.alert('请选择物理服务器模板。');
+                    return;
+                }
+                phyServers = psTable.getSelectedRows();
+            }
+            var param = {};
+            param.asTemplate = asTemplate;
+            param.randomSelection = isRandomly();
+            param.count = $('#count').val();
+            param.phyServers = phyServers;
+            mduService.deployServerTemplate(param);
+            MessageBox.alert('发布成功。');
+        }
+
+        /**
+         * 创建全新的应用服务器模板
+         */
+        function cancel() {
+            if (fromPage != null) {
+                document.location.href = fromPage; 
+            }
+        }       
+    </script>
+</html>

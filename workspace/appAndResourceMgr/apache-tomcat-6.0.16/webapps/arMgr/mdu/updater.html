@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>更新管理</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+	
+</script>
+
+</head>
+
+<body>
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">更新管理</TD>
+	    </TR>
+	</TABLE>
+	<div id="updater">
+             <ul>
+                 <li><a href="#"><span>应用服务器</span></a></li>
+                 <li><a href="#"><span>任务分配器</span></a></li>
+             </ul>
+        </div>
+		
+</body>
+<script>
+
+var $tabs = $('#updater').tabs();
+// var selected = $tabs.tabs('option', 'selected'); // => 0
+/*
+$('#updater').tabs({
+    load: function(event, ui) {
+        $(ui.panel).delegate('a', 'click', function(event) {
+            $(ui.panel).load(this.href);
+            event.preventDefault();
+        });
+    }
+});
+*/
+</script>
+</html>

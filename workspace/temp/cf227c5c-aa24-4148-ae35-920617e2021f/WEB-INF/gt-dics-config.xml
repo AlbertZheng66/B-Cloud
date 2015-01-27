@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 只配置了制屏幕的流转。返回的页面即为path属性的值。 -->
+
+  <dictionaries>
+      <!-- 省编码 -->
+      <dic name="province"  type="xml" > 
+          <item value="010" title="北京" />
+          <item value="022" title="天津" />
+          <item value="0311" title="河北" />
+          <item value="0351" title="山西" />
+          <item value="0471" title="内蒙古" />
+          <item value="024" title="辽宁" />
+          <item value="0431" title="吉林" />
+          <item value="0451" title="黑龙江" />
+          <item value="021" title="上海" />
+          <item value="025" title="江苏" />
+          <item value="0571" title="浙江" />
+          <item value="0551" title="安徽" />
+          <item value="0591" title="福建" />
+          <item value="0791" title="江西" />
+          <item value="0531" title="河南" />
+          <item value="027" title="湖北" />
+          <item value="0731" title="湖南" />
+          <item value="020" title="广东" />
+          <item value="0771" title="广西" />
+          <item value="0898" title="海南" />
+          <item value="023" title="重庆" />
+          <item value="028" title="四川" />
+          <item value="0851" title="贵州" />
+          <item value="0871" title="云南" />
+          <item value="0891" title="西藏" />
+          <item value="029" title="陕西" />
+          <item value="0931" title="甘肃" />
+          <item value="0971" title="青海" />
+          <item value="0954" title="宁夏" />
+          <item value="0991" title="新疆" />
+      </dic>
+
+      <dic name="city"  type="xml" > 
+          <item value="010" title="北京" />
+          <item value="022" title="天津" />
+          <item value="021" title="上海" />
+      </dic>
+    
+      <!-- 性别类型 -->
+      <dic name="gender_type" type="xml" > 
+          <item value="F" title="女士" />
+          <item value="M" title="先生" />
+      </dic>
+	  
+      <!-- 学历类型 -->
+      <dic name="degree_type" type="xml" > 
+          <item value="000" title="初中" />
+          <item value="001" title="高中" />
+          <item value="002" title="本科" />
+          <item value="003" title="硕士" />
+          <item value="004" title="博士" />
+      </dic>
+
+</dictionaries>

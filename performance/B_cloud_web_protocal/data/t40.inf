@@ -1,0 +1,13 @@
+[t40]
+FileName1=t40.htm
+URL1=http://www.bc_demo1.com:4900/jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.service.TableService","methodName":"list","serviceObject":{"className":"com.xt.gt.demo.service.TableService","invokedMethods":[]},"type":null,"params":[]}
+Total=1
+RequestHeaderFile=t40_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t40_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_40.xml
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=0

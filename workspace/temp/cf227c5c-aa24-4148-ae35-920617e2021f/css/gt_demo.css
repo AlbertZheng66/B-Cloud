@@ -1,0 +1,164 @@
+/*通用控制 begin*/
+TD,DIV {
+	/*FONT-SIZE: 12px;*/
+	FONT-FAMILY: '新宋体'
+}
+
+
+
+p li {
+    line-height: 2;	
+    text-indent: 2em;
+}
+
+/*通用控制 end*/
+
+
+/*列表 begin */
+TABLE.tableRegion {BACKGROUND-COLOR: #FDDDBC;}
+TABLE.tableRegion TD{
+	MARGIN-LEFT: 1px;
+	WORD-BREAK: break-all;
+	MARGIN-RIGHT: 1px;
+	line-height:150%;
+	WORD-WRAP: break-word;
+}/*内容样式*/
+
+TABLE.tableRegion thead TD{
+	MARGIN-LEFT: 1px;
+	MARGIN-RIGHT: 1px;
+	HEIGHT: 22px;
+	BACKGROUND-COLOR: #FF9000;
+	COLOR: #FFFFFF;
+	TEXT-ALIGN: center;
+	font-weight: bold;
+}/*表头样式*/
+
+TABLE.tableRegion TD a {color: #0044DD;}
+
+TABLE.tableRegion TD a:hover {color: #0044DD;text-decoration: underline;}
+
+.oddRow {
+    BACKGROUND-COLOR : #FFFFFF;
+}
+.evenRow {
+    BACKGROUND-COLOR : #EEEEEE;
+}
+
+/*列表 end */
+
+
+
+
+/*按钮样式*/
+.button {
+	BORDER-RIGHT: #FF9934 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #FF9934 1px solid;
+	PADDING-LEFT: 2px;
+	/*FONT-SIZE: 12px;*/
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#FFFFCB); /*此处不能折行*/
+	BORDER-LEFT: #FF9934 1px solid;
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #FF9934 1px solid;
+}
+
+.selectedButton {
+	BORDER-RIGHT: #FF9934 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #FF9934 1px solid;
+	PADDING-LEFT: 2px;
+	/*FONT-SIZE: 12px;*/
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#FFFFCB); /*此处不能折行*/
+	BORDER-LEFT: #FF9934 1px solid;
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #FF9934 1px solid;
+}
+
+.deselectedButton {
+	BORDER-RIGHT: #FF9934 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #FF9934 1px solid;
+	PADDING-LEFT: 2px;
+	/*FONT-SIZE: 12px;*/
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#000000, EndColorStr=#FFFFCB); /*此处不能折行*/
+	BORDER-LEFT: #FF9934 1px solid;
+	CURSOR: hand;
+	COLOR: blue;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #FF9934 1px solid;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 956px;
+	position: relative;
+	/* 
+	background: url('../images/body_footer_bg.jpg') no-repeat center bottom;
+	padding-bottom: 365px;
+	 */
+}
+
+#banner {
+	height: 125px;
+}
+
+#content .bg {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+table.layout-grid a.disabled, table.layout-grid a.disabled:hover {
+	color: #aaa;
+	cursor: default;
+	text-decoration: line-through;
+}
+
+div.notice {
+	background: #FFF1AF;
+	padding: 3px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	border: 1px solid #EFD500;
+}
+
+
+/* Logo
+   -------------------------------- */
+
+h1.logo {
+	position: absolute;
+	top: 55px;
+	left: 28px;
+	margin: 0;
+}
+
+h1.logo,
+h1.logo a {
+	width: 235px;
+	height: 55px;
+}
+
+h1.logo a {
+	display: block;
+	background: url('../images/logo.gif') no-repeat;
+}
+
+h1.logo a span {
+	display: none;
+}
+
+.validation_fail
+{
+  background: transparent url('../images/validation_error.gif') 10px 0px no-repeat;
+  padding: 1px 0px 0px 25px;
+  font-size:12px;
+  color:#E30202;
+}/*红色12号*/
+
+      

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>字典表演示</title>
+    <script type="text/javascript" src="../js/boot.js"></script>
+    <script>
+        // 加载CSS 文件
+        Loader.importCSS();
+	
+        // 加载JS 文件
+        Loader.importJS();
+    </script>
+</head>
+
+<body>
+
+<h1 style="text-align: center;">字典表演示页面 </h1>
+    <br><br><br><br>
+	
+<select id="cityComboBox" size="1" name="city"></select> 
+<a onclick="decorateComboBox()" href="#">创建字典下拉列表框</a><br />
+<br><br><br>
+
+<select multiple="multiple" size="5" id="listDic"></select>
+ <a onclick="createListDic()" href="#">创建列表型字典</a><br />
+ <br><br><br>
+ 
+ <div id="checkBoxDic"> 在此创建一个字典</div>
+ <a onclick="createCheckBoxDic()" href="#"><br />
+ 创建复选框样式字典</a> 
+ <br><br><br>
+ 
+ <div id="radioDic"> 在此创建一个字典</div>
+ <a onclick="createRadioDic()" href="#"><br />
+ 创建单选钮样式的字典</a>
+ <br><br><br>
+ 
+	<input name="dictionaryName" id="dictionaryName" value="city"><br />
+	<a onclick="getDictionary()" href="#">获取字典</a>
+
+
+
+ 
+<script>
+    getDictionary = function() {
+        var dicNameField = $('#dictionaryName');
+        var name = dicNameField[0].value;
+        var city = DictionaryService.getDictionary(name);
+        MessageBox.debug('city:', city);
+    }
+
+    decorateComboBox = function () {
+        var dicNameField = $('#dictionaryName');
+        var name = dicNameField[0].value;
+	    var comboBox = $('#cityComboBox');
+        DicUtils.decorateComboBox('cityComboBox', name, true, 'all', '全部');
+    }
+
+    createCheckBoxDic = function () {
+        var dicNameField = $('#dictionaryName');
+        var name = dicNameField[0].value;
+        DicUtils.decorateCheckBoxes('checkBoxDic', name, 'ccCity');
+    }
+
+    createRadioDic = function () {
+        var dicNameField = $('#dictionaryName');
+        var name = dicNameField[0].value;
+        DicUtils.decorateRadioes('radioDic', name, true, 'all', '全部', "radioCity");
+    }
+
+    createListDic = function () {
+        var dicNameField = $('#dictionaryName');
+        var name = dicNameField[0].value;
+        DicUtils.decorateList('listDic', name);
+    }
+</script>
+</body>
+</html>

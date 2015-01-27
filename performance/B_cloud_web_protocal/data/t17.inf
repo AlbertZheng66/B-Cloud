@@ -1,0 +1,13 @@
+[t17]
+FileName1=t17_ajaxupload.3.2.html
+URL1=http://www.bc_demo1.com:4900/js/core/ajaxupload.3.2.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_17.xml
+RequestHeaderFile=t17_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t17_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

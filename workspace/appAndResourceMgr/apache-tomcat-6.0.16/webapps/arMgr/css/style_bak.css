@@ -1,0 +1,221 @@
+BODY {
+	TABLE-LAYOUT: fixed;
+	SCROLLBAR-FACE-COLOR: #dee3e7;
+	FONT-SIZE: 12px;
+	MARGIN: 0px;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #dee3e7;
+	COLOR: #333333;
+	WORD-BREAK: break-all;
+	SCROLLBAR-3DLIGHT-COLOR: #d1d7dc;
+	SCROLLBAR-ARROW-COLOR: #006699;
+	SCROLLBAR-TRACK-COLOR: #efefef;
+	SCROLLBAR-DARKSHADOW-COLOR: #98aab1;
+	WORD-WRAP: break-word;
+	background: eaf2ff;
+	padding-top: 10px;
+}
+TD {
+	FONT-SIZE: 12px; 
+}
+table {
+	border: 1px solid #A2C0DD;
+}
+A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+SELECT {
+	COLOR: #000000
+}
+INPUT {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-LEFT-COLOR: #dfdfdf; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #dfdfdf; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: #dfdfdf; PADDING-TOP: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #dfdfdf
+}
+TEXTAREA {
+	COLOR: #000000
+}
+.bgx {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; BORDER-COLLAPSE: collapse
+}
+.px14 {
+	FONT-SIZE: 14px
+}
+.red {
+	COLOR: #ff0000
+}
+A.redlink:link {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.redlink:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.redlink:hover {
+	TEXT-TRANSFORM: none; COLOR: #ff0000
+}
+A.redlink:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.blue {
+	COLOR: #000099
+}
+.white {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.button {
+	PADDING-RIGHT: 6px;
+	PADDING-LEFT: 6px;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	background: url(../images/btn_1.gif) repeat-x left center;
+	border: 1px solid #B0C0D7;
+	border-spacing: 0;
+	BORDER-COLLAPSE: collapse;
+line-height:13pt;
+}
+.btn1 {
+	BORDER-RIGHT: #333333 0px solid; PADDING-RIGHT: 10px; BORDER-TOP: #333333 0px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/btn_2.gif); BORDER-LEFT: #333333 0px solid; WIDTH: 113px; COLOR: #ffffff; BORDER-BOTTOM: #333333 0px solid; HEIGHT: 18px
+}
+.btn2 {
+	BORDER-RIGHT: #333333 0px solid; PADDING-RIGHT: 10px; BORDER-TOP: #333333 0px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/btn_2.gif); BORDER-LEFT: #333333 0px solid; WIDTH: 113px; COLOR: #000000; BORDER-BOTTOM: #333333 0px solid; HEIGHT: 18px
+}
+.font_y {
+	FILTER: DropShadow(color=#ffffff,offx=1,offy=1); COLOR: #000000
+}
+.menu_font1 {
+	COLOR: #000000
+}
+.listTableTitle {
+	COLOR: #003399;
+	line-height: 18px;
+	background: #C2D9F1;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+	border-top: 1px solid #DCEAFA;
+	border-right: 1px solid;
+	border-bottom: 1px solid #798EC1;
+	border-left: 1px solid #d4e4f5;
+}
+.listPageTitleTd {
+	FONT-WEIGHT: bold;
+	background: url(../images/menu1_bg.gif);
+	text-align: left;
+	font-size: 14px;
+	line-height: 140%;
+	color: #FF0000;
+}
+.listPageTitle {
+	COLOR: #000000
+}
+.listTablepage {
+	COLOR: #000000; BACKGROUND-COLOR: #eaeaea
+}
+.table_bg1 {
+	BACKGROUND-COLOR: #bacde4
+}
+.listTableTd {
+	BACKGROUND-COLOR: #f3f3f3
+}
+.listTableTd1 {
+	BACKGROUND-COLOR: #ffffff
+}
+.listTableTd2 {
+	BACKGROUND-COLOR: #f5e9ec
+}
+.listTableButtonTd {
+	BACKGROUND-COLOR: #f7f7f7
+}
+.searchTableButtonTd {
+	BACKGROUND-COLOR: #f1f1f1}
+.subModifyTable {
+	BACKGROUND-COLOR: #ffffff
+}
+.modifyTableButtonTd {
+	BACKGROUND-COLOR: #eaf2ff}
+.modifyTd {
+	COLOR: #000000;
+	background: #F1F1F1;
+}
+.addTd {
+	COLOR: #000000; BACKGROUND-COLOR: #e4eefb
+}
+.listTable {
+	background: #FFFFFF;
+}
+.tr_bg4 {
+	BACKGROUND-COLOR: #ffffff
+}
+.inputneed {
+	BORDER-RIGHT: #000000 1pt solid; BORDER-TOP: #000000 1pt solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1pt solid; WIDTH: auto; COLOR: #000000; BORDER-BOTTOM: #000000 1pt solid; BACKGROUND-COLOR: #ffffff
+}
+.inputreadonly {
+	BORDER-RIGHT: #e8f2f7 1px solid;
+	BORDER-TOP: #e8f2f7 1px solid;
+	FONT-SIZE: 12px;
+	BORDER-LEFT: #e8f2f7 1px solid;
+	COLOR: #000000;
+	BORDER-BOTTOM: #e8f2f7 1px solid;
+	background: #F1F1F1;
+}
+.inputtext {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; WIDTH: 140px; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid
+}
+.inputtext_line {
+	BORDER-RIGHT: #000000 0pt solid; BORDER-TOP: #000000 0pt solid; BORDER-LEFT: #000000 0pt solid; BORDER-BOTTOM: #000000 1pt solid; BACKGROUND-COLOR: #e4ecf3
+}
+.odd_tr {
+	FONT-SIZE: 12px; COLOR: #000000; HEIGHT: auto; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.even_tr {
+	FONT-SIZE: 12px; COLOR: #000000; HEIGHT: auto; BACKGROUND-COLOR: #f0f0f0
+}
+.frame {
+	BORDER-RIGHT: #369 1px solid; BORDER-TOP: #369 1px solid; BORDER-LEFT: #369 1px solid; WIDTH: 100%; BORDER-BOTTOM: #369 1px solid
+}
+.frame .label {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: #369; PADDING-BOTTOM: 5px; COLOR: white; PADDING-TOP: 5px
+}
+.frame .content {
+	FONT-SIZE: 99%; BACKGROUND: #f0f0ff; COLOR: black; LINE-HEIGHT: 120%
+}
+.frame .command {
+	FONT-SIZE: 99%; BACKGROUND: #f0f0ff; MARGIN: 2px; COLOR: black; LINE-HEIGHT: 120%; TEXT-ALIGN: right
+}
+.error {
+	BORDER-LEFT-COLOR: #f00000; BORDER-BOTTOM-COLOR: #f00000; BORDER-TOP-COLOR: #f00000; BORDER-RIGHT-COLOR: #f00000
+}
+.error .label {
+	BACKGROUND: #f00000; COLOR: white
+}
+.error .content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: #fff0f0; PADDING-BOTTOM: 5px; COLOR: black; PADDING-TOP: 5px
+}
+.warning {
+	BORDER-LEFT-COLOR: orange; BORDER-BOTTOM-COLOR: orange; BORDER-TOP-COLOR: orange; BORDER-RIGHT-COLOR: orange
+}
+.warning .label {
+	BACKGROUND: orange; COLOR: white
+}
+.warning .content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: #fffaf0; PADDING-BOTTOM: 5px; COLOR: black; PADDING-TOP: 5px
+}
+.help {
+	BORDER-LEFT-COLOR: #3166ce; BORDER-BOTTOM-COLOR: #3166ce; BORDER-TOP-COLOR: #3166ce; BORDER-RIGHT-COLOR: #3166ce
+}
+.help .label {
+	BACKGROUND: #3166ce; COLOR: white
+}
+.help .content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: #e3ecff; PADDING-BOTTOM: 5px; COLOR: black; PADDING-TOP: 5px
+}
+.searchTable {
+	background: #FFFFFF;
+}

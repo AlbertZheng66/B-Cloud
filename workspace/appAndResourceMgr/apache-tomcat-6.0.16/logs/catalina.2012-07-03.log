@@ -1,0 +1,42 @@
+七月 03, 2012 6:30:59 下午 org.apache.catalina.startup.Catalina stopServer
+严重: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:421)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:337)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+
+七月 03, 2012 6:31:05 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.7.0_03\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\TortoiseSVN\bin;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;D:\Program Files\Calibre2\;C:\strawberry\c\bin;C:\strawberry\perl\bin;d:\Program Files\Smart Projects\IsoBuster;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin;D:\Program Files\Git\bin;.
+七月 03, 2012 6:31:05 下午 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+七月 03, 2012 6:31:05 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1440 ms
+七月 03, 2012 6:31:05 下午 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+七月 03, 2012 6:31:05 下午 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+七月 03, 2012 6:31:05 下午 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+七月 03, 2012 6:31:13 下午 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+七月 03, 2012 6:31:13 下午 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+七月 03, 2012 6:31:13 下午 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/106  config=null
+七月 03, 2012 6:31:13 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 8390 ms

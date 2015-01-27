@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>应用服务器实例列表</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();
+	
+        </script>
+
+    </head>
+
+    <body>
+        <TABLE width="100%" border="0" align="center">
+            <TR>
+                <TD class="listPageTitleTd" colspan="4">应用服务器实例</TD>
+            </TR>
+        </TABLE>
+        <Table class='listTable' id="asInstances" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="version" > 版本号</td>
+                <td class='listTableTitle' name="valid">是否生效</td>
+                <td class='listTableTitle' name="state">状态</td>
+                <!--
+                <td class='listTableTitle' name="startupCmd">启动命令</td>
+                <td class='listTableTitle' name="stopCmd">停止命令</td>
+                -->
+                <td class='listTableTitle' name="startupTime">启动时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                </tr>
+            </tbody>
+        </Table>
+
+        <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a id='deploy'  onclick="deploy()" >启动</a>
+                    <a id='deploy'  onclick="deploy()" >停止</a>
+                    <a id='deploy'  onclick="deploy()" >强制停止</a>
+                    <a id='deploy'  onclick="deploy()" >重启</a>
+                    <a id='deploy'  onclick="deploy()" >发布</a>
+                </TD>
+            </TR>
+        </TABLE>
+    </body>
+    
+    
+    <script>
+        var asTable = null;
+
+        var mduService = ServiceFactory.getService('mdu.MduService');
+        Utils.run(function () {
+            // 表格的相关配置
+            var asTableConfig = new TableConfig('mdu.AppServerInstance');
+
+            // 表的配置参数
+            var asParams = {methodName : 'listAllAppServerInstances'};
+            
+            asTableConfig.createColumnsFromTemplate($('#asInstances'));
+            // 表的修饰函数
+            var tu = new TableUtils('asInstances', asTableConfig, 'mdu.MduService', 
+            asParams);
+            asTable = tu.autoLoad();
+        });
+
+        /**
+         * 创建一个跳转到指定页面的页面参数
+         */
+        function createAsUrl (page) {
+            var asInstance = getAsTemplate();
+            if (asInstance == null) {
+                return null;
+            }
+            var url = ParameterHelper.append(page, {'asInstance' : asInstance});
+            return url;
+        } 
+
+        /**
+         * 跳转到发布页面
+         */
+        function deploy() {
+            // type 对应ServerType(枚举类型)中的缩写
+            var url = ParameterHelper.append("server_selector.html", {'type' : 'AS',
+                'fromPage' : "app_server_deployer.html"});
+            document.location.href = url;
+        }
+
+        /**
+         * 返回当前选中的应用服务器模板
+         */
+        function getAsTemplate() {
+            var asTemplate = asTable.getSelectedRow();
+            if (asTemplate == null) {
+                MessageBox.alert('请选择一个需要处理的服务器模板。');
+            }
+            return asTemplate;
+        }
+
+    </script>
+</html>

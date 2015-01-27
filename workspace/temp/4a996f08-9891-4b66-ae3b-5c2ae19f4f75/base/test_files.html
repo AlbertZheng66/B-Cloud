@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>文件上传下载的演示</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+</head>
+<body>
+<h1 style="text-align: center;">测试上传文件(s)的情况</h1>
+<div> 注意：因为文件在上传后是使用 System.out 输出的，所以请上传文本文件。
+如果上传了二进制文件可能会导致不确定的结果。</div>
+<form id="queryPanel" method="post" >
+        用户编码: <input name="userId" value="007" id="userId"> &nbsp; &nbsp;
+        <br/>
+        <br/>
+        
+		上传文件1: &nbsp; <input name="file1" id="file1"> &nbsp; &nbsp;
+        <br/>
+        <br/>
+		
+        上传文件2: &nbsp; <input name="file2" id="file2"> &nbsp; &nbsp;
+        <br/>
+        <br/>
+        <a href="#" onclick="submitFiles()">上传</a> &nbsp;
+</form>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+		
+
+<h1 style="text-align: center;">下载文件</h1>
+        
+<a href="#" onclick="downloadFile()">下载文件（未知类型）</a> &nbsp;
+
+
+<a href="#" onclick="downloadExcelFile()">下载 Excel</a> &nbsp;
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+		
+
+<h1 style="text-align: center;">显示图片</h1>
+
+<img id='pictureId' src="" alt="Angry" />
+        
+<a href="#" onclick="showPicture()">显示</a> &nbsp;
+
+
+
+</body>
+<script>
+
+// 下载服务
+var service = ServiceFactory.getService('service.DownloadService');
+
+/*  修饰文件上传对象 */   
+var file1 = new UploadedFile ('#file1');
+var file2 = new UploadedFile ('#file2');	
+function submitFiles() {
+    Utils.run(function() {
+	    var userId  = $('#userId').val();
+        service.onComplete = function (retValue) {  // 业务处理之后
+	        retValue ? alert('文件上传成功!') : alert('文件上传失败!');
+    	}; 
+	
+	    service.uploadFiles(userId, file1, file2);
+    });
+}
+
+/**
+  * 下载
+  */
+function downloadFile() {
+	Utils.run(function() {
+	    var userId = $('#userId').val();
+	    service.downloadTxt(userId);
+    });
+}
+
+function downloadExcelFile() {
+	Utils.run(function() {
+	    service.downloadExcel();
+		// alert('downloadExcelFile end............');
+    });
+}
+
+/**
+  * 显示图片
+  */
+function showPicture() {
+	var serviceClassName = 'service.DownloadService';
+	var methodName = 'showPicture';
+	var userId = $('#userId').val();
+	var params = [userId];
+	// 此函数只是构建了一个URL，因此并不知道服务端发生的错误
+    ImageHelper.showPicture('pictureId', serviceClassName,
+                        		methodName, params);
+}
+
+
+</script>
+</html>

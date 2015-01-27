@@ -1,0 +1,13 @@
+[t47]
+FileName1=t47.htm
+URL1=http://www.bc_demo1.com:4900/base/test_bind.html
+Total=1
+RequestHeaderFile=t47_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t47_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_47.xml
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=0

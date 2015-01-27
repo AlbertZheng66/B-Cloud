@@ -1,0 +1,13 @@
+[t7]
+FileName1=t7_boot.html
+URL1=http://www.bc_demo1.com:4900/js/boot.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_7.xml
+RequestHeaderFile=t7_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t7_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,13 @@
+[t4]
+FileName1=t4.htm
+URL1=http://www.bc_demo1.com:4900/nav.html
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_4.xml
+RequestHeaderFile=t4_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t4_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

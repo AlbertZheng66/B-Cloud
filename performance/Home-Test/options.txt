@@ -1,0 +1,8 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Program Files\HP\LoadRunner\include
+-eE:\work\xthinker\B-Cloud\performance\Home-Test\logfile.log
+E:\work\xthinker\B-Cloud\performance\Home-Test\combined_bw6jB6b7hUad1NTqKHqf3w==0.c
+E:\work\xthinker\B-Cloud\performance\Home-Test\pre_cci.c

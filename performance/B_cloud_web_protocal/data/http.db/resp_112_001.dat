@@ -1,0 +1,4 @@
+153
+{"__className":"com.xt.proxy.event.Response","refParams":["city"],"returnValue":{"__className":"com.xt.core.utils.dic.DefaultDictionary","name":"city","items":[{"index":0,"title":"北京","validate":true,"value":"010"},{"index":1,"title":"天津","validate":true,"value":"022"},{"index":2,"title":"上海","validate":true,"value":"021"}]}}
+0
+

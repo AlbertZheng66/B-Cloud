@@ -1,0 +1,10 @@
+GET /base/test_bind.html HTTP/1.1
+Referer: http://www.bc_demo1.com:4900/main.html
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-cn
+Accept: */*
+Connection: Keep-Alive
+Host: www.bc_demo1.com:4900
+Cookie: JSESSIONID=D8C44CC0BF141803119D0006C01D3D61
+

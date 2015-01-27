@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>从已有表结构开始构建表</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+<script>
+// 加载CSS 文件
+Loader.importCSS();
+
+// 加载JS 文件
+Loader.importJS();
+
+</script>
+<body>
+<h1 style="text-align: center;">使用表格的原有格式信息生成表</h1>
+
+<br>
+<table class='tableRegion' id="table1" >
+<tr   >
+<td style="width:200px;" name="string1" > 字符串</td>
+<td style="width:200px;" name="date1">date1</td>
+<td  name="boolean1">boolean1</td>
+<td  name="lookup1">lookup1</td>
+<td  name="int1">int1</td>
+</tr>
+
+<tbody>
+
+<tr id='rowTemplate'>
+<td style="text-align: center; background-color: rgb(125, 125, 0);" ></td>
+<td style="text-align: center; background-color: rgb(125, 125, 0);" ></td>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+</tr>
+<tr>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+
+</tr>
+<tr>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+<td  ></td>
+
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<script>
+
+Utils.run(function() {
+    // 从服务器端读取数据
+    var service = ServiceFactory.getService('service.TableService');
+    var data = service.list();
+
+    // 修饰表格
+    var table = new GTable('table1');
+    var config = new TableConfig('po.RowBean');
+    config.createColumnsFromTemplate($('#table1'));
+    table.decorate(config, data);
+});
+
+</script>
+</body></html>

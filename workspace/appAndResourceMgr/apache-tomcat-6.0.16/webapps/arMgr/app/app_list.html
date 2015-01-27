@@ -1,0 +1,210 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用列表</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+	
+</script>
+
+</head>
+
+<body>
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">已注册应用列表</TD>
+	    </TR>
+	</TABLE>
+	
+    <!-- table id="apps" border="0" class='listTable' ></table -->
+		<table class='listTable' id="apps" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="id" > 应用编码</td>
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="description">描述信息</td>
+                <td class='listTableTitle' name="state">状态</td>
+                <td class='listTableTitle' name="contextPath">上下文路径</td>
+                <td class='listTableTitle' name="insertTime">注册时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+		
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a id='register'  href="app_register.html" value=''>注册</a>
+                <a id='update'  onclick="updateApp()" href="#">修改参数</a>
+                <a id='versions'  onclick="listVersions()" href="#">版本</a>
+                <a id='hosts'     onclick="listHosts()" href="#">域名管理</a>
+                <a id='instances' onclick="listInstances()" href="#">实例</a>
+                <!-- a id='restart'   onclick="restart()" href="#">重新启动</a -->
+                <a id='pause'     onclick="pause()" href="#">暂停</a>
+                <a id='restart'     onclick="restart()" href="#">恢复运行</a>
+                <a id='stop'      onclick="stop()" href="#">停止</a>
+                <a id='remove'    onclick="remove()" href="#">删除</a>
+			</TD>
+		</TR>
+	</TABLE>
+</body>
+<script>
+
+// 表格的相关配置
+var tableConfig = new TableConfig('app.App');
+
+// 表的配置参数
+var params = {methodName : 'list'};
+
+var appService = ServiceFactory.getService('app.AppService');
+
+var table = null;
+Utils.run(function () {
+    tableConfig.createColumnsFromTemplate($('#apps'));
+    // 表的修饰函数
+    tu = new TableUtils('apps', tableConfig, 'app.AppService', 
+           params);
+    table = tu.autoLoad();
+});
+
+/**
+  * 创建一个跳转到指定页面的页面参数
+  */
+function createUrl (page) {
+    var app = table.getSelectedRow();
+	if (app == null) {
+	    MessageBox.alert('请选择一个应用。');
+	    return null;
+	}
+	var url = ParameterHelper.append(page, {'app' : app});
+	return url;
+} 
+
+/**
+ * 更新应用的基本信息
+ */
+function updateApp() {
+    Utils.run(function() {
+	var url = createUrl('app_editor.html');
+	if (url != null) {
+	    document.location.href = url;
+	}
+    });
+}
+
+/**
+   * 跳转到发布页面
+   */
+function deploy() {
+    Utils.run(function() {
+	    var url = createUrl('deploy.html');
+	    if (url != null) {
+	        document.location.href = url;
+	    }
+	});
+}
+
+/**
+  * 显示应用的所有实例
+  */
+function listHosts() {
+    Utils.run(function() {
+        var url = createUrl('hosts.html');
+		if (url != null) {
+	        document.location.href = url;
+	    }
+	});
+}
+
+/**
+  * 显示应用的所有实例
+  */
+function listInstances() {
+    Utils.run(function() {
+        var url = createUrl('app_instance_list.html');
+		if (url != null) {
+	        document.location.href = url;
+	    }
+	});
+}
+
+/**
+  * 显示应用的所有版本
+  */
+function listVersions() {
+    Utils.run(function() {
+        var url = createUrl('versions.html');
+		if (url != null) {
+	        document.location.href = url;
+	    }
+	});
+}
+
+/**
+  * 返回当前选中的应用
+  */
+function getApp() {
+    var app = table.getSelectedRow();
+	if (app == null) {
+	    MessageBox.alert('请选择一个需要处理的应用。');
+	}
+	return app;
+}
+
+/**
+  * 暂停选中的应用
+  */
+function pause() {
+    var app = getApp();
+	if (app != null) {
+        appService.pauseApp(app);
+	}
+}
+
+/**
+  * 重新启动选中的应用
+  */
+function restart() {
+    var app = getApp();
+	if (app != null) {
+        appService.restartApp(app);
+	}
+}
+
+/**
+  * 停止选中的应用
+  */
+function stop() {
+    var app = getApp();
+	if (app != null) {
+        appService.stopApp(app);
+	}
+}
+
+/**
+  * 移除选中的应用（停止并删除所有应用相关的信息）
+  */
+function remove() {
+    var app = getApp();
+	if (app != null) {
+        appService.removeApp(app);
+		table.deleteRow(table.getSelectedRowNum());
+	}
+}
+</script>
+</html>

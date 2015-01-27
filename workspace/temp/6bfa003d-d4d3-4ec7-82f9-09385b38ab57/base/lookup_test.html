@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>查找.......</title>
+
+<!-- 启动加载器  -->
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+
+<table id="table1" border="1" cellpadding="0" cellspacing="0">
+</table>
+
+</body>
+<script>
+
+
+/**
+  * 查找对话框的初始化操作
+  */
+var lookupTable = null
+
+function lookupInit() {
+    // Utils.run(function() {  // 对话框暂时不能使用此方法
+        // 从服务器端读取数据
+        var service = ServiceFactory.getService('service.UserMgrService');
+        var data = service.list();
+
+        // 修饰表格
+        lookupTable = new GTable('table1');
+        var config = new TableConfig('po.UserInfo');    
+        lookupTable.decorate(config, data);
+	//  });
+}
+
+function getReturnValue() {
+    return lookupTable.getSelectedRow();
+}
+</script>
+</html>

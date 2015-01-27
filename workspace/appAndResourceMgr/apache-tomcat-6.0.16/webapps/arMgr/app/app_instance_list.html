@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理-运行实例</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+    <script>    
+        // 加载JS 文件
+        Loader.importJS();
+
+		// 加载CSS 文件
+        Loader.importCSS();
+	
+    </script>
+</head>
+
+<body>
+<form id="appForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">应用信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd">ID:</td>
+				<td class="modifyTd"><input name="id" width="100%"
+                            			readonly='true' /></td>
+				<td class="modifyTd">名称:</td>
+				<td class="modifyTd"><input name="name" readonly='true' /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd">描述信息:</td>
+				<td colspan="3"><input name="description" readonly='true' /></td>
+			</tr>
+	</table>
+</form>
+        
+	<!-- table id="appVersions" border="1" ></table -->
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">应用版本列表</TD>
+	    </TR>
+	</TABLE>
+	
+	<!-- table id="appVersions" border="1" ></table -->
+	<table class='listTable' id="appVersions" width="100%" >
+        <tr class='listTableTitle'  >
+            <td class='listTableTitle' name="version" > 版本号</td>
+            <td class='listTableTitle' name="code">开发代码</td>
+            <!-- td class='listTableTitle' name="valid">是否生效</td -->
+            <td class='listTableTitle' name="description">描述信息</td>
+            <td class='listTableTitle' name="state">状态</td>
+            <td class='listTableTitle' name="contextPath">上下文路径</td>
+            <td class='listTableTitle' name="fileSize">文件大小</td>
+            <td class='listTableTitle' name="insertTime">注册时间</td>
+        </tr>
+		<tbody>
+            <tr id='rowTemplate'>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+            </tr>
+        </tbody>
+    </table>
+	<br />
+	
+	<table class='listTable' width="100%" >
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="7">实例列表</TD>
+	    </TR>
+    </table>
+	<table class='listTable' id="appInstances" width="100%" >
+	    <tr class='listTableTitle'  >
+            <td class='listTableTitle' name="ip" > 服务器地址</td>
+            <td class='listTableTitle' name="port">占用端口号</td>
+            <td class='listTableTitle' name="contextPath">上下文路径</td>
+            <td class='listTableTitle' name="valid">是否生效</td>
+            <td class='listTableTitle' name="startupTime">启动时间</td>
+            <td class='listTableTitle' name="state">当前状态</td>
+            <td class='listTableTitle' name="shutdownTime">停止时间</td>
+        </tr>
+		<tbody>
+            <tr id='rowTemplate'>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+            </tr>
+        </tbody>
+    </table>
+		
+    <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+	        	<a id='stop'    onclick="stop()" href="#">停止</a>
+		        <a id='restart' onclick="restart()" href="#">重新启动</a>
+		        <a id='redeploy' onclick="redeploy()" href="#">重新分配</a>
+                <a id='cancel'  onclick="" href="app_list.html">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</body>
+<script>
+
+var app           = null;
+var versionTable  = null;
+var instanceTable = null;
+var appService    = ServiceFactory.getService('app.AppService');
+Utils.run(function () {
+    // 解析应用参数
+	var params = ParameterHelper.parse(window.location.href);
+    app = params.app;
+	if (app == null) {
+	    Message.alert('尚未定义当前应用。');
+	    return;
+	}
+	// 数据绑定
+	BindUtils.bind('#appForm',         app);
+	// MessageBox.debug('app=', app);
+
+    // 表格的相关配置
+    var tableConfig = new TableConfig('app.AppVersion');
+	
+    var params = {methodName : 'listVersions', methodParams : [app]};
+
+    // 版本列表（翻页的处理）
+    tableConfig.createColumnsFromTemplate($('#appVersions'));
+    var tu = new TableUtils('appVersions', tableConfig, 'app.AppService', 
+           params);
+    versionTable = tu.autoLoad();
+	versionTable.addRowSelectionListener(new RowSelection());
+	
+	// 实例列表
+	instanceTable = new GTable('appInstances');
+	var instanceTableConfig =  new TableConfig('app.AppInstance');
+    instanceTableConfig.createColumnsFromTemplate($('#appInstances'));
+    instanceTable.decorate(instanceTableConfig, []);
+});
+
+function RowSelection () {	
+	this.onRowSelection = function(event) {
+        var selectedRowIndex = event.rowIndex;
+		if (selectedRowIndex < 0) {
+		   return;
+		}
+		
+        var appVersion = versionTable.getRowAt(selectedRowIndex);
+        var data = appService.listInstances(app, appVersion);
+		instanceTable.reload(data);
+	}
+}
+
+function getInstance() {
+    var instance = instanceTable.getSelectedRow();
+    if (instance == null) {
+	    MessageBox.alert('请选择应用实例。');
+	}
+	return instance;
+}
+
+/**
+  * 停止应用的实例
+  */
+function stop(){
+    var instance = getInstance();
+	if (instance != null) {
+	    appService.stopInstance(instance);
+	}
+}
+
+/**
+  * 重新启动应用的实例
+  */
+function restart(){
+    var instance = getInstance();
+	if (instance != null) {
+	    appService.restartInstance(instance);
+	}
+}
+
+/**
+  * 重新分配的实例
+  */
+function redeploy(){
+    var instance = getInstance();
+	if (instance != null) {
+	    appService.redeployInstance(instance);
+	}
+}
+
+</script>
+</html>

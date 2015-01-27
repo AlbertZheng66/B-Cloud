@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+    <system>
+        <param name="arm.url.ip"     value="192.168.29.252" />
+	    <param name="mdu.backupDir"  value="./temp" />
+	    <param name="ehcache.id"     value="appsCache" />
+        <param name="taskDispatcher.uid"  value="taskDispatcher.127.0.0.1" />
+        <param name="taskDispatcher.publicHosts" type='list'>
+          <data value="b-cloud.com" />
+          <data value="b-cloud0.com" />
+       </param>
+    </system>
+</xt-config>

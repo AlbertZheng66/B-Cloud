@@ -1,0 +1,13 @@
+[t20]
+FileName1=t20_jquery-ui-1.7.2.custom.css
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/jquery-ui-1.7.2.custom.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_20.xml
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>演示--Session(包括分布式 Session)</title>
+
+<!-- 启动加载器  -->
+<script type="text/javascript" src="../js/boot.js"></script>
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+
+<body>
+<h1 style="text-align: center;">Session 演示程序</h1>
+
+<!----------- put  ----------->
+<div name="writing">	
+    请输入一个字符串：<input name="attrValue" value="Hello:" id="attrValue" />
+    <br/><br/>
+	<input type='button' onclick='putAttr()' value='Put' >
+</div>
+<br/><br/>
+<!----------- put  ----------->
+
+<!----------- get  ----------->
+<div name="writing">	
+    读取字符串：<input name="storedValue" value="" id="storedValue" readonly='true' />
+    <br/><br/>
+	<input type='button' onclick='getAttr()' value='Get' >
+	<input type='button' onclick='clearAttr()' value='Clear' >
+</div>
+<!----------- get  ----------->
+
+</body>
+<script>
+var ss = ServiceFactory.getService('service.SessionService');
+function putAttr() {
+    var value = jQuery('#attrValue').val();
+    ss.putAttr(value);
+}
+
+function getAttr() {
+    var value = ss.getAttr();
+	jQuery('#storedValue').val(value);
+}
+
+function clearAttr() {
+	jQuery('#storedValue').val('');
+}
+
+    
+</script>
+</html>

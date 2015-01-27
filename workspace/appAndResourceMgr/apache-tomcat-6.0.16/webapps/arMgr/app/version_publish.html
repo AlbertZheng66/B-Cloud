@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理-版本管理-发布</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+    <script>    
+        // 加载JS 文件
+        Loader.importJS();
+
+		// 加载CSS 文件
+        Loader.importCSS();
+	
+    </script>
+</head>
+
+<body>
+<form id="versionForm">
+	<table width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <tr>
+		    <td class="listPageTitleTd" colspan="4">发布版本</td>
+	    </tr>
+                
+        <tr class="searchTable">
+			<td class="modifyTd">版本号:</td>
+			<td class="modifyTd" ><input name="version" width="100%" readonly /></td>
+			<td class="modifyTd">开发代号:</td>
+			<td class="modifyTd"><input name="code"  readonly='true' /></td>
+		</tr>			
+        <tr class="searchTable">
+			<td class="modifyTd">描述信息:</td>
+			<td class="modifyTd"colspan='3'>
+				<textarea name="description"  readonly='true'></textarea></td>
+		</tr>
+	</table>
+</form>
+<form id="publishInfoForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="80%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="2">发布信息</TD>
+	    </TR>
+        
+        <tr class="searchTable">
+			<td class="modifyTd">最小启动的服务器数量:</td>
+			<td class="modifyTd"><input name="minServers" width="100%" /></td>
+		</tr>
+        <tr class="searchTable">
+			<td class="modifyTd">初始启动的服务器数量:</td>
+			<td class="modifyTd"><input name="initialServers" width="100%" /></td>
+		</tr>
+        <tr class="searchTable">
+			<td class="modifyTd">最大启动的服务器数量:</td>
+                        <td class="modifyTd"><input name="maxServers"  width="100%" /></td>
+		</tr>
+	</table>
+	
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+	            <a onclick="publish()" href="#">确定</a>
+                <a onclick="back()" href="#">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+</body>
+<script>
+
+
+var appService  = ServiceFactory.getService('app.AppService');
+
+// 发布信息
+var publishInfo = {minServers : 1, initialServers : 1, maxServers : 10};
+var app         = null;
+var appVersion  = null;
+
+var deployedFile = null;
+
+Utils.run(function () {
+    // 解析应用参数
+	var params = ParameterHelper.parse(window.location.href);
+	app        = params.app;
+	appVersion = params.appVersion;
+
+	BindUtils.bind('#publishInfoForm', publishInfo);
+	BindUtils.bind('#versionForm',     appVersion);
+
+	
+	if (app == null || appVersion == null) {
+	    MessageBox.showError("应用及其版本均不能为空。");
+	    return;
+	}
+});
+
+function publish() {
+    Utils.run(function() {
+        appService.publishAppVersion(app, appVersion, publishInfo);
+		back();
+	});
+}
+
+function back() {
+    var url = ParameterHelper.append('versions.html',
+        	{'app' : app});
+	document.location.href = url;
+}
+
+</script>
+</html>

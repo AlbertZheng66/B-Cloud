@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>资源列表</title>
+		<script type="text/javascript" src="../js/boot.js"></script>
+		<script type="text/javascript">    
+    		// 加载JS 文件
+    		Loader.importJS();
+			// 加载CSS 文件
+    		Loader.importCSS();	
+		</script>
+    </head>
+    <body>
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">已注册服务器列表</TD>
+	    </TR>
+	</TABLE>		
+	
+	<table class='listTable' id="servers" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="id" > 自定义标识</td>
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="ip">IP 地址</td>
+                <td class='listTableTitle' name="managerPort">管理端口号</td>
+                <td class='listTableTitle' name="jmxRmiPort">JMX 端口号</td>
+                <td class='listTableTitle' name="contextPath">管理上下文</td>
+                <td class='listTableTitle' name="insertTime">启动时间</td>
+                <td class='listTableTitle' name="state">当前状态</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+    
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a id='removeBtn' href="#">删除</a>
+                <a id='pauseBtn' href="#">停用</a>
+                <a id='startBtn' href="#">恢复使用</a>
+                <a  href="resource_mgr.html">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+				             
+    </body>
+	
+<script>
+
+// 删除指定服务器
+function removeServer(table, selectedRow, service) {
+    return service.removeServer(selectedRow);
+}
+	
+// 表格的相关配置
+var tableConfig = new TableConfig('resource.server.ServerInfo');
+
+// 表的配置参数
+var params = {actionsConfig : {remove       : 'removeBtn',
+                               removeAction : removeServer},
+              methodName    : 'listServers'
+			 };
+
+var tu = null;
+Utils.run(function () {
+    // 表的修饰函数
+    tableConfig.createColumnsFromTemplate($('#servers'));
+    tu = new TableUtils('servers', tableConfig, 'resource.ResourceService', 
+           params);
+    tu.autoLoad();
+});
+
+
+</script>
+</html>

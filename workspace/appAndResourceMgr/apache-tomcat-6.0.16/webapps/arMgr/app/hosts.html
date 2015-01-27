@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理-域名信息</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+    <script>
+    
+        // 加载JS 文件
+        Loader.importJS();
+		// 加载CSS 文件
+        Loader.importCSS();
+	
+    </script>
+</head>
+
+<body>
+<form id="appForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">应用信息</TD>
+	    </TR>
+        <tr  class="searchTable">
+			<td class="modifyTd">应用编码:</td>
+			<td class="modifyTd"><input name="id" width="100%" readonly='true' /></td>
+			<td class="modifyTd">应用名称:</td>
+			<td class="modifyTd"><input name="name" readonly='true' /></td>
+		</tr>
+	</table>
+</form>
+
+        
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">域名列表</TD>
+	    </TR>
+	</TABLE>
+	<table class='listTable' id="appHosts" width="100%" >
+        <tr class='listTableTitle'  >
+            <td class='listTableTitle' name="host" > 域名</td>
+            <!-- td class='listTableTitle' name="valid">是否生效</td -->
+        </tr>
+		<tbody>
+            <tr id='rowTemplate'>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+            </tr>
+        </tbody>
+    </table>
+	
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+	        	<a id='add' onclick="add()" href="#">增加</a>
+		        <a id='remove' onclick="remove()" href="#" >修改</a>
+        		<a id='update' onclick="update()" href="#">删除</a>
+                <a id='cancel'   onclick="" href="app_list.html">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</body>
+<script>
+
+
+var appService = ServiceFactory.getService('app.AppService');
+var hostsTable = null;
+var app   = null;
+
+
+Utils.run(function () {
+    // 解析应用参数
+    app = ParameterHelper.parse(window.location.href).app;
+	
+	if (app == null) {
+	    MessageBox.showError("应用参数不能为空。");
+	    return;
+	}
+	
+	// 数据绑定
+	BindUtils.bind('#appForm', app);
+
+    // 表格的相关配置
+    var tableConfig = new TableConfig('app.AppHost');
+    tableConfig.createColumnsFromTemplate($('#appHosts'));
+	
+    var params = {methodName : 'list', methodParams : [app]};
+
+    // 表的修饰函数
+    var tu = new TableUtils('appHosts', tableConfig, 'app.AppHostService', 
+           params);
+    versionsTable = tu.autoLoad();
+});
+
+/**
+  * 删除指定版本。
+  */
+function remove() {
+    var appVersion = getAppVersion();
+	if (appVersion != null) {
+	    appService.removeAppVersion(app, appVersion);
+		
+	}
+}
+
+</script>
+</html>

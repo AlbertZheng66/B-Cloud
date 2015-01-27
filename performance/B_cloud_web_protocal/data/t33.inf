@@ -1,0 +1,13 @@
+[t33]
+FileName1=t33_ui-bg_gloss-wave_35_f6a828_500x100.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_33.xml
+RequestHeaderFile=t33_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t33_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

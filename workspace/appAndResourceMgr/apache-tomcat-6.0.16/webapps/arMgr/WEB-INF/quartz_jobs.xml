@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quartz xmlns="http://www.quartz-scheduler.org/JobSchedulingData"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.quartz-scheduler.org/JobSchedulingData
+  http://www.quartz-scheduler.org/xml/job_scheduling_data_1_5.xsd"
+  version="1.5">
+  <job>
+    <job-detail>
+      <name>Inspector</name>
+      <group>AutoInspector</group>
+      <description>自动巡检程序，用于自动校正服务器状态。</description>
+      <job-class>com.xt.bcloud.bg.SimpleInspector</job-class>
+      <volatility>false</volatility>
+      <durability>false</durability>
+      <recover>false</recover>
+    </job-detail>
+    <trigger>
+      <cron>
+        <name>inspectorTrigger</name>
+        <group>inspectorTrigger</group>
+        <description>每 15 秒运行一次巡检程序。</description>
+        <job-name>Inspector</job-name>
+        <job-group>AutoInspector</job-group>
+        <!--
+        <start-time>2003-12-17T14:15:00</start-time>  
+        <end-time>2013-12-17T14:15:00</end-time>  
+-->
+        <cron-expression>0/30 * * ? * *</cron-expression>
+        <!-- every 15 seconds... -->
+      </cron>
+    </trigger>
+  </job>
+</quartz>

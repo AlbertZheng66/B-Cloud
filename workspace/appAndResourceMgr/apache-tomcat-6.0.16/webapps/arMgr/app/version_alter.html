@@ -1,0 +1,131 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理--版本管理--调整容量</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>	
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+</script>
+
+</head>
+<body>
+<form id="oldPublishInfo">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">当前发布信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd">最小服务器数量:</td>
+				<td class="modifyTd"><input name="minServers"   readonly='true'/></td>
+				<td class="modifyTd">初始启动的服务器数量:</td>
+				<td class="modifyTd"><input name="initialServers" readonly='true'/></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd">最大启动的服务器数量:</td>
+				<td class="modifyTd"><input name="maxServers" readonly='true' /></td>
+				<td class="modifyTd">是否自动调整服务器数量:</td>
+				<td class="modifyTd"><input type='checkbox' name="autoScale" readonly='true' /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd">当前实例数量:</td>
+				<td class="modifyTd"><input id="instanceCount" readonly='true' /></td>
+			</tr>
+	</table>
+</form>
+
+<form id="newPublishInfo">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="30%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">调整后的发布信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd" >最小服务器数量:</td>
+				<td class="modifyTd" ><input name="minServers"  /></td>
+				<td class="modifyTd" >初始启动的服务器数量:</td>
+				<td class="modifyTd" ><input name="initialServers" /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd" >最大启动的服务器数量:</td>
+				<td class="modifyTd" ><input name="maxServers" /></td>
+				<td class="modifyTd" >是否自动调整服务器数量:</td>
+				<td class="modifyTd" ><input name="autoScale" type='checkbox' /></td>
+			</tr>
+		</tbody>
+	</table>
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+            	<a onclick="alter()" href="#">确定</a>
+                <a onclick="back()" href="#">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+</body>
+<script>
+
+var appService  = ServiceFactory.getService('app.AppService');
+var app         = null;
+var appVersion  = null;
+var publishInfo = {};
+
+Utils.run(function () {
+    // 解析应用参数
+	var params = ParameterHelper.parse(window.location.href);
+	app        = params.app;
+    appVersion = params.appVersion;
+	
+	if (appVersion == null) {
+	    MessageBox.showError("应用及其版本参数均不能为空。");
+	    return;
+	}
+	
+	var oldPublishInfo = appService.readPublishInfo(appVersion);
+	Utils.valueCopy(oldPublishInfo, publishInfo);  // 复制原有的值
+	
+	// 数据绑定
+	BindUtils.bind('#oldPublishInfo', oldPublishInfo);
+	BindUtils.bind('#newPublishInfo', publishInfo);
+	
+	// 读取当前的实例
+	var instanceCount = appService.readInstanceCount(appVersion);
+	jQuery('#instanceCount').val(instanceCount);
+
+});
+
+/**
+  * 调整版本的容量
+  */
+function alter(){
+    if (app == null || appVersion == null) {
+	    MessageBox.alert('未选择当前应用及版本。');
+	} else {
+	    appService.alterCapacity(app, appVersion, publishInfo);
+		back();
+	}
+}
+
+function back() {
+    var url = ParameterHelper.append('versions.html',
+        	{'app' : app});
+	document.location.href = url;
+}
+
+
+</script>
+</html>

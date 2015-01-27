@@ -1,0 +1,800 @@
+2012-4-28 8:00:11 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 8:00:12 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 8:00:12 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 2241 ms
+2012-4-28 8:00:12 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 8:00:12 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 8:00:12 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 8:00:19 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 8:00:19 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 8:00:19 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/75  config=null
+2012-4-28 8:00:19 org.apache.catalina.startup.Catalina start
+信息: Server startup in 7462 ms
+2012-4-28 9:26:28 org.apache.coyote.http11.Http11Protocol pause
+信息: Pausing Coyote HTTP/1.1 on http-58080
+2012-4-28 9:26:29 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2012-4-28 9:26:31 org.apache.coyote.http11.Http11Protocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-58080
+2012-4-28 9:26:39 org.apache.catalina.loader.WebappClassLoader loadClass
+信息: Illegal access: this web application instance has been stopped already.  Could not load java.io.LineNumberReader.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1246)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1206)
+	at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:78)
+	at org.apache.log4j.spi.LoggingEvent.getThrowableStrRep(LoggingEvent.java:407)
+	at org.apache.log4j.WriterAppender.subAppend(WriterAppender.java:305)
+	at org.apache.log4j.RollingFileAppender.subAppend(RollingFileAppender.java:263)
+	at org.apache.log4j.WriterAppender.append(WriterAppender.java:160)
+	at org.apache.log4j.AppenderSkeleton.doAppend(AppenderSkeleton.java:251)
+	at org.apache.log4j.helpers.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:66)
+	at org.apache.log4j.Category.callAppenders(Category.java:206)
+	at org.apache.log4j.Category.forcedLog(Category.java:391)
+	at org.apache.log4j.Category.log(Category.java:856)
+	at org.apache.commons.logging.impl.Log4JLogger.error(Log4JLogger.java:251)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:429)
+2012-4-28 9:26:56 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 9:26:57 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 9:26:57 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1416 ms
+2012-4-28 9:26:57 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 9:26:57 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 9:26:57 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 9:27:03 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 9:27:03 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 9:27:03 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/129  config=null
+2012-4-28 9:27:03 org.apache.catalina.startup.Catalina start
+信息: Server startup in 6088 ms
+2012-4-28 9:32:39 org.apache.catalina.startup.Catalina stopServer
+严重: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:421)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:337)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+2012-4-28 9:32:41 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 9:32:41 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 9:32:41 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1034 ms
+2012-4-28 9:32:41 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 9:32:41 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 9:32:41 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 9:32:45 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 9:32:45 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 9:32:45 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/50  config=null
+2012-4-28 9:32:45 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3704 ms
+2012-4-28 10:43:51 org.apache.coyote.http11.Http11Protocol pause
+信息: Pausing Coyote HTTP/1.1 on http-58080
+2012-4-28 10:43:52 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2012-4-28 10:43:53 org.apache.coyote.http11.Http11Protocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-58080
+2012-4-28 10:43:54 org.apache.catalina.loader.WebappClassLoader loadClass
+信息: Illegal access: this web application instance has been stopped already.  Could not load java.io.LineNumberReader.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1246)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1206)
+	at org.apache.log4j.spi.ThrowableInformation.getThrowableStrRep(ThrowableInformation.java:78)
+	at org.apache.log4j.spi.LoggingEvent.getThrowableStrRep(LoggingEvent.java:407)
+	at org.apache.log4j.WriterAppender.subAppend(WriterAppender.java:305)
+	at org.apache.log4j.RollingFileAppender.subAppend(RollingFileAppender.java:263)
+	at org.apache.log4j.WriterAppender.append(WriterAppender.java:160)
+	at org.apache.log4j.AppenderSkeleton.doAppend(AppenderSkeleton.java:251)
+	at org.apache.log4j.helpers.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:66)
+	at org.apache.log4j.Category.callAppenders(Category.java:206)
+	at org.apache.log4j.Category.forcedLog(Category.java:391)
+	at org.apache.log4j.Category.log(Category.java:856)
+	at org.apache.commons.logging.impl.Log4JLogger.error(Log4JLogger.java:251)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:429)
+2012-4-28 11:28:37 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 11:28:38 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 11:28:38 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1489 ms
+2012-4-28 11:28:38 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 11:28:38 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 11:28:38 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 11:28:39 org.apache.catalina.session.StandardManager doLoad
+严重: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 11:28:39 org.apache.catalina.session.StandardManager start
+严重: Exception loading sessions from persistent storage
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 11:28:44 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 11:28:44 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 11:28:44 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/86  config=null
+2012-4-28 11:28:44 org.apache.catalina.startup.Catalina start
+信息: Server startup in 6479 ms
+2012-4-28 12:48:58 org.apache.coyote.http11.Http11Protocol pause
+信息: Pausing Coyote HTTP/1.1 on http-58080
+2012-4-28 12:48:59 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2012-4-28 12:48:59 org.apache.catalina.core.StandardWrapper unload
+信息: Waiting for 1 instance(s) to be deallocated
+2012-4-28 12:49:00 org.apache.catalina.core.StandardWrapper unload
+信息: Waiting for 1 instance(s) to be deallocated
+2012-4-28 12:49:01 org.apache.catalina.core.StandardWrapper unload
+信息: Waiting for 1 instance(s) to be deallocated
+2012-4-28 12:49:02 org.apache.coyote.http11.Http11Protocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-58080
+2012-4-28 12:49:17 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 12:49:17 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 12:49:17 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1451 ms
+2012-4-28 12:49:18 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 12:49:18 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 12:49:18 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 12:49:19 org.apache.catalina.session.StandardManager doLoad
+严重: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 12:49:19 org.apache.catalina.session.StandardManager start
+严重: Exception loading sessions from persistent storage
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 12:49:22 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 12:49:23 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 12:49:23 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/59  config=null
+2012-4-28 12:49:23 org.apache.catalina.startup.Catalina start
+信息: Server startup in 5150 ms
+2012-4-28 13:02:26 org.apache.coyote.http11.Http11Protocol pause
+信息: Pausing Coyote HTTP/1.1 on http-58080
+2012-4-28 13:02:27 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2012-4-28 13:02:27 org.apache.coyote.http11.Http11Protocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-58080
+2012-4-28 13:02:43 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 13:02:44 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 13:02:44 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 962 ms
+2012-4-28 13:02:44 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 13:02:44 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 13:02:44 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 13:02:44 org.apache.catalina.session.StandardManager doLoad
+严重: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 13:02:44 org.apache.catalina.session.StandardManager start
+严重: Exception loading sessions from persistent storage
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 13:02:47 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 13:02:47 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 13:02:47 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/65  config=null
+2012-4-28 13:02:47 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3937 ms
+2012-4-28 13:11:56 org.apache.coyote.http11.Http11Protocol pause
+信息: Pausing Coyote HTTP/1.1 on http-58080
+2012-4-28 13:11:57 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2012-4-28 13:11:57 org.apache.coyote.http11.Http11Protocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-58080
+2012-4-28 13:12:12 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 13:12:12 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 13:12:12 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 951 ms
+2012-4-28 13:12:12 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 13:12:12 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 13:12:12 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 13:12:13 org.apache.catalina.session.StandardManager doLoad
+严重: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 13:12:13 org.apache.catalina.session.StandardManager start
+严重: Exception loading sessions from persistent storage
+java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1333)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1947)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1871)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1753)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1329)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:351)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1439)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:942)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:637)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4271)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:525)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:924)
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:887)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:492)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1147)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:311)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:719)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:443)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:516)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:578)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:288)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.io.NotSerializableException: org.apache.catalina.session.StandardSessionFacade
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1156)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1474)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1392)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1150)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:326)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1515)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:959)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:517)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:463)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:667)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4512)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1189)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1160)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:313)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:448)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:584)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:628)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:603)
+	... 6 more
+2012-4-28 13:12:15 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 13:12:16 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 13:12:16 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/48  config=null
+2012-4-28 13:12:16 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3879 ms
+2012-4-28 13:16:33 org.apache.catalina.startup.Catalina stopServer
+严重: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:421)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:337)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+2012-4-28 15:22:52 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 15:22:52 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 15:22:52 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1001 ms
+2012-4-28 15:22:52 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 15:22:52 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 15:22:52 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 15:22:56 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 15:22:56 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 15:22:56 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/55  config=null
+2012-4-28 15:22:56 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3916 ms
+2012-4-28 19:12:03 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.6.0_20\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Calibre2\;D:\Program Files\TortoiseSVN\bin;D:\Program Files\QuickTime\QTSystem\;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin
+2012-4-28 19:12:04 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+2012-4-28 19:12:04 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 2861 ms
+2012-4-28 19:12:04 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+2012-4-28 19:12:04 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2012-4-28 19:12:04 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+2012-4-28 19:12:15 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+2012-4-28 19:12:15 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+2012-4-28 19:12:15 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/94  config=null
+2012-4-28 19:12:15 org.apache.catalina.startup.Catalina start
+信息: Server startup in 11608 ms

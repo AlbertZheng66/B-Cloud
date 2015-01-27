@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>主子表演示程序</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<h3 style="">这个使用用来展示管理员编辑图书的过程。这个过程展示了如下几个关于表格的操作：过滤、分页、
+上传图片、编辑信息、校验等等。</h3>
+<br />
+
+<div id="queryPanel">
+    <form>
+        用户编码: <input name="user_Id" value="" filterType='CONTAINS'> &nbsp; &nbsp;
+        用户名称: <input name="name" value="" filterType='STARTS_WITH'> &nbsp; &nbsp;
+        学历: <select name="degree" id='degree' filterType='EQUALS' > </select>&nbsp;&nbsp;
+        <a href="#" id='queryBtn'>&#26597;&#35810;</a> &nbsp;<input type="reset">
+	</form>
+</div>
+
+<br/>
+
+<table class="tableRegion" id="userTable">
+</table>
+
+<br/>
+
+<a href="#"  id="firstPage" >|&lt;</a>&nbsp;
+<a href="#"  id="prevPage" >&lt;</a>&nbsp;
+<a href="#"  id="nextPage" >&gt;</a>&nbsp;
+<a href="#"  id="lastPage" >&gt;|</a>
+
+
+<br />
+<br />
+<br />
+
+
+<div id="details">
+    <ul>
+        <li><a href="#orders"><span>地址列表</span></a></li>
+        <li><a href="#addresses"><span>订单列表</span></a></li>
+    </ul>
+	 
+	 
+    <!--  地址列表  -->
+    <div id='addresses' >
+        <table id="addressesTable" class="tableRegion">
+        </table>
+    </div>    
+    
+	<!--  订单列表  -->
+    <div id='orders'>
+        <div id="queryOrdersPanel">
+            订单号: <input name="order_Number" value="" filterType='CONTAINS'> &nbsp; &nbsp;      <a href="#" id='queryOrdersBtn'>&#26597;&#35810;</a> 
+	    
+        </div>
+    
+	    <table  id="ordersTable" class="tableRegion">
+        </table>
+
+        <br/>
+        <a href="#"  id="orders_firstPage" >|&lt;</a>&nbsp;
+        <a href="#"  id="orders_prevPage" >&lt;</a>&nbsp;
+        <a href="#"  id="orders_nextPage" >&gt;</a>&nbsp;
+        <a href="#"  id="orders_lastPage" >&gt;|</a>
+    </div>
+</div>
+
+
+
+</body>
+<script>
+
+Utils.run(function() {
+    // 初始化页签
+    var $tabs = $('#details').tabs();
+	DicUtils.decorateComboBox("degree", "degree_type", true, '', "全部");
+
+    // 用户表的配置参数
+    var params = {query : {dom  : 'queryPanel', button : 'queryBtn'}, 
+                  pagination    : {}, 
+		    	  actionsConfig : {remove : 'romoveBtn',
+			                       update : 'updateBtn', editForm : 'user_editor.html'                                  }
+				};
+
+    // 用户表的修饰函数
+    var tableUtils = new TableUtils('userTable', new TableConfig('po.UserInfo'),
+                                	'service.UserMgrService', params);
+    var userTable = tableUtils.autoLoad();
+	
+	var methodParams = [''];  // 装载地址数据和订单数据方法的参数 
+	// 构建一个主子表结构
+	var mdTable = new MasterDetailTable(userTable, function (propertyName, 
+	                                                         selectedUser) {
+	    var userService = ServiceFactory.getService('service.UserMgrService');	    
+		if (propertyName == 'addresses') {
+		    return userService.listAddresses(selectedUser.oid);
+		} else {
+		    return userService.listOrders(selectedUser.oid);
+		}
+	});
+	userTable.addRowSelectionListener(new RowSelection(methodParams, userTable));
+
+    // 地址表
+    var addressTable = new GTable('addressesTable');
+    addressTable.decorate(new TableConfig('po.Address'), []);
+	mdTable.addChild('addresses', addressTable);
+
+	
+    // 订单表
+	var orderParams = {
+	    query : {dom  : 'queryOrdersPanel', button : 'queryOrdersBtn'}, 
+		methodName:'listOrders', 
+        pagination    : {}, 
+		methodParams : methodParams
+	};
+    var orderUtils = new TableUtils('ordersTable',
+                              	    new TableConfig('po.DatOrder'),     
+	                                'service.UserMgrService',
+                                    orderParams);
+    var ordersTable = orderUtils.autoLoad();
+	mdTable.addChild('orders', ordersTable);
+	
+});
+
+function RowSelection (params, table) {
+    this.params = params;
+	this.table  = table;
+	
+	this.onRowSelection = function(event) {
+        var selectedRowIndex = event.rowIndex;
+		if (selectedRowIndex < 0) {
+		    this.params[0] = '';
+		}
+		var selectedUser = this.table.getRowAt(selectedRowIndex);
+        this.params[0]   = selectedUser.oid;
+	}
+}
+
+</script>
+</html>

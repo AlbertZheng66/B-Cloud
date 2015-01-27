@@ -1,0 +1,69 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.11|$
+
+[PLUGINS]
+nppdf32.dll|$
+C:\Program Files\Adobe\Reader 10.0\Reader\browser\nppdf32.dll|$
+10.1.3.23|$
+1333518836000|1|1|$
+Adobe PDF Plug-In For Firefox and Netscape 10.1.3|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npjpi170_03.dll|$
+D:\Program Files\Java\jre7\bin\npjpi170_03.dll|$
+10.3.0.5|$
+1332830081698|1|1|$
+Classic Java Plug-in 10.3.0 for Netscape and Mozilla|$
+Java(TM) Platform SE 7 U3|$
+34
+0|application/x-java-applet;jpi-version=1.7.0_03|Java Applet||$
+1|application/x-java-bean;jpi-version=1.7.0_03|JavaBeans||$
+2|application/x-java-applet;version=1.7|||$
+3|application/x-java-bean;version=1.7|||$
+4|application/x-java-applet;version=1.6|||$
+5|application/x-java-bean;version=1.6|||$
+6|application/x-java-applet;version=1.5|||$
+7|application/x-java-bean;version=1.5|||$
+8|application/x-java-applet;version=1.4|||$
+9|application/x-java-applet;version=1.4.1|||$
+10|application/x-java-applet;version=1.4.2|||$
+11|application/x-java-bean;version=1.4|||$
+12|application/x-java-bean;version=1.4.1|||$
+13|application/x-java-bean;version=1.4.2|||$
+14|application/x-java-applet;version=1.3|||$
+15|application/x-java-applet;version=1.3.1|||$
+16|application/x-java-bean;version=1.3|||$
+17|application/x-java-bean;version=1.3.1|||$
+18|application/x-java-applet;version=1.2|||$
+19|application/x-java-applet;version=1.2.1|||$
+20|application/x-java-applet;version=1.2.2|||$
+21|application/x-java-bean;version=1.2|||$
+22|application/x-java-bean;version=1.2.1|||$
+23|application/x-java-bean;version=1.2.2|||$
+24|application/x-java-applet;version=1.1|||$
+25|application/x-java-applet;version=1.1.1|||$
+26|application/x-java-applet;version=1.1.2|||$
+27|application/x-java-applet;version=1.1.3|||$
+28|application/x-java-bean;version=1.1|||$
+29|application/x-java-bean;version=1.1.1|||$
+30|application/x-java-bean;version=1.1.2|||$
+31|application/x-java-bean;version=1.1.3|||$
+32|application/x-java-applet|||$
+33|application/x-java-bean|||$
+npnul32.dll|$
+D:\Program Files\HP\LoadRunner\bin\Firefox\plugins\npnul32.dll|$
+1.0.0.15|$
+1270130300000|1|1|$
+Default Plug-in|$
+Mozilla Default Plug-in|$
+1
+0|*|Mozilla Default Plug-in|*|$

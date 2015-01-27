@@ -1,0 +1,13 @@
+[t8]
+FileName1=t8_dolphin.jpg
+URL1=http://www.bc_demo1.com:4900/images/dolphin.jpg
+Total=1
+ContentType=image/jpeg
+SnapshotXmlFile=snapshot_8.xml
+RequestHeaderFile=t8_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t8_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

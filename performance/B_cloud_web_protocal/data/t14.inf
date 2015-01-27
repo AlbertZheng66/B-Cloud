@@ -1,0 +1,13 @@
+[t14]
+FileName1=t14_json2.html
+URL1=http://www.bc_demo1.com:4900/js/core/json2.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_14.xml
+RequestHeaderFile=t14_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t14_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>模板制作管理</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+        <script type="text/javascript">
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();	
+        </script> 
+    </head>
+
+    <body>
+        <TABLE width="100%" border="0" align="center">
+            <TR>
+                <TD class="listPageTitleTd" colspan="4">模板制作管理</TD>
+            </TR>
+        </TABLE>
+        <div id="maker" heigth="">
+            <ul>
+                <li><a href="#asServers"><span>应用服务器</span></a></li>
+                <li><a href="#tdServers"><span>任务分配器</span></a></li>
+            </ul>
+            <div id="asServers"  width="100%" style="overflow: auto; width: 100%; height: 100%;">
+                <iframe id="asServersFrame" src="as_template_list.html" frameborder="0" 
+                        width="100%" height="80%" >
+
+                </iframe></div>
+            <div id="tdServers"  width="100%">
+                <iframe id="tdServersFrame" src="td_template_list.html" frameborder="0"
+                        width="100%" height="80%">
+
+                </iframe>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        var $tabs = $('#maker').tabs();
+    </script>
+</html>

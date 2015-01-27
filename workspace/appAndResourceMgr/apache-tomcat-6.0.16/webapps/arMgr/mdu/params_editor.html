@@ -1,0 +1,146 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>MDU 中心-模板制作-参数编辑器</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+
+        <script type="text/javascript">
+	
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();
+        </script>
+
+    </head>
+    <body>
+        <TABLE width="100%"  id="paramsTable" border="0" align="center" cellspacing="1" class="listTable">
+            
+        </TABLE>
+        <!-- 模板代码 开始 -->   
+        <div id='template'  style="display:none">   
+            <table width="95%" height="90%" border="0" cellspacing="1" cellpadding="5">
+                <tr class="searchTable">
+                    <td class="modifyTd">参数名称:</td>
+                    <td class="modifyTd"><input id="name_${rowIndex}" value="${name}" /></td>
+                    <td class="modifyTd">参数类型:</td>
+                    <td class="modifyTd">
+                        <select id="type_${rowIndex}" name="type" > 
+                            <option value="STRING" ${STRING} >字符串</option> 
+                            <option value="PORT_RANGE" ${PORT_RANGE} >端口区间</option> 
+                            <option value="INCREMENT"  ${INCREMENT}>数字增量</option> 
+                            <option value="RANDOM"  ${RANDOM} >随机数</option> 
+                        </select>
+                    </td>
+                    <td class="modifyTd">起始值:</td>
+                    <td class="modifyTd"><input id="from_${rowIndex}" value="${from}" /></td>
+                    <td class="modifyTd">结束值:</td>
+                    <td class="modifyTd"><input id="to_${rowIndex}" value="${to}"  /></td>
+                </tr>
+            </table>
+        </div>
+        <!-- 模板代码 结束 -->   
+
+        <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a href="#" onclick="addParam()">增加</a>
+                    <a href="#" onclick="deleteParam()">删除</a>
+                    <a href="#" onclick="ok()">确定</a>
+                    <a href="#" onclick="cancel()">返回</a>
+                </TD>
+            </TR>
+        </TABLE>
+        </form>
+    </body>
+    <script>
+		
+        var appParams;         
+        var favoriteTable;
+        var process = function(row, rowIndex, varName, value) {
+            if (varName == 'rowIndex') {
+                return rowIndex;
+            }
+            if (varName.toUpperCase() == 'STRING' && row['type'].name == 'STRING') {
+                return "selected";
+            } else if (varName.toUpperCase() == 'PORT_RANGE' && row['type'].name == 'PORT_RANGE') {
+                return "selected";
+            } else if (varName.toUpperCase() == 'INCREMENT' && row['type'].name == 'INCREMENT') {
+                return "selected";
+            } else if (varName.toUpperCase() == 'RANDOM' && row['type'].name == 'RANDOM') {
+                return "selected";
+            }
+            return (value == undefined) ? "" : value;
+        };
+        Utils.run(function() {
+            //// 解析应用参数
+            appParams = ParameterHelper.parse(window.location.href);
+            // 应用信息
+            var serverTemplate = appParams.serverTemplate;
+            if (serverTemplate == null) {
+                MessageBox.showError("应用模板参数不能为空。");
+                document.location.href = getUrl();
+            }
+            var params = serverTemplate.params;
+            if (params == null) {  // 新增的情况此参数为空
+                params = {};
+            }
+            // 创建一个模板配置
+            var tableConfig = TemplateTableConfig.create('mdu.ParamsVO', false, process);
+            tableConfig.selectionMode = SelectionMode.SINGLE;
+            
+            var methodParams = [serverTemplate];  // 参数为userOid
+
+            // 用户表的配置参数
+            var _params = {methodName    : 'loadParams', 
+                methodParams  : methodParams};
+						   
+            // 用户表的修饰函数
+            var tableUtils = new TableUtils('paramsTable', tableConfig,    
+            'mdu.service.MakingService', _params);
+            favoriteTable = tableUtils.autoLoad();
+        });
+        
+        // 增加新的参数
+        function addParam() {
+            var className = ClassLoader.getFullName('mdu.ParamsVO', false);
+            favoriteTable.appendRow({'__className' : className, name:"", type:"STRING", from:"", to:""});
+        }
+        
+        // 删除选中的参数
+        function deleteParam() {
+            var param = favoriteTable.getSelectedRow();
+            if (param == null) {
+                MessageBox.alert('请选择一个需要删除的参数。');
+                return;
+            }
+            if (MessageBox.confirm("确定删除此参数？")) {
+                favoriteTable.deleteRow(favoriteTable.getSelectedRowNum());
+            }
+        }
+
+        // 注册当前应用
+        function ok () {
+            var rows = favoriteTable.rows;
+            var makingService = ServiceFactory.getService('mdu.service.MakingService');
+            var params = makingService.buildParams(rows);
+            appParams.serverTemplate.params = params;
+            document.location.href = getUrl();
+        }
+        
+        function cancel() {
+            document.location.href = getUrl();
+        }
+        
+        
+        function getUrl() {
+            var url = ParameterHelper.append("template_editor.html", appParams);
+            return url;
+        }
+
+
+    </script>
+</html>

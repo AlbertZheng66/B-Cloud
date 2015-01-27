@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="43">
+  <HTTPTask id="43" path="//www.bc_demo1.com:4900/base/test_table_template.html" url="http://www.bc_demo1.com:4900/base/test_table_template.html" origin="Primary" startTime="11198" endTime="11211">
+    <HTTPRequest method="GET" />
+    <HTTPResponse>
+      <HTTPBody>
+        <HTTPDataSet>
+          <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+            <ActualData>PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPg0KPG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjx0aXRsZT7ku47lt7LmnInooajnu5PmnoTlvIDlp4vmnoTlu7rooag8L3RpdGxlPg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSIuLi9qcy9ib290LmpzIj48L3NjcmlwdD4NCjxzY3JpcHQ+DQovLyDliqDovb1DU1Mg5paH5Lu2DQpMb2FkZXIuaW1wb3J0Q1NTKCk7DQoNCi8vIOWKoOi9vUpTIOaWh+S7tg0KTG9hZGVyLmltcG9ydEpTKCk7Cg0KPC9zY3JpcHQ+DQo8Ym9keT4NCjxoMSBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+5L2/55So6KGo5qC855qE5Y6f5pyJ5qC85byP5L+h5oGv55Sf5oiQ6KGoPC9oMT4NCg0KPGJyPg0KPHRhYmxlIGNsYXNzPSd0YWJsZVJlZ2lvbicgaWQ9InRhYmxlMSIgPg0KPHRyICAgPgo8dGQgc3R5bGU9IndpZHRoOjIwMHB4OyIgbmFtZT0ic3RyaW5nMSIgPiDlrZfnrKbkuLI8L3RkPgo8dGQgc3R5bGU9IndpZHRoOjIwMHB4OyIgbmFtZT0iZGF0ZTEiPmRhdGUxPC90ZD4KPHRkICBuYW1lPSJib29sZWFuMSI+Ym9vbGVhbjE8L3RkPgo8dGQgIG5hbWU9Imxvb2t1cDEiPmxvb2t1cDE8L3RkPgo8dGQgIG5hbWU9ImludDEiPmludDE8L3RkPgo8L3RyPgoKPHRib2R5Pg0KDQo8dHIgaWQ9J3Jvd1RlbXBsYXRlJz4NCjx0ZCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTI1LCAxMjUsIDApOyIgPjwvdGQ+DQo8dGQgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDEyNSwgMTI1LCAwKTsiID48L3RkPg0KPHRkICA+PC90ZD4NCjx0ZCAgPjwvdGQ+DQo8dGQgID48L3RkPg0KPC90cj4NCjx0cj4NCjx0ZCAgPjwvdGQ+DQo8dGQgID48L3RkPg0KPHRkICA+PC90ZD4NCjx0ZCAgPjwvdGQ+DQo8dGQgID48L3RkPg0KDQo8L3RyPg0KPHRyPg0KPHRkICA+PC90ZD4NCjx0ZCAgPjwvdGQ+DQo8dGQgID48L3RkPg0KPHRkICA+PC90ZD4NCjx0ZCAgPjwvdGQ+DQoNCjwvdHI+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCjxicj4NCjxicj4NCjxicj4NCjxzY3JpcHQ+DQoKVXRpbHMucnVuKGZ1bmN0aW9uKCkgew0KICAgIC8vIOS7juacjeWKoeWZqOerr+ivu+WPluaVsOaNrg0KICAgIHZhciBzZXJ2aWNlID0gU2VydmljZUZhY3RvcnkuZ2V0U2VydmljZSgnc2VydmljZS5UYWJsZVNlcnZpY2UnKTsNCiAgICB2YXIgZGF0YSA9IHNlcnZpY2UubGlzdCgpOw0KCiAgICAvLyDkv67ppbDooajmoLwNCiAgICB2YXIgdGFibGUgPSBuZXcgR1RhYmxlKCd0YWJsZTEnKTsNCiAgICB2YXIgY29uZmlnID0gbmV3IFRhYmxlQ29uZmlnKCdwby5Sb3dCZWFuJyk7DQogICAgY29uZmlnLmNyZWF0ZUNvbHVtbnNGcm9tVGVtcGxhdGUoJCgnI3RhYmxlMScpKTsNCiAgICB0YWJsZS5kZWNvcmF0ZShjb25maWcsIGRhdGEpOwp9KTsKDQo8L3NjcmlwdD4NCjwvYm9keT48L2h0bWw+</ActualData>
+          </HTTPData>
+        </HTTPDataSet>
+        <IsExternalData>false</IsExternalData>
+      </HTTPBody>
+    </HTTPResponse>
+  </HTTPTask>
+</HTTPSnapshot>

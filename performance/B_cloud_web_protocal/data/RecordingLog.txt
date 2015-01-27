@@ -1,0 +1,670 @@
+[Network Analyzer ( c08:1b0c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( c08:1b0c)] Load Network Traffic Analyzers:
+[Network Analyzer ( c08:1b0c)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( c08:1b0c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( c08:1b0c)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( c08:1b0c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( c08:1b0c)]     Analyzer Module: QTWeb (value=)
+[Network Analyzer ( c08:1b0c)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( c08:1b0c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( c08:18cc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b0c)] Address lookup for Albert-Office = 192.168.1.48
+[Net An. Warning  ( c08:1b0c)] Request Connection: Remote Server @ 127.0.0.1:9415 (Service=) Failed attempt #1. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Warning  ( c08:1b0c)] Request Connection: Remote Server @ 127.0.0.1:9415 (Service=) Failed attempt #2. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Warning  ( c08:1b0c)] Request Connection: Remote Server @ 127.0.0.1:9415 (Service=) Failed attempt #3. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Error    ( c08:1b0c)] Request Connection: Remote Server @ 127.0.0.1:9415   (Service=)  NOT PROXIED! (REASON: Unable to connect to remote server: rc = -1 , le = 0)
+[Network Analyzer ( c08:1a24)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a24)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /"   
+[Network Analyzer ( c08:18cc)]   (Sid:  1) Client -> Server : 251 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  1) Server -> Client : 675 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a24)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1fbc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a24)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /top.html"   
+[Network Analyzer ( c08:18cc)]   (Sid:  2) Client -> Server : 299 bytes (Service=HTTP)
+[Network Analyzer ( c08:1fbc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid:  2) Server -> Client : 667 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  2) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /main.html"   
+[Network Analyzer ( c08:18cc)]   (Sid:  3) Client -> Server : 300 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  3) Server -> Client : 731 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  3) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a24)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1fbc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1ee4)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1fbc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  4)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /nav.html"   
+[Network Analyzer ( c08:18cc)]   (Sid:  4) Client -> Server : 308 bytes (Service=HTTP)
+[Network Analyzer ( c08:1a24)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid:  4) Server -> Client : 2754 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  4) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /images/banner.jpg"   
+[Network Analyzer ( c08:18cc)]   (Sid:  5) Client -> Server : 329 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  5) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:1ee4)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid:  5) Server -> Client : 5145 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  5) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /welcome.html"   
+[Network Analyzer ( c08:18cc)]   (Sid:  6) Client -> Server : 312 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  6) Server -> Client : 459 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  6) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1c44)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1c44)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  7)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/boot.js"   
+[Network Analyzer ( c08:18cc)]   (Sid:  7) Client -> Server : 305 bytes (Service=HTTP)
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  8)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /images/dolphin.jpg"   
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Client -> Server : 334 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  7) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Server -> Client : 8784 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  7) Server -> Client : 3355 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  7) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Server -> Client : 5659 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  8) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid=  9)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /read.getParams?name=contextPath"   
+[Network Analyzer ( c08:18cc)]   (Sid:  9) Client -> Server : 296 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  9) Server -> Client : 103 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid:  9) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/conf.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 10) Client -> Server : 275 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 10) Server -> Client : 1998 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 10) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-1.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Client -> Server : 288 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Server -> Client : 2057 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 11) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 12)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-ui-1.7.2.custom.min.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Client -> Server : 302 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 15360 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 8784 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 10240 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 10240 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Server -> Client : 7932 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 12) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/i18n/ui.datepicker-zh-CN.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 13) Client -> Server : 300 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 13) Server -> Client : 1085 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 13) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 14)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/json2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 14) Client -> Server : 281 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 14) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 14) Server -> Client : 8306 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 14) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 15)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_base.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Client -> Server : 283 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Server -> Client : 6527 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 15) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 16)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_table.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Client -> Server : 284 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 14336 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Server -> Client : 2970 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 16) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 17)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/ajaxupload.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 17) Client -> Server : 290 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 17) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 17) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 17) Server -> Client : 2655 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 17) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 18)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/jquery.cookie.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 18) Client -> Server : 289 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 18) Server -> Client : 4458 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 18) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 19)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/aa.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 19) Client -> Server : 278 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 19) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 19) Server -> Client : 325 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 19) Connection Terminated (by Server)
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 20)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/jquery-ui-1.7.2.custom.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Client -> Server : 313 bytes (Service=HTTP)
+[Network Analyzer ( c08:1f18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Server -> Client : 9216 bytes  (Service=HTTP)
+[Web Request      ( c08:18cc)] "GET /css/gt_demo.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 21) Client -> Server : 285 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 21) Server -> Client : 3345 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 21) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Server -> Client : 9216 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Server -> Client : 162 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 20) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b90)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1eb8)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: 7d0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1fbc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 22)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 22) Client -> Server : 377 bytes (Service=HTTP)
+[Network Analyzer ( c08:1b90)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 23)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 23) Client -> Server : 368 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 22) Server -> Client : 292 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 22) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 23) Server -> Client : 308 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 23) Connection Terminated (by Server)
+[Network Analyzer ( c08:1eb8)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 24)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_ef8c08_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 24) Client -> Server : 363 bytes (Service=HTTP)
+[Network Analyzer ( c08: 7d0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 24) Server -> Client : 4575 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 24) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 25) Client -> Server : 367 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 25) Server -> Client : 309 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 25) Connection Terminated (by Server)
+[Network Analyzer ( c08:1fbc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 26)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /favicon.ico"   
+[Network Analyzer ( c08:18cc)]   (Sid: 26) Client -> Server : 204 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 26) Server -> Client : 1141 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 26) Connection Terminated (by Server)
+[Network Analyzer ( c08:19fc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:19fc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 27)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/test_table_template.html"   
+[Network Analyzer ( c08:18cc)]   (Sid: 27) Client -> Server : 329 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 27) Server -> Client : 1784 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 27) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a9c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a9c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 28)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/boot.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 28) Client -> Server : 416 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 28) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 28) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a9c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a9c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 29)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/read.getParams?name=contextPath"   
+[Network Analyzer ( c08:18cc)]   (Sid: 29) Client -> Server : 322 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 29) Server -> Client : 103 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 29) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a9c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a9c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 30)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/conf.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 30) Client -> Server : 385 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 30) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 30) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1ee0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a9c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 31)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-1.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 31) Client -> Server : 400 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 31) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 31) Connection Terminated (by Server)
+[Network Analyzer ( c08:1ee0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Web Request      ( c08:18cc)] "GET /css/gt_demo.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 32) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 32) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 32) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a9c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 33)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/jquery-ui-1.7.2.custom.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 33) Client -> Server : 424 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 33) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 33) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 34)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-ui-1.7.2.custom.min.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 34) Client -> Server : 414 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 34) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 34) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 35)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/i18n/ui.datepicker-zh-CN.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 35) Client -> Server : 409 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 35) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 35) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 36)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/json2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 36) Client -> Server : 392 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 36) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 36) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 37)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_base.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 37) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 37) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 37) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 38)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_table.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 38) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 38) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 38) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 39)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/ajaxupload.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 39) Client -> Server : 401 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 39) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 39) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 40)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/jquery.cookie.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 40) Client -> Server : 399 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 40) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 40) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 41)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/aa.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 41) Client -> Server : 388 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 41) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 41) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.service.TableService"]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 42) Client -> Server : 597 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 42) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 42) Server -> Client : 1530 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 42) Connection Terminated (by Server)
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 43)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.service.TableService","methodName":"list","serviceObject":{"className":"com.xt.gt.demo.service.TableService","invokedMethods":[]},"type":null,"params":[]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 43) Client -> Server : 618 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 43) Server -> Client : 2321 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 43) Connection Terminated (by Server)
+[Network Analyzer ( c08: c8c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:12ac)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1894)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:15a0)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: c8c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 44)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_222222_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 44) Client -> Server : 384 bytes (Service=HTTP)
+[Network Analyzer ( c08:12ac)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 45)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 45) Client -> Server : 398 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 44) Server -> Client : 4575 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 44) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 45) Server -> Client : 455 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 45) Connection Terminated (by Server)
+[Network Analyzer ( c08:1894)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 46)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_ffffff_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 46) Client -> Server : 384 bytes (Service=HTTP)
+[Network Analyzer ( c08:15a0)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 47)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 46) Server -> Client : 4575 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 46) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 47) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 47) Server -> Client : 2048 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 47) Server -> Client : 1920 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 47) Connection Terminated (by Server)
+[Network Analyzer ( c08:1180)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1180)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 48)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 48) Client -> Server : 389 bytes (Service=HTTP)
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 49)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 48) Server -> Client : 329 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 48) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.aa.LoginService"]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 49) Client -> Server : 592 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 49) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 49) Server -> Client : 2092 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 49) Connection Terminated (by Server)
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 50)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.aa.LoginService","methodName":"login","serviceObject":{"className":"com.xt.gt.demo.aa.LoginService","invokedMethods":[]},"type":null,"params":[{"userName":"admin","passwd":"admin"}]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 50) Client -> Server : 646 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 50) Server -> Client : 857 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 50) Connection Terminated (by Server)
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 51)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/test_table_template.html"   
+[Network Analyzer ( c08:18cc)]   (Sid: 51) Client -> Server : 329 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 51) Server -> Client : 1784 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 51) Connection Terminated (by Server)
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 52)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/boot.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 52) Client -> Server : 416 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 52) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 52) Connection Terminated (by Server)
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 53)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/read.getParams?name=contextPath"   
+[Network Analyzer ( c08:18cc)]   (Sid: 53) Client -> Server : 322 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 53) Server -> Client : 103 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 53) Connection Terminated (by Server)
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 54)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/conf.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 54) Client -> Server : 385 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 54) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 54) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:119c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:19a4)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 55)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-1.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 55) Client -> Server : 400 bytes (Service=HTTP)
+[Network Analyzer ( c08:119c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 56)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/jquery-ui-1.7.2.custom.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 56) Client -> Server : 424 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 56) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 55) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 56) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 55) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:19a4)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 57)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/gt_demo.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 57) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 58)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 57) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 57) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-ui-1.7.2.custom.min.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 58) Client -> Server : 414 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 58) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 58) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 59)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/i18n/ui.datepicker-zh-CN.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 59) Client -> Server : 409 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 59) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 59) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 60)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/json2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 60) Client -> Server : 392 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 60) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 60) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 61)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_base.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 61) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 61) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 61) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 62)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_table.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 62) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 62) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 62) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 63)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/ajaxupload.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 63) Client -> Server : 401 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 63) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 63) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 64)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/jquery.cookie.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 64) Client -> Server : 399 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 64) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 64) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 65)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/aa.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 65) Client -> Server : 388 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 65) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 65) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 66)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.service.TableService"]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 66) Client -> Server : 597 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 66) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 66) Server -> Client : 1530 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 66) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 67)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.service.TableService","methodName":"list","serviceObject":{"className":"com.xt.gt.demo.service.TableService","invokedMethods":[]},"type":null,"params":[]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 67) Client -> Server : 618 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 67) Server -> Client : 2321 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 67) Connection Terminated (by Server)
+[Network Analyzer ( c08:1960)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: ffc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1a38)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1cec)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1960)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 68)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 68) Client -> Server : 484 bytes (Service=HTTP)
+[Network Analyzer ( c08: ffc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 69)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_222222_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 69) Client -> Server : 473 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 68) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 68) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 69) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 69) Connection Terminated (by Server)
+[Network Analyzer ( c08:1a38)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 70)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 70) Client -> Server : 486 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 70) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 70) Connection Terminated (by Server)
+[Network Analyzer ( c08:1cec)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 71)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_ffffff_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 71) Client -> Server : 473 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 71) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 71) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1b80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 72)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 72) Client -> Server : 477 bytes (Service=HTTP)
+[Network Analyzer ( c08:1b80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 73)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 72) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 72) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.aa.LoginService"]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 73) Client -> Server : 592 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 73) Server -> Client : 3072 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 73) Server -> Client : 2092 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 73) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 74)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.aa.LoginService","methodName":"login","serviceObject":{"className":"com.xt.gt.demo.aa.LoginService","invokedMethods":[]},"type":null,"params":[{"userName":"admin","passwd":"admin"}]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 74) Client -> Server : 646 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 74) Server -> Client : 857 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 74) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 75)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/test_table_template.html"   
+[Network Analyzer ( c08:18cc)]   (Sid: 75) Client -> Server : 329 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 75) Server -> Client : 1784 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 75) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 76)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/boot.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 76) Client -> Server : 416 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 76) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 76) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 77)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/read.getParams?name=contextPath"   
+[Network Analyzer ( c08:18cc)]   (Sid: 77) Client -> Server : 322 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 77) Server -> Client : 103 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 77) Connection Terminated (by Server)
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 78)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/conf.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 78) Client -> Server : 385 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 78) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 78) Connection Terminated (by Server)
+[Network Analyzer ( c08:180c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:180c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 79)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-1.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 79) Client -> Server : 400 bytes (Service=HTTP)
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 80)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/gt_demo.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 80) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 79) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 79) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 80) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 80) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1f80)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 81)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/jquery-ui-1.7.2.custom.css"   
+[Network Analyzer ( c08:18cc)]   (Sid: 81) Client -> Server : 424 bytes (Service=HTTP)
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 82)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 81) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 81) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /js/core/jquery-ui-1.7.2.custom.min.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 82) Client -> Server : 414 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 82) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 82) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 83)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/i18n/ui.datepicker-zh-CN.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 83) Client -> Server : 409 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 83) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 83) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 84)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/json2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 84) Client -> Server : 392 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 84) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 84) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 85)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_base.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 85) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 85) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 85) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 86)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/gt_table.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 86) Client -> Server : 395 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 86) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 86) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 87)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/core/ajaxupload.3.2.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 87) Client -> Server : 401 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 87) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 87) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 88)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/jquery.cookie.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 88) Client -> Server : 399 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 88) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 88) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 89)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/demo/aa.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 89) Client -> Server : 388 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 89) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 89) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 90)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.service.TableService"]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 90) Client -> Server : 597 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 90) Server -> Client : 4096 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 90) Server -> Client : 506 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 90) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 91)  PROXIED!
+[Web Request      ( c08:18cc)] "POST /jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.demo.service.TableService","methodName":"list","serviceObject":{"className":"com.xt.gt.demo.service.TableService","invokedMethods":[]},"type":null,"params":[]}"   
+[Network Analyzer ( c08:18cc)]   (Sid: 91) Client -> Server : 618 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 91) Server -> Client : 2321 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 91) Connection Terminated (by Server)
+[Network Analyzer ( c08: 71c)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1afc)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08:1fc8)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: 71c)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 92)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 92) Client -> Server : 484 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 92) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 92) Connection Terminated (by Server)
+[Network Analyzer ( c08:1afc)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 93)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 93) Client -> Server : 486 bytes (Service=HTTP)
+[Network Analyzer ( c08:1fc8)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 94)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_222222_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 94) Client -> Server : 473 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 93) Server -> Client : 122 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 93) Connection Terminated (by Server)
+[Network Analyzer ( c08:18cc)]   (Sid: 94) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 94) Connection Terminated (by Server)
+[Network Analyzer ( c08:1fc8)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 95)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /css/ui-lightness/images/ui-icons_ffffff_256x240.png"   
+[Network Analyzer ( c08:18cc)]   (Sid: 95) Client -> Server : 473 bytes (Service=HTTP)
+[Network Analyzer ( c08:1fc8)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 96)  PROXIED!
+[Network Analyzer ( c08:18cc)]   (Sid: 95) Server -> Client : 123 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 95) Connection Terminated (by Server)
+[Web Request      ( c08:18cc)] "GET /base/test_bind.html"   
+[Network Analyzer ( c08:18cc)]   (Sid: 96) Client -> Server : 319 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 96) Server -> Client : 2047 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 96) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 97)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /js/boot.js"   
+[Network Analyzer ( c08:18cc)]   (Sid: 97) Client -> Server : 406 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 97) Server -> Client : 124 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 97) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 98)  PROXIED!
+[Web Request      ( c08:18cc)] "GET /base/read.getParams?name=contextPath"   
+[Network Analyzer ( c08:18cc)]   (Sid: 98) Client -> Server : 312 bytes (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 98) Server -> Client : 103 bytes  (Service=HTTP)
+[Network Analyzer ( c08:18cc)]   (Sid: 98) Connection Terminated (by Server)
+[Network Analyzer ( c08: d18)] Address lookup for Albert-Office = 192.168.1.48
+[Network Analyzer ( c08: d18)] Request Connection: Remote Server @ 127.0.0.1:4900   (Service=)  (Sid= 99)  PROXIED!

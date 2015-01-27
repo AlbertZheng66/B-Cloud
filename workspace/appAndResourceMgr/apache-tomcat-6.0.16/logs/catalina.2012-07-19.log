@@ -1,0 +1,20 @@
+七月 19, 2012 5:23:43 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Program Files\Java\jdk1.7.0_03\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;%JAVA_HOME%\bin;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;D:\apache-ant-1.7.1\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\TortoiseSVN\bin;D:\strawberry\c\bin;D:\strawberry\perl\site\bin;D:\strawberry\perl\bin;D:\Program Files\Calibre2\;C:\strawberry\c\bin;C:\strawberry\perl\bin;d:\Program Files\Smart Projects\IsoBuster;d:\jruby-1.6.7\bin;d:\Program Files\jprofiler6\bin\windows;d:\Program Files\SSH Communications Security\SSH Secure Shell;D:\android-sdk-windows\tools;D:\Python27;D:\strawberry\perl\bin;d:\Program Files\Nmap;D:\Ruby192\bin;D:\Program Files\Git\bin;.
+七月 19, 2012 5:23:44 下午 org.apache.coyote.http11.Http11Protocol init
+信息: Initializing Coyote HTTP/1.1 on http-58080
+七月 19, 2012 5:23:44 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 2921 ms
+七月 19, 2012 5:23:44 下午 org.apache.catalina.realm.JAASRealm setContainer
+信息: Set JAAS app name Catalina
+七月 19, 2012 5:23:44 下午 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+七月 19, 2012 5:23:44 下午 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/6.0.16
+七月 19, 2012 5:24:04 下午 org.apache.coyote.http11.Http11Protocol start
+信息: Starting Coyote HTTP/1.1 on http-58080
+七月 19, 2012 5:24:04 下午 org.apache.jk.common.ChannelSocket init
+信息: JK: ajp13 listening on /0.0.0.0:58009
+七月 19, 2012 5:24:04 下午 org.apache.jk.server.JkMain start
+信息: Jk running ID=0 time=0/138  config=null
+七月 19, 2012 5:24:04 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 20288 ms

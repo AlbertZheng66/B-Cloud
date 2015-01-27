@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="arm" name="b_cloud" basedir="." >
+
+   <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+   <tstamp>
+      <format property="touch.time" pattern="MM-dd-yyyy hh:mm:ss" />
+   </tstamp>
+   
+    <!--  公用的几个 Jar 文件 -->
+	<property name="gt_html_demo.jar"
+              value="E:/work/xthinker/gt_html_demo/dist/gt_html_demo.jar" />
+	<property name="gt_html.jar"
+              value="E:/work/xthinker/gt_html/dist/gt_html.jar" />
+	<property name="B-Cloud.jar"
+              value="E:/work/xthinker/B-Cloud/dist/B-Cloud.jar" />
+	<property name="greentea.jar"
+	          value="E:/work/xthinker/greentea/dist/greentea.jar" />
+	<!--  工作基础路径 -->
+  
+	<property name="base" value="E:/work/xthinker/B-Cloud/workspace/" />
+	
+	<!-- 应用和资源管理器的操作目录 -->
+    <property name="arm.bin" value="${base}appAndResourceMgr/apache-tomcat-6.0.16/bin/" />
+	<!-- 应用和资源管理器的发布目录 -->
+    <property name="arm.deploy" value="${base}appAndResourceMgr/apache-tomcat-6.0.16/webapps/arMgr/WEB-INF/lib" />
+	
+	<!-- MDU 源管理器的操作目录 -->
+    <property name="mdu.bin" value="${base}mdu" />
+	<!-- MDU 管理器的发布目录 -->
+    <property name="mdu.deploy" value="${mdu.bin}/lib" />
+	
+	<!-- 任务分配器的操作目录 -->
+    <property name="td.bin" value="${base}td" />
+	<!-- MDU 管理器的发布目录 -->
+    <property name="td.deploy" value="${td.bin}/lib" />
+	
+	<!-- 演示服务器 1 的操作目录 -->
+    <property name="serv1.bin" value="${base}servers/server1/apache-tomcat-6.0.16/bin/" />
+	<!-- 演示服务器 1 的发布目录 -->
+    <property name="serv1.deploy" value="${base}servers/server1/apache-tomcat-6.0.16/webapps/serv1/WEB-INF/lib" />
+    <!--property name="serv1.deploy" value="${base}servers/server1/apache-tomcat-6.0.16/lib" / -->
+	
+	<!-- 演示服务器2的操作目录 -->
+    <property name="serv2.bin" value="${base}servers/server2/apache-tomcat-6.0.16/bin/" />
+	<!-- 演示服务器 2 的发布目录 -->
+    <property name="serv2.deploy" value="${base}servers/server2/apache-tomcat-6.0.16/webapps/serv2/WEB-INF/lib" />
+    <!-- property name="serv2.deploy" value="${base}servers/server2/apache-tomcat-6.0.16/lib" / -->
+
+	<!-- 演示应用的目录及发布目录 -->
+	<property name="demo.deploy" value="E:/work/xthinker/gt_html_demo/web" />
+    <property name="demo.deploy.lib" value="${demo.deploy}/WEB-INF/lib" />
+	<property name="Ver" value="" />
+	<property name="demo.war" value="C:/Users/albert/Desktop/demo-${Ver}.war" />
+		
+	<!-- 工程备份路径 -->
+	<property name="projects" value="E:/work/xthinker" />
+	<property name="git.repo" value="H:/Backup/git-repo" />
+	<!-- 使用 git 进行备份 -->
+	<target name="git-backups">  
+	    <foreach list="B-Cloud,greentea,gt_html,gt_html_demo" 
+		         param="projName" target="git-backup" delimiter=",">
+        </foreach>
+    </target>  
+	<target name="git-backup"> 
+        <echo>starting to backup : ${projName}</echo>
+	    <exec executable="git" dir="${projects}/${projName}">
+            <arg value="add"/>
+            <arg value="."/>
+        </exec>
+	    <exec executable="git" dir="${projects}/${projName}">
+            <arg value="commit"/>
+            <arg value="-m"/>
+            <arg value="committed at ${touch.time}."/>
+        </exec>
+        <exec executable="git" dir="${git.repo}/${projName}">
+            <arg value="pull"/>
+            <arg value="${projects}/${projName}"/>
+        </exec>
+    </target>  
+	
+	<target name="scp-jars">  
+        <scp file="${B-Cloud.jar}" todir="root:Abcd1234@192.168.32.34:/opt/pt/mdu/lib" trust="true" />  
+        <scp file="${greentea.jar}" todir="root:Abcd1234@192.168.32.34:/opt/pt/mdu/lib" trust="true" />  
+        <scp file="${B-Cloud.jar}" todir="root:Abcd1234@192.168.32.16:/opt/pt/mdu/lib" trust="true" />  
+        <scp file="${greentea.jar}" todir="root:Abcd1234@192.168.32.16:/opt/pt/mdu/lib" trust="true" />   
+        <scp file="${B-Cloud.jar}" todir="root:Abcd1234@192.168.32.16:/opt/pt/td/lib" trust="true" />  
+        <scp file="${greentea.jar}" todir="root:Abcd1234@192.168.32.16:/opt/pt/td/lib" trust="true" />  
+    </target>  
+    
+	<!-- 启动/重新启动应用和资源管理器 -->
+	<target name="arm">
+	    <exec  dir="${arm.bin}" executable="${arm.bin}/shutdown.bat" />
+		<input message="waiting for shutdowning arm....." />
+	    <copy file="${gt_html_demo.jar}" 
+		      tofile="${arm.deploy}/gt_html_demo.jar" />
+	    
+	    <copy file="${gt_html.jar}" 
+		      tofile="${arm.deploy}/gt_html.jar" />
+
+        <copy file="${greentea.jar}" 
+		      tofile="${arm.deploy}/greentea.jar" />
+			  
+		<copy file="${B-Cloud.jar}" 
+		 tofile="${arm.deploy}/B-Cloud.jar" />
+		
+        <exec dir="${arm.bin}" executable="${arm.bin}/startup.bat" spawn='true' />
+    </target>
+	
+	<!-- 启动/重新启动制作，发布和更新（MDU）管理器 -->
+	<target name="mdu">
+	    <exec  dir="${mdu.bin}" executable="${mdu.bin}/shutdown.bat" />
+		<input message="waiting for shutdowning mdu....." />	
+
+        <copy file="${greentea.jar}" 
+		      tofile="${mdu.deploy}/greentea.jar" />
+		<copy file="${B-Cloud.jar}" 
+		 tofile="${mdu.deploy}/B-Cloud.jar" />
+		<echo>startup :${mdu.bin}/startup.bat</echo>
+        <exec dir="${mdu.bin}" executable="${mdu.bin}/startup.bat" spawn='true' />
+    </target>
+	
+	<!-- 启动/重新任务分派器 -->
+	<target name="td">
+	    <exec  dir="${td.bin}" executable="${td.bin}/shutdown.bat" />
+		<input message="waiting for shutdowning td....." />	
+
+        <copy file="${greentea.jar}" 
+		      tofile="${td.deploy}/greentea.jar" />
+		<copy file="${B-Cloud.jar}" 
+		      tofile="${td.deploy}/B-Cloud.jar" />
+		<echo>startup :${td.bin}/startup.bat</echo>
+        <exec dir="${td.bin}" executable="${td.bin}/startup.bat" spawn='true'  />
+    </target>
+	
+	<!-- 启动/重新启动演示服务器1 -->
+	<target name="serv1">
+	    <exec  dir="${serv1.bin}" executable="${serv1.bin}/shutdown.bat" />
+		<input message="waiting for shutdowning server1....." />
+	    <copy file="${gt_html_demo.jar}" 
+		      tofile="${serv1.deploy}/gt_html_demo.jar" />
+	    
+	    <copy file="${gt_html.jar}" 
+		      tofile="${serv1.deploy}/gt_html.jar" />
+
+        <copy file="${greentea.jar}" 
+		      tofile="${serv1.deploy}/greentea.jar" />
+			  
+		<copy file="${B-Cloud.jar}" 
+		      tofile="${serv1.deploy}/B-Cloud.jar" />
+		
+        <exec dir="${serv1.bin}" 
+		      executable="${serv1.bin}/startup.bat" spawn='true' />
+    </target>
+
+     
+	<!-- 启动/重新启动演示服务器2 -->
+	<target name="serv2">
+	    <exec  dir="${serv2.bin}" executable="${serv2.bin}/shutdown.bat" />
+		<input message="waiting for shutdowning server2....." />
+	    <copy file="${gt_html_demo.jar}" 
+		      tofile="${serv2.deploy}/gt_html_demo.jar" />
+	    
+	    <copy file="${gt_html.jar}" 
+		      tofile="${serv2.deploy}/gt_html.jar" />
+
+        <copy file="${greentea.jar}" 
+		      tofile="${serv2.deploy}/greentea.jar" />
+			  
+		<copy file="${B-Cloud.jar}" 
+		      tofile="${serv2.deploy}/B-Cloud.jar" />
+		
+        <exec dir="${serv2.bin}" 
+		      executable="${serv2.bin}/startup.bat" spawn='true' />
+    </target>
+	
+	<!-- 创建演示用的脚本 -->
+	<target name="createDemo">
+	    <copy file="${gt_html_demo.jar}" 
+		      tofile="${demo.deploy.lib}/gt_html_demo.jar" />	    
+	    <copy file="${gt_html.jar}" 
+		      tofile="${demo.deploy.lib}/gt_html.jar" />
+        <copy file="${greentea.jar}" 
+		      tofile="${demo.deploy.lib}/greentea.jar" />			  
+		<copy file="${B-Cloud.jar}" 
+		      tofile="${demo.deploy.lib}/B-Cloud.jar" />	
+        <echo>building Version:${Ver}</echo>
+
+	    <copy file="E:/work/xthinker/B-Cloud/workspace/demos/${Ver}/welcome.html" 
+		      tofile="${demo.deploy}/welcome.html" overwrite='true' failonerror='false' />
+		<!-- -->
+		<delete file="${demo.war}"/>
+		
+        <war destfile="${demo.war}" update='true' >
+			<fileset dir="${demo.deploy}" />
+        </war>			
+    </target>
+	
+</project>

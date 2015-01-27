@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+ETag: W/"125-1339723606442"
+Last-Modified: Fri, 15 Jun 2012 01:26:46 GMT
+Content-Type: image/png
+Content-Length: 125
+Date: Fri, 15 Jun 2012 01:56:14 GMT
+

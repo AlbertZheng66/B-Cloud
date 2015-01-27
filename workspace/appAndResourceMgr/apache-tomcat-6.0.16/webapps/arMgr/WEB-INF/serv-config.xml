@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+    <databases default="B-Cloud">      
+        <database id="B-Cloud" type="jdbc">
+            <param name="user"     value="b_cloud" /> 
+            <param name="password" value="b_cloud" /> 
+            <!-- param name="schema"   value="root" /--> 
+            <param name="url"  value="jdbc:mysql://127.0.0.1:3306/b_cloud" /> 
+            <param name="driver"   value="com.mysql.jdbc.Driver" />  
+        </database>
+    </databases>
+  
+    <system>
+        <param name="AJAX_ENCODING"     value="UTF-8" />
+	    <param name="locaFileService.rootPath"  value="${appContext}" />
+	    <param name="appLifecycles" type='list'>
+            <data value="com.xt.comm.quartz.ServerStarter" />
+        </param>
+	<param name="system.inspectors" type='list'>
+          <data value="com.xt.bcloud.bg.impl.ServerStatusInspector" />
+          <data value="com.xt.bcloud.bg.impl.AppInstanceInspector" />
+          <data value="com.xt.bcloud.bg.impl.AppVersionInspector" />
+          <data value="com.xt.bcloud.bg.impl.DumperInspector" />
+          <data value="com.xt.bcloud.bg.impl.AppStateInspector" />
+          <data value="com.xt.bcloud.bg.impl.MduInspector" />
+          <data value="com.xt.bcloud.bg.impl.TdInspector" />
+       </param>
+	   <param name="parsers" type="map">
+          <entry key="databases" value="com.xt.gt.sys.impl.DataBaseParameterParser" />
+       </param>
+       <param name="processorFactories" type="list">
+          <data value="com.xt.core.proc.impl.fs.FileServiceProcessorFactory" />
+          <data value="com.xt.core.proc.impl.IPOPersistenceProcessorFactory" />
+          <data value="com.xt.core.proc.impl.SessionProcessorFactory" />
+          <data value="com.xt.core.proc.impl.InjectorProcessorProcessor" />
+       </param>
+  </system>
+
+</xt-config>

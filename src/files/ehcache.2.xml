@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+             updateCheck="true" monitoring="autodetect">
+    
+    <diskStore path="java.io.tmpdir"/>
+
+
+    <cacheManagerEventListenerFactory class="" properties=""/>
+
+
+    <cacheManagerPeerProviderFactory
+class="net.sf.ehcache.distribution.jgroups.JGroupsCacheManagerPeerProviderFactory"
+properties="connect=TCP(bind_addr=192.168.29.139;bind_port=7801;loopback=true):
+TCPPING(initial_hosts=${jgroups.tcpping.initial_hosts:192.168.29.139[7800],192.168.29.139[7801]};port_range=2;timeout=5000;
+num_initial_members=2):
+MERGE2(min_interval=10000;max_interval=30000):
+FD_SOCK:
+FD(timeout=10000;max_tries=5):
+VERIFY_SUSPECT(timeout=1500):
+pbcast.NAKACK(gc_lag=100;retransmit_timeout=3000):
+BARRIER:
+UNICAST(timeout=300,600,1200):
+pbcast.STABLE(stability_delay=1000;desired_avg_gossip=50000;max_bytes=400000):
+pbcast.GMS(print_local_addr=true;join_timeout=3000;view_bundling=true):
+FC(max_credits=2000000;min_threshold=0.10):
+FRAG2(frag_size=60000):
+pbcast.STREAMING_STATE_TRANSFER"
+propertySeparator="::" />
+
+    <!--cacheManagerPeerListenerFactory
+            class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"/ -->
+	
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            diskSpoolBufferSizeMB="30"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            />
+
+    <cache name="104e32ed-f4f8-45db-8feb-389e92cd2937"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="100000"
+           eternal="true"
+           overflowToDisk="true"
+           memoryStoreEvictionPolicy="LFU"
+            >
+        <cacheEventListenerFactory
+            class="net.sf.ehcache.distribution.jgroups.JGroupsCacheReplicatorFactory"
+            properties="replicateAsynchronously=true, replicatePuts=true,
+            replicateUpdates=true, replicateUpdatesViaCopy=true, replicateRemovals=true" />
+    	<bootstrapCacheLoaderFactory 
+	        class="net.sf.ehcache.distribution.jgroups.JGroupsBootstrapCacheLoaderFactory"
+            properties="bootstrapAsynchronously=true" />
+
+    </cache>
+
+</ehcache>

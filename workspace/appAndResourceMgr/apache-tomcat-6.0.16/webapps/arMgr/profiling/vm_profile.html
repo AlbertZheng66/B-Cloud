@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>性能监控 - 虚拟机性能</title>
+		<script type="text/javascript" src="../js/boot.js"></script>
+		<script type="text/javascript">    
+    		// 加载JS 文件
+    		Loader.importJS();
+			// 加载CSS 文件
+    		Loader.importCSS();	
+		</script>
+    </head>
+    <body>
+        <TABLE width="100%" border="0" align="center">
+	    <TR>
+                <TD class="listPageTitleTd" ><input id="refreshFlag" title="" type="checkbox" value="true" onchange="" />自动刷新</TD>
+                <TD class="listPageTitleTd" >刷新时间(秒)：<input id="interval" value="180" /></TD>
+                <TD class="listPageTitleTd" >加载时间：<input id="loadedTime" value="" readonly="true" /></TD>
+	    </TR>
+	</TABLE>
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="7">可用虚拟机列表</TD>
+	    </TR>
+	</TABLE>		
+	
+	<table class='listTable' id="servers" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="id" > 自定义标识</td>
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="state">当前状态</td>
+                <td class='listTableTitle' name="uptime">运行时间(秒)</td>
+                <td class='listTableTitle' name="cpuInfo">CPU 资源</td>
+                <td class='listTableTitle' name="memoryInfo">内存占用</td>
+                <td class='listTableTitle' name="classLoadingInfo">类信息</td>
+                <td class='listTableTitle' name="threadInfo">线程信息</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <br />
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+		<TD class="listPageTitleTd" colspan="7">详细信息</TD>
+	    </TR>
+	</TABLE>
+	<table class='listTable'  id="memDetails" width="100%" style="display: none" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' >内存类型</td>
+                <td class='listTableTitle' >启动大小</td>
+                <td class='listTableTitle' >已使用大小</td>
+                <td class='listTableTitle' >已提交大小</td>
+                <td class='listTableTitle' >最大内存</td>
+            </tr>
+            <tbody>
+                <tr id='heapMemDetails'>
+                    <td class='listTableTd1' >堆空间</td>
+                    <td class='listTableTd1' >${init}(M)</td>
+                    <td class='listTableTd1' >${used}(M)</td>
+                    <td class='listTableTd1' >${committed}(M)</td>
+                    <td class='listTableTd1' >${max}(M)</td>
+                </tr>
+                <tr id='nonHeapMemDetails'>
+                    <td class='listTableTd1' >非堆空间</td>
+                    <td class='listTableTd1' >${init}(M)</td>
+                    <td class='listTableTd1' >${used}(M)</td>
+                    <td class='listTableTd1' >${committed}(M)</td>
+                    <td class='listTableTd1' >${max}(M)</td>
+                </tr>
+            </tbody>
+        </table>	
+        <table class='listTable'  id="cpuDetails" width="100%" style="display: none" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' id="systemCpuLoad" >系统负载</td>
+                <td class='listTableTitle' id="processCpuLoad">进程负载</td>
+                <td class='listTableTitle' id="totalSwapSpaceSize" >总交换空间大小</td>
+                <td class='listTableTitle' id="processCpuTime" >进程运算时间</td>
+            </tr>
+            <tbody>
+                <tr >
+                    <td class='listTableTd1' >${systemCpuLoad}</td>
+                    <td class='listTableTd1' >${processCpuLoad}</td>
+                    <td class='listTableTd1' >${totalSwapSpaceSize}(M)</td>
+                    <td class='listTableTd1' >${processCpuTime}(S)</td>
+                </tr>
+            </tbody>
+        </table>	
+        <table class='listTable'  id="classesDetails" width="100%" style="display: none" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' id="totalLoaded" >当前加载数</td>
+                <td class='listTableTitle' id="sharedLoaded">共享加载数</td>
+                <td class='listTableTitle' id="totalUnloaded" >共卸载数</td>
+                <td class='listTableTitle' id="totalLoadedClassCount" >所有已加载的类的数量</td>
+            </tr>
+            <tbody>
+                <tr >
+                    <td class='listTableTd1' >${totalLoaded}</td>
+                    <td class='listTableTd1' >${sharedLoaded}</td>
+                    <td class='listTableTd1' >${totalUnloaded}</td>
+                    <td class='listTableTd1' >${totalLoadedClassCount}</td>
+                </tr>
+            </tbody>
+        </table>	
+        	
+        <table class='listTable'  id="threadDetails" width="100%" style="display: none" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' id="" >当前线程数</td>
+                <td class='listTableTitle' id="">最大线程数</td>
+                <td class='listTableTitle' id="" >后台线程数</td>
+                <td class='listTableTitle' id="" >启动的总线程数</td>
+            </tr>
+            <tbody>
+                <tr >
+                    <td class='listTableTd1' >${live}</td>
+                    <td class='listTableTd1' >${livePeak}</td>
+                    <td class='listTableTd1' >${deamon}</td>
+                    <td class='listTableTd1' >${totalStarted}</td>
+                </tr>
+            </tbody>
+        </table>	
+    </body>
+	
+<script>
+
+	
+// 表格的相关配置
+var tableConfig = new TableConfig('pf.jvm.JVMProfilingInfo');
+
+// 表的配置参数
+var params = {actionsConfig : {},
+              methodName    : 'listServers'
+	};
+        
+
+var tu = null;
+var gTable = null;
+Utils.run(function () {
+    // 表的修饰函数
+    tableConfig.createColumnsFromTemplate($('#servers'));
+    tableConfig.renderers = {
+        uptime : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){
+                            return HRFormatter.toDate(value);
+                        }
+                    },
+        cpuInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a onclick='showCpuDetails(" + rowIndex + ", " + colIndex + ")'> 系统负载：" 
+                                + value.systemCpuLoad +
+                                "<br /> 进程负载："  + value.processCpuTime + "</a>"}},
+        memoryInfo : { getRendererComponent:function(gTable,
+            value, rowIndex, colIndex){return "<a onclick='showMemDetails(" + rowIndex + ", " + colIndex + ")'> 最大内存：" + HRFormatter.toM(value.heapMemoryUsage.max)
+                                 + "M<br /> 已使用内存："  + HRFormatter.toM(value.heapMemoryUsage.used) + "M</a>"}},
+        classLoadingInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a onclick='showClassesDetails(" + rowIndex + ", " + colIndex + ")'> 已加载数：" + value.totalLoaded + "</a>"}},
+        threadInfo : { getRendererComponent:function(gTable,
+                        value, rowIndex, colIndex){return "<a onclick='showThreadDetails(" + rowIndex + ", " + colIndex + ")'> 活动进程：" + value.live 
+                                + "<br /> 最大进程数："  + value.livePeak + "</a>"}}
+    };
+    tu = new TableUtils('servers', tableConfig, 'pf.jvm.JVMProfilingService', 
+           params);
+    gTable = tu.autoLoad();
+    setCurrentTime("#loadedTime");
+    refreshAutomatically ();
+});
+
+var tid = null;
+function refreshAutomatically () {
+    var refreshFlag = $('#refreshFlag').val();
+    if (refreshFlag) {
+        var interval = $('#interval').val() * 1000;  // the interval for refreshing
+        setInterval(refresh, interval);
+    } else {
+        if (tid != null) {
+            clearInterval(tid);
+        }
+    }
+}
+
+function refresh() {
+    if (tu != null) {
+        tu.refresh();
+        setCurrentTime("#loadedTime");
+    }
+}
+
+/**
+ * 显示内存的详细信息
+ */
+function showMemDetails(rowIndex, colIndex) {
+    var memInfo = gTable.getValueAt(rowIndex, colIndex);
+    var str = VarTemplate.format("#heapMemDetails", memInfo.heapMemoryUsage, function(varName, value) {
+        return HRFormatter.toM(value);
+    });
+    $("#heapMemDetails").html(str);
+    
+    var str = VarTemplate.format("#nonHeapMemDetails", memInfo.nonHeapMemoryUsage, function(varName, value) {
+        return HRFormatter.toM(value);
+    });
+    $("#nonHeapMemDetails").html(str);
+    
+    display("#memDetails");
+}
+
+/**
+ * 显示内存的详细信息
+ */
+function showCpuDetails(rowIndex, colIndex) {
+    var cpuInfo = gTable.getValueAt(rowIndex, colIndex);
+    var id = "#cpuDetails";
+    var str = VarTemplate.format(id, cpuInfo, function(varName, value) {
+        var _val = value;
+        if ('totalSwapSpaceSize' == varName) {
+            _val = HRFormatter.toM(value);
+        } else {
+            _val = HRFormatter.toK(value);
+        }
+        
+        return _val;
+    });
+    $(id).html(str);
+    
+    display(id);
+}
+
+/**
+ * 显示类加载的详细信息
+ */
+function showClassesDetails(rowIndex, colIndex) {
+    var classesInfo = gTable.getValueAt(rowIndex, colIndex);
+    var id = "#classesDetails";
+    var str = VarTemplate.format(id, classesInfo);
+    $(id).html(str);
+    display(id);
+}
+
+/**
+ * 显示类加载的详细信息
+ */
+function showThreadDetails(rowIndex, colIndex) {
+    var classesInfo = gTable.getValueAt(rowIndex, colIndex);
+    var id = "#threadDetails";
+    var str = VarTemplate.format(id, classesInfo);
+    $(id).html(str);
+    display(id);
+}
+
+/**
+ * 隐藏其他详细信息区域
+ */
+function display(id) {
+    $("#memDetails").hide();
+    $("#cpuDetails").hide();
+    $("#classesDetails").hide();
+    $("#threadDetails").hide();
+    $(id).show();
+}
+
+
+</script>
+</html>

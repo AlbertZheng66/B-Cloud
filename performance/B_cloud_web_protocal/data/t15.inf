@@ -1,0 +1,13 @@
+[t15]
+FileName1=t15_gt_base.html
+URL1=http://www.bc_demo1.com:4900/js/core/gt_base.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_15.xml
+RequestHeaderFile=t15_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t15_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

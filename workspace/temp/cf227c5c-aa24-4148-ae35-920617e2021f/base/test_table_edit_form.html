@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>json client test.......</title>
+
+<script type="text/javascript" src="js/boot.js"></script>
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+</head>
+<body>
+<h1 style="text-align: center;">编辑测试区域...</h1>
+
+<br/>
+<br/>
+
+<!----------- edit area  ----------->
+<div id='edit_form' style="xbackground-color:#6DDA3F;z-index:0">
+            string1: <input name="string1" value="string1">
+            <br/>
+            date1: <input name="date1" value="date1" id="edit_date1">
+            <br/>
+            dictionary1: <select size="1" name="dictionary1" id="editCity"></select>
+            <br/>
+            lookup1: <input name="lookup1" value="lookup1" id="lookup1" /> <a href="#" id='lookup1_btn' >...</a>
+            <br/>
+</div>
+<!----------- edit area  ----------->
+
+</body>
+<script>
+ 
+// 初始化字典、日期、查找等信息
+DicUtils.decorateComboBox('#editCity',  'city', false);
+
+$('#edit_date1').datepicker({showOn: 'button',
+                       		 buttonImage: 'images/calendar.gif', 
+							 buttonImageOnly: true});
+		
+// 绑定 Lookup 搜索
+LookupUtils.bindInput('#lookup1_btn', 'lookup_test.html', {name : 'lookup1', 
+		                feedbacks : {lookup1 : 'lookup1'}});
+
+function editFormInit(params) {
+    BindUtils.bindById('edit_form', params['editingObject']);
+}
+
+</script>
+</html>

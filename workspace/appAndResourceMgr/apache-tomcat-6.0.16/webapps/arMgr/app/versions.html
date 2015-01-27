@@ -1,0 +1,266 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理-版本信息</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+    <script>	
+        // 加载JS 文件
+        Loader.importJS();
+		
+        // 加载CSS 文件
+        Loader.importCSS();
+    </script>
+</head>
+
+<body>
+<form id="appForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">应用信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd" >ID:</td>
+				<td class="modifyTd" ><input name="id" width="100%" readonly='true' /></td>
+				<td class="modifyTd" >名称:</td>
+				<td class="modifyTd" ><input name="name" readonly='true' /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd" >描述信息:</td>
+				<td class="modifyTd" colspan="3"><input name="description" readonly='true' /></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+
+        
+    <TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd">版本列表</TD>
+	    </TR>
+	</TABLE>
+	
+	<!-- table id="appVersions" border="1" ></table -->
+	<table class='listTable' id="appVersions" width="100%" >
+        <tr class='listTableTitle'  >
+            <td class='listTableTitle' name="version" > 版本号</td>
+            <td class='listTableTitle' name="code">开发代码</td>
+            <!-- td class='listTableTitle' name="valid">是否生效</td -->
+            <td class='listTableTitle' name="description">描述信息</td>
+            <td class='listTableTitle' name="state">状态</td>
+            <td class='listTableTitle' name="contextPath">上下文路径</td>
+            <td class='listTableTitle' name="fileSize">文件大小</td>
+            <td class='listTableTitle' name="insertTime">注册时间</td>
+        </tr>
+		<tbody>
+            <tr id='rowTemplate'>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+                <td class='listTableTd1' ></td>
+            </tr>
+        </tbody>
+    </table>
+
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+            	<a id='register' onclick="register()" href="#">注册</a>
+            	<!-- a id='publishTest' onclick="publishTest()" href="#" >测试</a -->
+		    	<a id='publishVersion' onclick="publishVersion()" href="#">发布</a>
+		    	<a id='upgrade' onclick="upgrade()" href="#">升级</a>
+		    	<a id='alter' onclick="alter()" href="#">调整容量</a>
+		    	<!-- a id='pause'    onclick="pause()" href="#">暂停</a  -->
+		    	<a id='restart'     onclick="restart()" href="#">重新启动</a>
+		    	<a id='stop'     onclick="stop()" href="#">停止</a>
+		    	<a id='remove'   onclick="remove()" href="#">删除</a>
+            	<a id='cancel'   onclick="" href="app_list.html">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</body>
+<script>
+
+
+var appService = ServiceFactory.getService('app.AppService');
+var versionsTable = null;
+var versionsTableUtils = null;
+var app   = null;
+var selectedRowIndex = -1; // 被选中的行
+
+/**
+  * 注册应用新版本
+  */
+function registerAppVersion(appVersion, table, service){
+    if (app == null) {
+	    MessageBox.alert('未选择当前应用。');
+	    return;
+	}
+	service.registerAppVersion(app, appVersion);
+}
+
+
+Utils.run(function () {
+    // 解析应用参数
+    app = ParameterHelper.parse(window.location.href).app;
+	
+	if (app == null) {
+	    MessageBox.showError("应用参数不能为空。");
+	    return;
+	}
+	
+	// 数据绑定
+	BindUtils.bind('#appForm', app);
+
+    // 表格的相关配置
+    var tableConfig = new TableConfig('app.AppVersion');
+	tableConfig.createColumnsFromTemplate($('#appVersions'));
+	
+    var params = {methodName : 'listVersions', methodParams : [app]};
+
+    // 表的修饰函数
+    versionsTableUtils = new TableUtils('appVersions', tableConfig, 'app.AppService', 
+           params);
+    versionsTable = versionsTableUtils.autoLoad();
+});
+
+function getAppVersion() {
+    var appVersion = versionsTable.getSelectedRow();
+	if (appVersion == null) {
+	    MessageBox.alert('请选择待操作的版本。');
+	}
+	selectedRowIndex = versionsTable.getSelectedRowNum();
+	return appVersion;
+}
+
+/**
+  * 创建一个跳转到指定页面的页面参数
+  */
+function createUrl (page) {
+    var appVersion = getAppVersion();
+	if (appVersion == null) {
+	    MessageBox.alert('请选择一个待发布的应用。');
+	    return null;
+	}
+	var url = ParameterHelper.append(page, {'appVersion' : appVersion,
+                                         	'app' : app});
+	return url;
+} 
+
+function register() {
+    var url = ParameterHelper.append('version_register.html', {'app' : app});
+	document.location.href = url;
+}
+
+
+/**
+  * 发布新版本
+  */
+function publishVersion() {
+    var url = createUrl('version_publish.html');
+	if (url != null) {
+	    document.location.href = url;
+	}
+}
+
+/**
+  * 发布新的测试版本
+  */
+function publishTest() {
+    var appVersion = getAppVersion();
+	if (appVersion != null) {
+	    appService.publishTestVersion(app, appVersion);
+	}
+}
+
+/**
+  * 升级指定版本。
+  */
+function upgrade() {
+	if (app != null) {
+	    var url = ParameterHelper.append('version_upgrade.html', {'app' : app});
+		document.location.href = url;
+	}
+}
+
+/**
+  * 调整容量。
+  */
+function alter() {
+    var url = createUrl('version_alter.html');
+	if (url != null) {
+	    document.location.href = url;
+	}
+}
+
+/**
+  * 暂停指定版本。
+  *  暂时不处理。
+  */
+function pause() {
+    var appVersion = getAppVersion();
+	if (appVersion != null) {
+	    appService.pauseAppVersion(app, appVersion);
+	}
+}
+
+/**
+  * 重新启动指定版本（以便重新加载参数，如果当前的服务器实例多于一个，重新启动将不会影响系统的运行）。
+  */
+function restart() {
+    Utils.run(function () {
+        var appVersion = getAppVersion();
+	if (appVersion != null) {
+	    appService.restart(appVersion);
+	}
+    });
+}
+
+/**
+  * 停用指定版本。
+  */
+function stop() {
+    Utils.run(function () {
+        var appVersion = getAppVersion();
+	if (appVersion != null) {
+	    appService.stopAppVersion(app, appVersion);
+		versionsTableUtils.refresh();
+	}
+     });
+}
+
+/**
+  * 删除指定版本。
+  */
+function remove() {
+    var appVersion = getAppVersion();
+    if (appVersion == null) {
+        return;
+    }
+    // var versionState = EnumFactory.create('com.xt.bcloud.app.AppVersionState');
+    var versionState = EnumFactory.create(appVersion.state.className);
+    // MessageBox.debug('state=', appVersion.state);
+    // MessageBox.debug('versionState=', versionState);
+    if (EnumFactory.equals(appVersion.state, versionState.REGISTERED)
+     		|| EnumFactory.equals(appVersion.state, versionState.STOPED)) {
+	if (MessageBox.confirm('确认删除此版本吗？')) {
+	    appService.removeAppVersion(app, appVersion);
+	    versionsTable.deleteRow(selectedRowIndex);
+	}  else {
+	    MessageBox.alert('只能删除处于“注册”和“停止”状态的版本。');
+	}
+    }
+}
+
+</script>
+</html>

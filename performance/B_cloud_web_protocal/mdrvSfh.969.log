@@ -1,0 +1,114 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(216): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(216): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(216): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(216): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 3.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 3.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 4.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 4.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 5.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 5.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 6.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 6.	[MsgId: MMSG-10545]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(4): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(216): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(216): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(208): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-icons_ef8c08_256x240.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(208): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-icons_ef8c08_256x240.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(216): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(216): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(216): 24-byte undetermined data (before an HTTP Status Line has been identified) received for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png", and will be handled and printed (or ignored) when determined   [issued at Action.c(224)]  	[MsgId: MMSG-26568]
+Action.c(216): Warning -26567: No HTTP Status Line detected.  The undetermined data above and additional data received now will be handled as body without headers for "http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png"   [issued at Action.c(224)]  	[MsgId: MWAR-26567]
+Action.c(224): web_concurrent_end highest severity level was "warning", 408 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+Action.c(226): lr_think_time: 84.00 seconds.	[MsgId: MMSG-15948]
+Action.c(228): Error -27796: Failed to connect to server "www.bc_demo1.com:4900": [10061] Connection refused  	[MsgId: MERR-27796]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

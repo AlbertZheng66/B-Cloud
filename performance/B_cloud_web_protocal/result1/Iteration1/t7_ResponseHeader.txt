@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=D8C44CC0BF141803119D0006C01D3D61; Path=/
+contentType: text/json;charset=UTF-8
+Content-Type: text/html;charset=utf-8
+Transfer-Encoding: chunked
+Date: Thu, 05 Jul 2012 08:19:52 GMT
+

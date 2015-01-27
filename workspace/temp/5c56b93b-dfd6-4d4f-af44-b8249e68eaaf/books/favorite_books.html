@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>表模板演示</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+	
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<h3 style="">这个使用表这种结构显示复杂的选择页面。</h3>
+<br />
+
+<div id="queryPanel">
+    <form>
+        书名: <input name="name" value="" filterType='CONTAINS'> &nbsp; &nbsp;
+        出版社: <input name="press" value="" filterType='EQUALS'>&nbsp;&nbsp;
+        <a href="#" id='queryBtn'>查询</a> 
+	</form>
+</div>
+
+<br/>
+
+<table style="text-align: left; width: 900px; height: 53px;" id="favoriteTable" 
+    border="0" cellpadding="0" cellspacing="0">
+	
+</table>
+
+<br/>
+<div id="pagination">
+    <input type='button' href="#"  id="firstPage" value='|&lt;' />&nbsp;
+    <input type='button' href="#"  id="prevPage" value='&lt;' />&nbsp;
+	&nbsp;<select id="turnPage"></select>&nbsp;
+    <input type='button' href="#"  id="nextPage" value='&gt;' />&nbsp;
+    <input type='button' href="#"  id="lastPage" value='&gt;|' />
+</div>
+
+<!-- 模板代码 开始 -->   
+    <div id='template'  style="display:none">   
+      <table width="95%" border="0" cellspacing="1" cellpadding="5">
+        <tr>
+          <td width="3%" valign="middle">
+		    <input type="checkbox" name="oid" value="${oid}" xonClick="changechecked(this)"  /></td>
+            <td width="17%" valign="top"><a href="#?oid=${oid}" target='_blank'> <img src='' style='display:none'   border='0'  height="110"  /> </td>
+            <td width="80%" align="left" valign="top"><strong>书　名：</strong>　<a href="#" target="_blank">${name}</a>
+            
+            <br />
+
+            <strong>出版社：　</strong>${press}   <br />
+            <strong>定　价：　</strong>${price}
+			<strong>我的价格：　</strong>${price} <br />
+            <strong>状态：　</strong>有货         <br/>
+            <strong>注　解：　</strong><font color=gray>还未填写注释</font> <a href="#">修改注解</a><br />
+
+          <img src="../images/buycar.gif" width="16" height="15" />[<a href="#" onClick="">购买</a>]<img src="../images/del.gif" width="15" height="15" />[<a href="(${oid});">删除</a>] </td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr size="1" noshade="noshade" color="AFD2EF"/></td>
+        </tr>
+      </table>
+    </div>
+<!-- 模板代码 结束 -->   
+
+</body>
+<script>
+
+function process (row, rowIndex, varName, value) {
+    if ('price' == varName) {
+	    return NumberFormat.format(value);
+	}
+	return value;
+}
+
+// 初始化表格并显示其数据
+Utils.run(function() {
+    // 创建一个模板配置
+    var tableConfig = TemplateTableConfig.create('po.Book');
+
+    var methodParams = ['0'];  // 参数为userOid
+
+    // 用户表的配置参数
+    var params = {methodName    : 'listFavorites', 
+	    		  methodParams  : methodParams,
+		    	  pagination    : {turnPage : $('#turnPage')},     // 
+			      query         : {dom : 'queryPanel', 
+				                   button : 'queryBtn'}};
+						   
+    // 用户表的修饰函数
+    var tableUtils = new TableUtils('favoriteTable', tableConfig,    
+            	'service.UserMgrService', params);
+    var favoriteTable = tableUtils.autoLoad();
+
+});
+
+</script>
+</html>

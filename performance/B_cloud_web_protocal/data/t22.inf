@@ -1,0 +1,13 @@
+[t22]
+FileName1=t22_ui-bg_highlight-soft_100_eeeeee_1x100.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_22.xml
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

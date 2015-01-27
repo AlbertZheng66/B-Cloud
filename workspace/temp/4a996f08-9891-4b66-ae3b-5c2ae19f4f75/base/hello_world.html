@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>Hello World</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+    您的名字: <input id="name" value="World" /> 
+    	<input type='button' value="提交" onclick='sayHello()' />
+</body>
+<script>
+function sayHello() {
+    var helloService = ServiceFactory.getService('com.xt.gt.demo.service.HelloService');
+	var name = jQuery('#name').val();
+	helloService.sayHello(name);
+}
+
+</script>
+</html>

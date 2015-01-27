@@ -1,0 +1,1 @@
+"%~dp0prunsrv.exe" //DS//RCPDatabase

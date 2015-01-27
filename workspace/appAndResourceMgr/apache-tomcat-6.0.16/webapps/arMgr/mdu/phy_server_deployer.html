@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物理服务器列表</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+	
+</script>
+
+</head>
+
+<body>
+	<TABLE width="100%" border="0" align="center">
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">可用的服务器列表</TD>
+	    </TR>
+	</TABLE>
+	<Table class='listTable' id="phyServers" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="ip" > IP 地址</td>
+                <td class='listTableTitle' name="osName">操作系统名称</td>
+                <td class='listTableTitle' name="osVersion">操作系统版本</td>
+                <td class='listTableTitle' name="valid">是否可用</td>
+     <!--
+                <td class='listTableTitle' name="managerPort">管理端口号</td>
+                <td class='listTableTitle' name="workPath">工作目录</td>
+                <td class='listTableTitle' name="userPath">当前运行目录</td>
+                <td class='listTableTitle' name="tempPath">临时工作目录</td>
+     -->
+                <td class='listTableTitle' name="insertTime">创建时间</td>
+                <td class='listTableTitle' name="lastUpdatedTime">最后一次更新时间</td>
+                <td class='listTableTitle' name="state">当前状态</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </Table>
+		
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a id='details'  onclick="showDetails()" value=''>详细信息</a>
+                <a id='disable'  onclick="disable()" value=''>设置为不可用</a>
+            </TD>
+		</TR>
+	</TABLE>
+</body>
+<script>
+
+// 表格的相关配置
+var psTableConfig = new TableConfig('mdu.PhyServer');
+
+// 表的配置参数
+var psParams = {methodName : 'listPhyServers'};
+
+var mduService = ServiceFactory.getService('mdu.MduService');
+
+var psTable = null;
+    
+Utils.run(function () {
+    psTableConfig.createColumnsFromTemplate($('#phyServers'));
+    
+    // 表的修饰函数
+    tu = new TableUtils('phyServers', psTableConfig, 'mdu.MduService', 
+           psParams);
+    psTable = tu.autoLoad();
+    
+    
+});
+
+
+/**
+   * 发布一个实例到指定的物理服务器（可能是多个）
+   */
+function deployPsServer() {
+    Utils.run(function() {
+        var phyServers = getPhyServers();
+        if (phyServers != null) {
+            mduService.disable(phyServers);
+        }
+    });
+}
+
+/**
+  * 返回当前所有选中的物理服务器
+  */
+function getPhyServers() {
+    var phyServers = psTable.getSelectedRows();
+    if (phyServers == null) {
+        MessageBox.alert('请选择一个需要发布的物理服务器。');
+    }
+    return phyServers;
+}
+
+</script>
+</html>

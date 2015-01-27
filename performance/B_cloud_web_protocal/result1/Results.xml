@@ -1,0 +1,715 @@
+﻿<?xml version="1.0"?>
+  <!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName, Res, DVer?, TSet?, TInst?, RunType?, DT?, Step*, Action+, DIter*, Action*, Summary?, NodeArgs?)> 
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+> <Report ver="2.0" tmZone="中国标准时间">
+<General productName="Vugen" productVer="11" os="" host="ALBERT-OFFICE"><DocLocation><![CDATA[E:\work\xthinker\B-Cloud\performance\B_cloud_web_protocal]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[B_cloud_web_protocal]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="2012/7/5 - 16:19:44" eTime="2012/7/5 - 16:19:45" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Url: www.bc_demo1.com:4900]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:48]]></Time>
+<NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
+<Disp><![CDATA[Url: www.bc_demo1.com:4900]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:48]]></Time>
+<NodeArgs eType="General" icon="5" nRep="10" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Url: top.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: top.html registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:48]]></Time>
+<NodeArgs eType="General" icon="4" nRep="11" >
+<Disp><![CDATA[Url: top.html]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Url: main.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: main.html registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:48]]></Time>
+<NodeArgs eType="General" icon="4" nRep="12" >
+<Disp><![CDATA[Url: main.html]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="6" nRep="13" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="5" nRep="14" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Url: nav.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: nav.html registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="4" nRep="15" >
+<Disp><![CDATA[Url: nav.html]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Url: welcome.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: welcome.html registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="4" nRep="16" >
+<Disp><![CDATA[Url: welcome.html]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="6" nRep="17" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="5" nRep="18" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Url: banner.jpg]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: banner.jpg registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="4" nRep="19" >
+<Disp><![CDATA[Url: banner.jpg]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Url: boot.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: boot.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="4" nRep="20" >
+<Disp><![CDATA[Url: boot.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:49]]></Time>
+<NodeArgs eType="General" icon="6" nRep="21" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Url: dolphin.jpg]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="22" status="Passed" >
+<Disp><![CDATA[Url: dolphin.jpg]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="5" nRep="23" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Url: read.getParams]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: read.getParams registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="24" >
+<Disp><![CDATA[Url: read.getParams]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Url: conf.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: conf.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="25" >
+<Disp><![CDATA[Url: conf.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Url: jquery-1.3.2.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: jquery-1.3.2.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="26" >
+<Disp><![CDATA[Url: jquery-1.3.2.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Url: jquery-ui-1.7.2.custom.min.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: jquery-ui-1.7.2.custom.min.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="27" >
+<Disp><![CDATA[Url: jquery-ui-1.7.2.custom.min.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Url: ui.datepicker-zh-CN.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui.datepicker-zh-CN.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="28" >
+<Disp><![CDATA[Url: ui.datepicker-zh-CN.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Url: json2.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: json2.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="29" >
+<Disp><![CDATA[Url: json2.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Url: gt_base.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: gt_base.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="30" >
+<Disp><![CDATA[Url: gt_base.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Url: gt_table.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: gt_table.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="31" >
+<Disp><![CDATA[Url: gt_table.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Url: ajaxupload.3.2.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ajaxupload.3.2.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="32" >
+<Disp><![CDATA[Url: ajaxupload.3.2.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Url: jquery.cookie.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: jquery.cookie.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="33" >
+<Disp><![CDATA[Url: jquery.cookie.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Url: aa.js]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: aa.js registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="34" >
+<Disp><![CDATA[Url: aa.js]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Url: jquery-ui-1.7.2.custom.css]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: jquery-ui-1.7.2.custom.css registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="35" >
+<Disp><![CDATA[Url: jquery-ui-1.7.2.custom.css]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Url: gt_demo.css]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: gt_demo.css registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="36" >
+<Disp><![CDATA[Url: gt_demo.css]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_highlight-soft_100_eeeeee_1x100.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_highlight-soft_100_eeeeee_1x100.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="37" >
+<Disp><![CDATA[Url: ui-bg_highlight-soft_100_eeeeee_1x100.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_glass_100_f6f6f6_1x400.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_glass_100_f6f6f6_1x400.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="38" >
+<Disp><![CDATA[Url: ui-bg_glass_100_f6f6f6_1x400.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Url: ui-icons_ef8c08_256x240.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-icons_ef8c08_256x240.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="39" >
+<Disp><![CDATA[Url: ui-icons_ef8c08_256x240.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_glass_65_ffffff_1x400.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_glass_65_ffffff_1x400.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:50]]></Time>
+<NodeArgs eType="General" icon="4" nRep="40" >
+<Disp><![CDATA[Url: ui-bg_glass_65_ffffff_1x400.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:51]]></Time>
+<NodeArgs eType="General" icon="6" nRep="41" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[Url: test_table_template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:51]]></Time>
+<NodeArgs eType="General" icon="4" nRep="42" status="Passed" >
+<Disp><![CDATA[Url: test_table_template.html]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:51]]></Time>
+<NodeArgs eType="General" icon="5" nRep="43" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Url: read.getParams_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: read.getParams_2 registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:51]]></Time>
+<NodeArgs eType="General" icon="4" nRep="44" >
+<Disp><![CDATA[Url: read.getParams_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="6" nRep="45" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="7" nRep="46" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="7" nRep="47" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="5" nRep="48" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Url: ui-icons_222222_256x240.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-icons_222222_256x240.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="4" nRep="49" >
+<Disp><![CDATA[Url: ui-icons_222222_256x240.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_diagonals-thick_20_666666_40x40.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_diagonals-thick_20_666666_40x40.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="4" nRep="50" >
+<Disp><![CDATA[Url: ui-bg_diagonals-thick_20_666666_40x40.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Url: ui-icons_ffffff_256x240.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-icons_ffffff_256x240.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="4" nRep="51" >
+<Disp><![CDATA[Url: ui-icons_ffffff_256x240.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_gloss-wave_35_f6a828_500x100.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_gloss-wave_35_f6a828_500x100.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="4" nRep="52" >
+<Disp><![CDATA[Url: ui-bg_gloss-wave_35_f6a828_500x100.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Url: ui-bg_glass_100_fdf5ce_1x400.png]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: ui-bg_glass_100_fdf5ce_1x400.png registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="4" nRep="53" >
+<Disp><![CDATA[Url: ui-bg_glass_100_fdf5ce_1x400.png]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:52]]></Time>
+<NodeArgs eType="General" icon="6" nRep="54" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:53]]></Time>
+<NodeArgs eType="General" icon="7" nRep="55" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_3]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_4]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:53]]></Time>
+<NodeArgs eType="General" icon="7" nRep="56" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_4]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Url: test_table_template.html_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:53]]></Time>
+<NodeArgs eType="General" icon="4" nRep="57" status="Passed" >
+<Disp><![CDATA[Url: test_table_template.html_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:53]]></Time>
+<NodeArgs eType="General" icon="5" nRep="58" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Url: read.getParams_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: read.getParams_3 registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:53]]></Time>
+<NodeArgs eType="General" icon="4" nRep="59" >
+<Disp><![CDATA[Url: read.getParams_3]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:54]]></Time>
+<NodeArgs eType="General" icon="6" nRep="60" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:54]]></Time>
+<NodeArgs eType="General" icon="7" nRep="61" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_5]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:54]]></Time>
+<NodeArgs eType="General" icon="7" nRep="62" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_6]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:54]]></Time>
+<NodeArgs eType="General" icon="5" nRep="63" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:54]]></Time>
+<NodeArgs eType="General" icon="6" nRep="64" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:55]]></Time>
+<NodeArgs eType="General" icon="7" nRep="65" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_7]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_8]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:55]]></Time>
+<NodeArgs eType="General" icon="7" nRep="66" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_8]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Url: test_table_template.html_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:55]]></Time>
+<NodeArgs eType="General" icon="4" nRep="67" status="Passed" >
+<Disp><![CDATA[Url: test_table_template.html_3]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:55]]></Time>
+<NodeArgs eType="General" icon="5" nRep="68" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[Url: read.getParams_4]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Url: read.getParams_4 registered successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:55]]></Time>
+<NodeArgs eType="General" icon="4" nRep="69" >
+<Disp><![CDATA[Url: read.getParams_4]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="6" nRep="70" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_9]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="7" nRep="71" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_9]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[Custom Request: jsonClient.action_10]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="7" nRep="72" status="Passed" >
+<Disp><![CDATA[Custom Request: jsonClient.action_10]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t18.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - start]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group started</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="5" nRep="73" >
+<Disp><![CDATA[Service: Concurrent Group - start]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Service: Concurrent Group - end]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Concurrent Group ended</CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="6" nRep="74" >
+<Disp><![CDATA[Service: Concurrent Group - end]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Url: test_bind.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:56]]></Time>
+<NodeArgs eType="General" icon="4" nRep="75" status="Passed" >
+<Disp><![CDATA[Url: test_bind.html]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t19.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[Url: read.getParams_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2012/7/5 - 16:19:57]]></Time>
+<NodeArgs eType="General" icon="4" nRep="76" status="Passed" >
+<Disp><![CDATA[Url: read.getParams_5]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2012/7/5 - 16:19:45" eTime="2012/7/5 - 16:19:57" passed="17" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[B_cloud_web_protocal Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T73">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="2012/7/5 - 16:19:57" eTime="2012/7/5 - 16:19:57" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="79" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="2012/7/5 - 16:19:44" eTime="2012/7/5 - 16:19:57" passed="17" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test B_cloud_web_protocal Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

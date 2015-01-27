@@ -1,0 +1,11 @@
+/*C2*/SET SCHEMA PUBLIC
+CONNECT USER SA
+drop table address
+drop table book\u000d\u000a
+drop table dat_order\u000d\u000a\u000d\u000a
+drop table favorite\u000d\u000a\u000d\u000a\u000d\u000a
+drop table order_item\u000d\u000a\u000d\u000a\u000d\u000a\u000d\u000a
+drop table validation_bean\u000d\u000a\u000d\u000a\u000d\u000a\u000d\u000a\u000d\u000a
+CREATE TABLE APP(\u000d\u000a    OID                 VARCHAR(64) NOT NULL,    -- \u5185\u90e8\u7f16\u7801\u000d\u000a    ID                  VARCHAR(64) NOT NULL,    -- \u81ea\u884c\u7f16\u7801\u000d\u000a    NAME                VARCHAR(128) NOT NULL,   -- \u670d\u52a1\u5668\u540d\u79f0\u000d\u000a    DESCRIPTION         VARCHAR(1024),           -- \u63cf\u8ff0\u4fe1\u606f\u000d\u000a    TAGS                VARCHAR(1024),           -- \u6807\u7b7e\u000d\u000a    VERSION_OID         VARCHAR(512),            -- \u5f53\u524d\u4f7f\u7528\u7684\u9ed8\u8ba4\u7684\u53d1\u5e03\u7248\u672c\u000d\u000a\u0009VALID               VARCHAR(2),              -- \u662f\u5426\u53ef\u7528, Y/N\u000d\u000a\u0009STATE               VARCHAR(2),              -- \u5e94\u7528\u7684\u72b6\u6001\u000d\u000a    CONSTRAINT PK_APP PRIMARY KEY (OID)\u000d\u000a)\u000d\u000a
+CREATE TABLE APP_VERSION(\u000d\u000a    OID                 VARCHAR(64) NOT NULL,    -- \u5185\u90e8\u7f16\u7801\u000d\u000a    APP_OID             VARCHAR(64) NOT NULL,    -- \u5e94\u7528\u7f16\u7801\u000d\u000a    VERSION             VARCHAR(64) NOT NULL,    -- \u7248\u672c\u53f7\u000d\u000a    CODE                VARCHAR(128),            -- \u5e94\u7528\u4ee3\u7801\u000d\u000a    DESCRIPTION         VARCHAR(1024) NOT NULL,  -- \u63cf\u8ff0\u4fe1\u606f\u000d\u000a    DEPLOY_PACKAGE      VARCHAR(512),            -- \u53d1\u5e03\u5305\u7684\u4f4d\u7f6e\u000d\u000a    SEQ                 VARCHAR(2),              -- \u53d1\u5e03\u5e8f\u5217\u000d\u000a\u0009VALID               VARCHAR(2),              -- \u662f\u5426\u53ef\u7528, Y/N\u000d\u000a    CONSTRAINT PK_VERSION_APP PRIMARY KEY (OID)\u000d\u000a)\u000d\u000a
+DISCONNECT

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+  <system>
+       <param name="serverId"  value="serv-2" />
+       <param name="sererMgr.port"          value="39001" />
+       <param name="serverMgr.contextPath"  value="/serv2" /> 
+       <param name="appLifecycles" type="list">
+          <data value="com.xt.bcloud.resource.ServerRegister" />
+       </param>
+       <param name="processorFactories" type="list">
+          <data value="com.xt.core.proc.impl.SessionProcessorFactory" />
+       </param>
+  </system>
+
+</xt-config>

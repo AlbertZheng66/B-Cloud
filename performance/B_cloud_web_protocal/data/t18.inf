@@ -1,0 +1,13 @@
+[t18]
+FileName1=t18_jquery.cookie.html
+URL1=http://www.bc_demo1.com:4900/js/demo/jquery.cookie.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_18.xml
+RequestHeaderFile=t18_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t18_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

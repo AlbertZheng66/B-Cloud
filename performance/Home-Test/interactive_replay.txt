@@ -1,0 +1,4 @@
+Failed to execute the command:
+
+Error code 0.
+Please, check your LoadRunner installation.

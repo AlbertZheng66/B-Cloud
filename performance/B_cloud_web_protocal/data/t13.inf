@@ -1,0 +1,13 @@
+[t13]
+FileName1=t13_ui.datepicker-zh-CN.html
+URL1=http://www.bc_demo1.com:4900/js/core/i18n/ui.datepicker-zh-CN.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_13.xml
+RequestHeaderFile=t13_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t13_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

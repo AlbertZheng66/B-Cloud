@@ -1,0 +1,85 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>导航页</title>
+
+		<script type="text/javascript" src="js/boot.js"></script>
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+			
+            // 加载CSS 文件
+            Loader.importCSS();
+			$(function() {
+		        $("#accordion").accordion({
+				    autoHeight: false,
+					clearStyle : false,
+					header: "h3"
+				});
+         	});
+			
+			function gotoPage(src) {
+			    parent.document.all.content.src = src;
+			    // $('#content').attr('src', src);
+				return false;
+			}
+
+        </script>
+		
+    </head>
+    <body>
+	
+			
+		<div id="accordion" class="" >
+		        <h3 style=""><a href="#">基本控件</a></h3>
+	            <div >
+				    <a href="#" 
+					    onclick="gotoPage('welcome.html')"> 主页 </a> <br />
+				    <a href="#" 
+					    onclick="gotoPage('base/hello_world.html')"> 
+						Hello World </a> <br />
+				    <a href="#" 
+					    onclick="gotoPage('base/test_files.html')"> 
+						文件上传和下载 </a> <br />
+		            <a href="#" 
+					    onclick="gotoPage('base/test_table_template.html')"> 
+						表格模板 </a>  <br />
+				    <a href="#" 
+					       onclick="gotoPage('base/test_validator.html')">
+						   数据校验 </a>  <br />
+				    <a href="#"
+    					onclick="gotoPage('base/test_dic.html')"> 字典表 </a> 
+						<br />
+				    <a href="#" 
+					   onclick="gotoPage('base/test_format.html')"> 格式化 </a>
+					   <br />
+				    <a href="#" 
+					   onclick="gotoPage('base/test_lookup.html')"> 查找 </a> 
+					   <br />
+				    <a href="#" 
+					    onclick="gotoPage('base/test_bind.html')"> 数据绑定 </a> 
+						<br />
+				    <a href="#" 
+					    onclick="gotoPage('base/test_session.html')"> Session </a> 
+						<br />
+				    <a href="#" 
+					    onclick="gotoPage('base/test_asych.html')"> 异步服务 </a> 
+						<br />
+		        </div>
+				
+	            <h3 style=""><a href="#">样例模板</a></h3>
+			    <div style="height:200px;">
+				    <a href="#" 
+					    onclick="gotoPage('books/book_list.html')"> 
+						    查询以及表编辑 </a>           <br />
+			        <a  href="#" 
+					    onclick="gotoPage('books/user_list.html')"> 
+						    用户管理（主子表） </a>  <br />
+		            <a href="#" 
+					    onclick="gotoPage('books/favorite_books.html')"> 
+						    使用列模板构建表格 </a>      <br />
+					
+		        </div>
+		</div><!-- End demo -->        
+    </body>
+</html>

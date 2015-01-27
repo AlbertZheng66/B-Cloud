@@ -1,0 +1,13 @@
+[t31]
+FileName1=t31_ui-bg_diagonals-thick_20_666666_40x40.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_31.xml
+RequestHeaderFile=t31_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t31_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,194 @@
+Virtual User Script started at : 2012-06-15 09:41:43
+Starting action vuser_init.
+TruClient Replay for LoadRunner 11.0.0 for Windows Vista build 8859, initialized on 2012/06/15 at 09:41:34 (1339724494.660s)
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+t=00009024ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00010276ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00010279ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00011206ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00011207ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00011936ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00011939ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00013180ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00013181ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00014514ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00014516ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00015321ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00015322ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00016324ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 1.
+Waiting 21.1990 seconds for iteration pacing.
+Starting iteration 2.
+Starting action Action.
+t=00038569ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00039584ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00039586ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00041465ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00041467ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00042364ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00042367ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00043047ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00043048ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00043963ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00043965ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00044694ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00044695ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00045886ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 2.
+Waiting 19.0940 seconds for iteration pacing.
+Starting iteration 3.
+Starting action Action.
+t=00065313ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00066119ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00066121ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00066873ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00066874ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00067560ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00067562ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00068540ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00068548ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00069356ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00069358ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00070032ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00070034ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00070908ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 3.
+Waiting 28.3510 seconds for iteration pacing.
+Starting iteration 4.
+Starting action Action.
+t=00099655ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00100512ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00100514ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00101447ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00101449ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00102501ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00102502ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00103290ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00103292ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00104108ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00104110ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00104753ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00104754ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00105557ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 4.
+Waiting 23.6280 seconds for iteration pacing.
+Starting iteration 5.
+Starting action Action.
+t=00129799ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00130694ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00130697ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00131649ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00131650ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00132444ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00132446ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00133192ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00133193ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00133970ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00133971ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00134640ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00134642ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00135490ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 5.
+Waiting 14.6830 seconds for iteration pacing.
+Starting iteration 6.
+Starting action Action.
+t=00150648ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00151436ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00151439ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00152303ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00152304ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00153090ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00153091ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00153930ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00153932ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00154778ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00154780ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00155437ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00155439ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00156220ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 6.
+Waiting 23.8100 seconds for iteration pacing.
+Starting iteration 7.
+Starting action Action.
+t=00180488ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00181416ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00181421ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00183229ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00183231ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00184019ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00184020ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00184869ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00184870ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00185774ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00185775ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00186427ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00186428ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00187496ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 7.
+Waiting 14.0180 seconds for iteration pacing.
+Starting iteration 8.
+Starting action Action.
+t=00201885ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00202778ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00202780ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00204694ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00204696ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00205477ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00205479ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00206067ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00206068ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00226497ms: Error -203246: ** 6: Click on Get button ** failed - target object was not found.    [MsgId: MERR-203246]
+Ending action Action.
+Ending iteration 8.
+Waiting 29.6230 seconds for iteration pacing.
+Starting iteration 9.
+Starting action Action.
+t=00256792ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00257795ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00257807ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00259642ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00259644ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00260295ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00260296ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00261141ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00261151ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00262009ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00262010ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00262758ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00262760ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00263758ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 9.
+Waiting 24.1740 seconds for iteration pacing.
+Starting iteration 10.
+Starting action Action.
+t=00288330ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** started    [MsgId: MMSG-204251]
+t=00289150ms: ** 1: Navigate to "http://www.bc_demo1.com:4900/" ** successfully completed    [MsgId: MMSG-204250]
+t=00289160ms: ** 2: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00289934ms: ** 2: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00289937ms: ** 4: Click on 表格模板 focusable ** started    [MsgId: MMSG-204251]
+t=00290744ms: ** 4: Click on 表格模板 focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00290746ms: ** 5: Click on Session focusable ** started    [MsgId: MMSG-204251]
+t=00291528ms: ** 5: Click on Session focusable ** successfully completed    [MsgId: MMSG-204250]
+t=00291530ms: ** 6: Click on Get button ** started    [MsgId: MMSG-204251]
+t=00292321ms: ** 6: Click on Get button ** successfully completed    [MsgId: MMSG-204250]
+t=00292323ms: ** 7: Click on 样例模板 tab ** started    [MsgId: MMSG-204251]
+t=00292973ms: ** 7: Click on 样例模板 tab ** successfully completed    [MsgId: MMSG-204250]
+t=00292975ms: ** 8: Click on 用户管理（主子表） focusable ** started    [MsgId: MMSG-204251]
+t=00293824ms: ** 8: Click on 用户管理（主子表） focusable ** successfully completed    [MsgId: MMSG-204250]
+Ending action Action.
+Ending iteration 10.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

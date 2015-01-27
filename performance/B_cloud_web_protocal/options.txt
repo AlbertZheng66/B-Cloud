@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IE:\work\xthinker\B-Cloud\performance\B_cloud_web_protocal
+-ID:\Program Files\HP\LoadRunner\include
+-ee:\work\xthinker\b-cloud\performance\b_cloud_web_protocal\\logfile.log
+e:\work\xthinker\b-cloud\performance\b_cloud_web_protocal\\combined_B_cloud_web_protocal.c
+e:\work\xthinker\b-cloud\performance\b_cloud_web_protocal\\pre_cci.c

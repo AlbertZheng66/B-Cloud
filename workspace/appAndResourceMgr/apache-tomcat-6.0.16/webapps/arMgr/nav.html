@@ -1,0 +1,81 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>导航页</title>
+
+		<script type="text/javascript" src="js/boot.js"></script>
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+			
+            // 加载CSS 文件
+            Loader.importCSS();
+			$(function() {
+		        $("#accordion").accordion({
+				    autoHeight: false,
+					clearStyle : false,
+					header: "h3"
+				});
+         	});
+			
+			function gotoPage(src) {
+			    parent.document.all.content.src = src;
+			    // $('#content').attr('src', src);
+				return false;
+			}
+
+        </script>
+		
+    </head>
+    <body>	
+		<div id="accordion" class="" >
+		        <h3 style=""><a href="#">应用管理</a></h3>
+	            <div >
+				    <a href="#" 
+					    onclick="gotoPage('app/app_list.html')"> 
+						应用列表</a> <br />	    
+		        </div>
+				
+	            <h3 style=""><a href="#">资源管理</a></h3>
+			    <div style="height:200px;">
+				    <a href="#" 
+					    onclick="gotoPage('resource/server_mgr.html')"> 
+						    服务器管理 </a>           <br />
+			        <a  href="#" 
+					    onclick="gotoPage('resource/db_mgr.html')"> 
+						    数据库管理 </a>  <br />
+		            <a href="#" 
+					    onclick="gotoPage('resource/file_mgr.html')"> 
+						    文件系统管理 </a>      <br />
+		        </div>
+				
+		    <h3 style=""><a href="#">性能监控</a></h3>
+			    <div style="height:200px;">
+				    <a href="#" 
+					    onclick="gotoPage('profiling/server_profile.html')"> 
+						    服务器性能 </a>           <br />
+					<a href="#" 
+					    onclick="gotoPage('profiling/vm_profile.html')"> 
+						    虚拟机性能 </a>           <br />
+					<a href="#" 
+					    onclick="gotoPage('profiling/app_profile.html')"> 
+						    应用性能 </a>           <br />
+			        <a  href="#" 
+					    onclick="gotoPage('profiling/td_profile.html')"> 
+						    任务分配器 </a>  <br />
+		        </div>
+                    <h3 style=""><a href="#">MDU 中心</a></h3>
+			    <div style="height:200px;">
+				 <a href="#" onclick="gotoPage('mdu/maker.html')"> 
+						    制作管理 </a>           <br />
+				 <a href="#" 
+					    onclick="gotoPage('mdu/deployer.html')"> 
+					    发布管理 </a>           <br />
+				 <a  href="#" 
+					    onclick="gotoPage('mdu/updater.html')"> 
+						    更新管理 </a>  <br />
+		        </div>
+		</div>
+        <!-- End accordion -->        
+    </body>
+</html>

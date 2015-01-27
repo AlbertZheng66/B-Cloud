@@ -1,0 +1,13 @@
+[t9]
+FileName1=t9_read.html
+URL1=http://www.bc_demo1.com:4900/read.getParams?name=contextPath
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_9.xml
+RequestHeaderFile=t9_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t9_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

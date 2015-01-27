@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>图书编辑</title>
+
+
+</head>
+<body>
+<h3 style="text-align: center;">图书编辑</h3>
+<br>
+
+<table id="edit_form" style="text-align: left; width: 500px; height: 56px;" 
+   border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="text-align: right;">书名：</td>
+<td><input name="name"></td>
+
+
+</tr>
+<tr>
+<td style="text-align: right;">ISDN：</td>
+<td><input name="isdn"></td></tr>
+<tr><td style="text-align: right; vertical-align: middle;">价格：</td>
+         <td ><input name="price"></td></tr>
+	<tr><td style="text-align: right; vertical-align: middle;">作者：</td>
+	     <td ><input name="author"></td></tr>
+    <tr><td style="text-align: right; vertical-align: middle;">译者：</td>
+	<td ><input name="translator"></td></tr>
+	<tr><td style="text-align: right; vertical-align: middle;">出版社：</td>
+	<td ><input name="press"></td></tr>
+	<tr><td style="text-align: right; vertical-align: middle;">出版时间：</td>
+	<td ><input name="publishDate" id='publishDate'></td></tr>
+	<!--
+	<tr><td style="text-align: right; vertical-align: middle;">封面：</td>
+	<td ><input name="cover"></td></tr> -->
+</tbody>
+</table>
+<br>
+
+<script>
+ 
+// 
+jQuery('#publishDate').datepicker({showOn: 'button',
+                       		 buttonImage : '../images/calendar.gif', 
+							 buttonImageOnly: true});
+FormEditor.init('edit_form');
+
+function formReentry (params) {
+    BindUtils.bind('edit_form', params['editingRow']);
+}
+
+
+</script>
+</body></html>

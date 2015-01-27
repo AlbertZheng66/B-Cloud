@@ -1,0 +1,143 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>MDU 中心-模板制作-应用服务器模板</title>
+        
+        <script type="text/javascript" src="../js/boot.js"></script>
+        <script type="text/javascript">
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();
+        </script>
+
+    </head>
+    <body style="margin: 0;width:100%;">
+
+        <form id="asTemplateForm">
+            <TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+                <colGroup width="15%"></colGroup>
+                <colGroup width="35%"></colGroup>
+                <colGroup width="15%"></colGroup>
+                <colGroup width="35%"></colGroup>
+                
+                <tr class="searchTable">
+                    <td class="modifyTd">名称:</td>
+                    <td class="modifyTd"><input name="name" /></td>
+                    <td class="modifyTd">版本号:</td>
+                    <td class="modifyTd"><input name="version" /></td>
+                </tr>
+                <tr class="searchTable">
+                    <td class="modifyTd">存储位置:</td>
+                    <td class="modifyTd">
+                        <input readonly="true" name="storePath" />
+                        <a href="#" onclick="download()">下载</a>
+                    </td>
+                    <td class="modifyTd">上传文件:</td>
+                    <td class="modifyTd">
+                        <input id="templateFileField" name="templateFile" />
+                    </td>
+                </tr>
+                <tr class="searchTable">
+                    <td class="modifyTd">参数配置:</td>
+                    <td class="modifyTd" colspan='3'>
+                        <textarea name="params" readonly="true"   style="width:620px;height:80px" ></textarea>
+                        <a href="#" onclick="editParams()" > 编辑 </a>
+                    </td>
+                </tr>
+                <tr class="searchTable">
+                    <td class="modifyTd">启动命令模板:</td>
+                    <td class="modifyTd" colspan='3'  >
+                        <textarea name="startupCmd"  style="width:620px;height:80px" ></textarea>
+                    </td>
+                </tr>
+                <tr class="searchTable">
+                    <td class="modifyTd">停止命令模板:</td>
+                    <td class="modifyTd" colspan='3' width="100%">
+                        <textarea name="stopCmd"  style="width:620px;height:80px" ></textarea>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+                <TR>
+                    <TD class='listTableButtonTd' align=right>
+                        <a href="#" onclick="save()">确定</a>
+                        <a href="#" onclick="backTo()">返回</a>
+                    </TD>
+                </TR>
+            </TABLE>
+        </form>
+    </body>
+    
+    <script  type="text/javascript">
+	
+        var templateFile = null;  // 用于上传的模板文件   
+        var makingService = ServiceFactory.getService('mdu.service.MakingService');
+        var serverTemplate = null;  // 服务模板，应该由调用程序传入
+        var fromPage = null;  // 来自页面（需要返回到此页面）
+        var methodName = null;
+
+        Utils.run(function() {
+            templateFile = new UploadedFile ('#templateFileField');
+            // 解析应用参数
+            var appParams = ParameterHelper.parse(window.location.href);
+            // 应用信息
+            serverTemplate = appParams.serverTemplate;
+            methodName     = appParams.methodName;
+            fromPage       = appParams.fromPage;
+            if (fromPage == null) {  // 新增的情况此参数为空
+                MessageBox.warn('发起页面不能为空。');
+                return;
+            }
+            if (methodName == null) {  // 新增的情况此参数为空
+                MessageBox.warn('方法名称不能为空。');
+                document.location.href = fromPage;
+                return;
+            }
+            if (serverTemplate == null) {  // 新增的情况此参数为空
+                serverTemplate = {};
+            } 
+            // 将参数转换为字符串的形式
+            if (serverTemplate.params != null) {
+                serverTemplate.params = JSON.stringify(serverTemplate.params);
+            }
+            BindUtils.bind("asTemplateForm", serverTemplate, {});
+        });
+
+        // 注册当前应用
+        function save () {
+            Utils.run(function() {
+                makingService.onComplete = function (retValue) {  // 业务处理之后
+                    // retValue ? alert('文件上传成功!') : alert('文件上传失败!');
+                    document.location.href = fromPage;
+                }; 
+                makingService[methodName](serverTemplate, templateFile);
+            });
+            
+        }
+        
+        function editParams() {
+            // 传递完整的参数，然后再传递回来
+            var url = ParameterHelper.append("params_editor.html",
+                {'serverTemplate' : serverTemplate, 'methodName' : methodName, 'fromPage': fromPage});
+            document.location.href = url;
+        }
+        
+        function backTo() {
+            document.location.href = fromPage;
+        }
+        
+        function download() {
+            if (serverTemplate == null) {
+                MessageBox.warn("当前模板为空，不能下载。");
+            }
+            makingService.downloadPackage(serverTemplate);
+        }
+
+
+    </script>
+</html>

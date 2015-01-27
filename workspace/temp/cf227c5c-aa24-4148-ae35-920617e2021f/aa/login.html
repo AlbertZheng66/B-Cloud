@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>用户登录</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+<script>
+    // 加载CSS 文件
+    Loader.importCSS();
+    // 加载JS 文件
+    Loader.importJS();
+</script>
+
+</head>
+<body>
+<p> 演示登录的模拟系统，用户名和密码相同时认为校验通过。 </p>
+<table style="text-align: left; width: 449px; height: 119px;" id="loginPanel" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="text-align: right;">用
+户名：</td>
+<td><input name="userName" value="admin" type='text' /></td>
+</tr>
+<tr>
+<td style="text-align: right;">密
+码：</td>
+<td><input name="passwd" value="admin" type="password" /></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td style="text-align: center;">
+    <button style="width: 80px; height: 20px; text-align: center;"
+    	value="确定" type="button" onclick="login()">确定</button></td>
+</tr>
+</tbody>
+</table>
+<br>
+<script>
+    var userInfo = {};
+	BindUtils.bind('#loginPanel', userInfo);  // 数据绑定
+	
+	function login() {	
+        Utils.run(function() {    
+	        // 登录操作
+	        var service = ServiceFactory.getService('aa.LoginService');
+		    if (service.login(userInfo)) {
+			    // alert('登录成功！');
+				var href = Utils.createUrl('');
+				window.location.href = href;
+			} else {
+			    alert('登录失败，请确认你输入的用户名和密码相同!');
+			}
+        });
+	}
+</script>
+</body></html>

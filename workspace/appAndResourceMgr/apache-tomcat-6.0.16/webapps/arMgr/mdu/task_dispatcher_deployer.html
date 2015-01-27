@@ -1,0 +1,131 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>应用服务器模板列表</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+
+        <script>
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();
+	
+        </script>
+
+    </head>
+
+    <body>
+        <TABLE width="100%" border="0" align="center">
+            <TR>
+                <TD class="listPageTitleTd" colspan="4">任务管理器实例</TD>
+            </TR>
+        </TABLE>
+        <table class='listTable' id="tdInstances" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="version"> 版本号</td>
+                <td class='listTableTitle' name="valid">是否生效</td>
+                <td class='listTableTitle' name="state">状态</td>
+                <!--
+                <td class='listTableTitle' name="startupCmd">启动命令</td>
+                <td class='listTableTitle' name="stopCmd">停止命令</td>
+                -->
+                <td class='listTableTitle' name="startupTime">启动时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a id='start'            onclick="start()" >启动</a>
+                    <a id='stop'             onclick="stop()" >停止</a>
+                    <a id='stopForcefully'  onclick="stopForcefully()" >强制停止</a>
+                    <a id='restart'          onclick="restart()" >重启</a>
+                    <a id='deploy'           onclick="deploy()" >发布</a>
+                </TD>
+            </TR>
+        </TABLE>
+    </body>
+    <script>
+
+        // 表格的相关配置
+        var tdTableConfig = new TableConfig('mdu.AppServerInstance');
+
+        // 表的配置参数
+        var tdParams = {methodName : 'listTaskDispatcherServers'};
+
+        var mduService = ServiceFactory.getService('mdu.MduService');
+
+        var tdTable = null;
+        Utils.run(function () {
+            tdTableConfig.createColumnsFromTemplate($('#tdInstances'));
+            // 表的修饰函数
+            tu = new TableUtils('tdInstances', tdTableConfig, 'mdu.MduService', 
+            tdParams);
+            tdTable = tu.autoLoad();
+        });
+
+        ///**
+        //  * 创建一个跳转到指定页面的页面参数
+        //  */
+        //function createUrl (page) {
+        //    var tdTemplate = gettdInstances();
+        //    if (tdTemplate == null) {
+        //       return null;
+        //    }
+        //    var url = ParameterHelper.append(page, {'tdTemplate' : tdTemplate});
+        //    return url;
+        //} 
+
+        /**
+         * 跳转到发布页面
+         */
+        function deploy() {        
+            var url = ParameterHelper.append("server_selector.html", 
+                {'fromPage' : "app_server_deployer.html", 'type' : 'TD'  });
+            document.location.href = url;
+        }
+
+        /**
+         * 返回当前选中的应用服务器模板
+         */
+        function gettdInstances() {
+            var tdTemplate = table.getSelectedRow();
+            if (tdTemplate == null) {
+                MessageBox.alert('请选择一个需要处理的应用服务器模板。');
+            }
+            return tdTemplate;
+        }
+
+
+
+        /**
+         * 移除选中的应用服务器模板
+         */
+        function removeTdTemplate() {
+            Utils.run(function() {
+                var tdTemplate = gettdInstances();    
+                if (tdTemplate != null) {
+                    if (MessageBox.confirm("确定删除此模板？")) {
+                        appService.deleteAppServerTemplate(tdTemplate);
+                        table.deleteRow(table.getSelectedRowNum());
+                    }
+                }
+            });
+        }
+    </script>
+</html>

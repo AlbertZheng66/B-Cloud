@@ -1,0 +1,13 @@
+[t25]
+FileName1=t25_ui-bg_glass_65_ffffff_1x400.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_25.xml
+RequestHeaderFile=t25_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t25_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

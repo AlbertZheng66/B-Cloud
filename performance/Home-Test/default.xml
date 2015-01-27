@@ -1,0 +1,1121 @@
+<truScript engineVersion="11.0.0.08859">
+<step type="block" id="step:{d75bbc60-9f6f-4167-8a2b-3d4e9fe32373}" action="block" level="1" arguments="{&quot;comment&quot;:&quot;TopStep&quot;}">
+  <step type="block" id="step:{69b3cc6f-7239-4427-aac3-3a606c06539a}" action="action" level="43" arguments="{&quot;comment&quot;:&quot;Init Container&quot;}"/>
+  <step type="block" id="step:{86f5dfdc-2813-4366-864f-6a11a3f1ce26}" action="action" level="43" arguments="{&quot;comment&quot;:&quot;Action Container&quot;}">
+    <step type="testObject" testObject="testObj:{3b272182-f70f-4fbe-b116-7933cb78ef0c}" id="step:{3e2246da-e85e-4a2d-a3c1-7bcc59bf65fe}" action="Navigate" level="1" arguments="{&quot;Location&quot;:&quot;\&quot;http://www.bc_demo1.com:4900/\&quot;&quot;}" index="1"/>
+    <step type="testObject" testObject="testObj:{54164d03-aebe-45bf-a93d-9bb2d29f63e0}" id="step:{cb77d4c6-8c6e-482c-8338-1d159cdb67b7}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:17,&quot;Y Coordinate&quot;:13}" index="2"/>
+    <step type="testObject" testObject="testObj:{6b9cb3ce-59bc-42a0-83ba-f58046b99e8f}" id="step:{616d7a31-88f1-4508-b404-16c939d0057d}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:26,&quot;Y Coordinate&quot;:21}" index="3" disabled="true"/>
+    <step type="testObject" testObject="testObj:{54164d03-aebe-45bf-a93d-9bb2d29f63e0}" id="step:{a101ffda-602c-41fd-a740-b627ef10b4ad}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:44,&quot;Y Coordinate&quot;:9}" index="4"/>
+    <step type="testObject" testObject="testObj:{a320a1b7-af68-4ca8-9208-23008b6ddd95}" id="step:{445c82a0-c5e6-44d2-88f2-dc302c20499b}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:22,&quot;Y Coordinate&quot;:8}" index="5"/>
+    <step type="testObject" testObject="testObj:{dc4fbf8b-f2cb-4219-b4b6-ea135de26e37}" id="step:{35980439-1ab6-4298-a99b-47ce9c807c56}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:28,&quot;Y Coordinate&quot;:9}" index="6"/>
+    <step type="testObject" testObject="testObj:{a52b84bb-ef53-472a-8692-f371fa4705cd}" id="step:{1e44a625-bbd9-4d11-9945-91a973d373e3}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:67,&quot;Y Coordinate&quot;:23}" index="7"/>
+    <step type="testObject" testObject="testObj:{75f2cd23-9fa7-48ae-a3ca-503734302cc3}" id="step:{766d95be-b1d2-432c-8cff-60fc342d21d3}" action="Click" level="1" arguments="{&quot;X Coordinate&quot;:41,&quot;Y Coordinate&quot;:5}" index="8"/>
+    <step type="block" id="step:{1d86568d-7b35-4c66-94ec-d42e006e9aef}" action="Mouse Over" level="3" arguments="{}" index="9">
+      <step type="testObject" testObject="testObj:{a86aa9b7-722c-4ff4-bb63-7b7ddba88fb6}" id="step:{1aa9db37-f350-4bc1-a29d-5cb308474e83}" action="Mouse Over" level="3" index="1"/>
+      <step type="testObject" testObject="testObj:{37a47b8e-ee4d-4dbc-aae2-543d067fbf4e}" id="step:{0d8e55d8-0954-4ef0-8b57-d133f55c918f}" action="Mouse Over" level="3" index="2"/>
+      <step type="testObject" testObject="testObj:{43770508-60d7-42c8-8cd4-6cee8bb93b02}" id="step:{336b4f95-722b-488f-a6c1-b517faf81bec}" action="Mouse Over" level="3" index="3"/>
+    </step>
+    <step type="alternative" id="step:{e6af1d4a-93ff-4d7b-9cbe-f05c3adc4689}" action="Click" level="2" activeStep="0" index="10">
+      <step type="testObject" testObject="testObj:{b058b3b7-a794-4681-b8ac-1cc24b2f8efb}" id="step:{8341624e-67c5-4015-b409-8c71bede33e6}" action="Click" level="43" arguments="{&quot;X Coordinate&quot;:18,&quot;Y Coordinate&quot;:31}"/>
+      <step type="testObject" testObject="testObj:{f86ac94d-e8dc-4b58-a87e-fde6bacc97ef}" id="step:{dd0aa438-716b-4ab6-825c-b91f41a263d5}" action="Select" level="43" arguments="{&quot;Ordinal&quot;:1,&quot;Inner Object&quot;:&quot;\&quot;testObj:{b058b3b7-a794-4681-b8ac-1cc24b2f8efb}\&quot;&quot;}"/>
+    </step>
+    <step type="testObject" testObject="testObj:{a66d5fac-fa58-46f0-8010-013393368785}" id="step:{49dc9a9f-056a-4885-b1a5-b1f33f085188}" action="Mouse Over" level="3" index="11"/>
+    <step type="testObject" testObject="testObj:{f91f56fa-8fc0-4cd2-b59e-09f6d09de92f}" id="step:{eb3d1521-ecd8-46af-b51c-adac3956ee5e}" action="Mouse Down" level="3" arguments="{&quot;X Coordinate&quot;:723,&quot;Y Coordinate&quot;:481}" index="12"/>
+    <step type="testObject" testObject="testObj:{f91f56fa-8fc0-4cd2-b59e-09f6d09de92f}" id="step:{92f6fa1d-f435-4d20-af4a-481f9ccb4a25}" action="Mouse Up" level="3" arguments="{&quot;X Coordinate&quot;:720,&quot;Y Coordinate&quot;:1097}" index="13"/>
+  </step>
+  <step type="block" id="step:{8906aaeb-8c81-4230-baa7-2ff274d84937}" action="action" level="43" arguments="{&quot;comment&quot;:&quot;End Container&quot;}"/>
+  <step type="runLogic" name="default" id="step:{a8e8f8d6-1358-4f1c-a1d5-190b4ea59ede}" action="runLogic" level="43" arguments="{&quot;type&quot;:&quot;default&quot;}">
+    <step type="control" id="step:{254c37a4-1e2a-470f-9bcd-35cf0b983502}" action="ref" level="43" arguments="{}" refStepId="step:{69b3cc6f-7239-4427-aac3-3a606c06539a}" actionName="Init"/>
+    <step type="control" id="step:{94c36384-8a8a-4c32-8386-12c7d75887a1}" action="ref" level="43" arguments="{}" refStepId="step:{86f5dfdc-2813-4366-864f-6a11a3f1ce26}" actionName="Action"/>
+    <step type="control" id="step:{b5e1e307-612c-427f-b874-843ddf607dd4}" action="ref" level="43" arguments="{}" refStepId="step:{8906aaeb-8c81-4230-baa7-2ff274d84937}" actionName="End"/>
+  </step>
+</step>
+<testObjects><testObject id="testObj:{3b272182-f70f-4fbe-b116-7933cb78ef0c}" autoName="active"><roles><role>browser</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.65,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "id", "value" : {"id":"content","isValidWord":true}, "score" : 0.5 }, 
+		{ "id" : "title", "value" : "GreenTea 演示程序 - Mozilla Firefox", "score" : 0.3 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":1,
+				"maxObjsPerElector":200,
+				"total":{
+						"id":1,
+						"title":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::tabbrowser[@id=\"content\"]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}"><roles><role>element</role><role>tablist</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6042846250000001,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "role", "value" : "tablist", "score" : 0.05 }, 
+		{ "id" : "id", "value" : {"id":"accordion","isValidWord":true}, "score" : 0.5 }, 
+		{ "id" : "tagName", "value" : "DIV", "score" : 0.01 }, 
+		{ "id" : "class", "value" : "ui-accordion ui-widget ui-helper-reset", "score" : 0.15 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":8,
+				"maxObjsPerElector":200,
+				"total":{
+						"role":1,
+						"id":1,
+						"tagName":4,
+						"class":5,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{f61eadd8-bf0c-4c2f-9b3a-ba06d1e7c741}"><roles><role>element</role><role>tabpanel</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.5251415500000001,
+"contextObj":"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"主页 Hello World 文件上传和下载 表格模板 数据校验 字典表 格式化 查找 数据绑定 Session 异步服务","tagName":"DIV"}, "score" : 0.4 }, 
+		{ "id" : "role", "value" : "tabpanel", "score" : 0.05 }, 
+		{ "id" : "tagName", "value" : "DIV", "score" : 0.01 }, 
+		{ "id" : "class", "value" : "ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active", "score" : 0.15 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":7,
+				"maxObjsPerElector":200,
+				"total":{
+						"text":1,
+						"role":2,
+						"tagName":4,
+						"class":5,
+						"leaf":null
+				},
+				"secondaryScore":0.20856716430750002,
+				"totalCandidates":2
+		},
+		"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}":{
+				"totalObjs":4,
+				"maxObjsPerElector":200,
+				"total":{
+						"text":1,
+						"role":2,
+						"tagName":2,
+						"class":4,
+						"leaf":null
+				},
+				"secondaryScore":0.20856716430750002,
+				"totalCandidates":2
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/div[1]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{54164d03-aebe-45bf-a93d-9bb2d29f63e0}" autoName="表格模板"><roles><role>element</role><role>focusable</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.558955,
+"contextObj":"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}",
+"contextChanged":true,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"表格模板","tagName":"A"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "A", "score" : 0.01 }, 
+		{ "id" : "a/href", "value" : {"url":"#","protocol":"http:","host":"www.bc_demo.com:","pathname":"/nav.html","search":""}, "score" : 0.25 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"text":1,
+						"tagName":16,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		},
+		"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"text":1,
+						"tagName":16,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/div[1]/a[4]"
+}
+}]]></ident><ident type="JavaScript"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":undefined
+}
+}]]></ident></idents></testObject><testObject id="testObj:{6b9cb3ce-59bc-42a0-83ba-f58046b99e8f}" autoName="Ok"><roles><role>element</role><role>focusable</role><role>button</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6001192,
+"implData":{
+	"ctxScore":0.4,
+	"electors":[
+		{ "id" : "tagName", "value" : "BUTTON", "score" : 0.1 }, 
+		{ "id" : "text", "value" : {"text":"Ok","tagName":"BUTTON"}, "score" : 0.4 }, 
+		{ "id" : "class", "value" : "ui-state-default ui-corner-all ui-state-hover", "score" : 0.15 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+		{ "id" : "border", "value" : {"top":1,"right":1,"bottom":1,"left":1}, "score" : 0.12 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":5,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":1,
+						"class":5,
+						"text":1,
+						"leaf":null,
+						"border":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"/html/body/div[2]/div[10]/button"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{a320a1b7-af68-4ca8-9208-23008b6ddd95}" autoName="Session"><roles><role>element</role><role>focusable</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.558955,
+"contextObj":"testObj:{f61eadd8-bf0c-4c2f-9b3a-ba06d1e7c741}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"Session","tagName":"A"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "A", "score" : 0.01 }, 
+		{ "id" : "a/href", "value" : {"url":"#","protocol":"http:","host":"www.bc_demo.com:","pathname":"/nav.html","search":""}, "score" : 0.25 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":16,
+						"text":1,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		},
+		"testObj:{f61eadd8-bf0c-4c2f-9b3a-ba06d1e7c741}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"text":1,
+						"a/href":11,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":11
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/div[1]/a[10]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{77b050cd-8636-4ab8-81a5-4348e37fe237}"><roles><role>element</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.41194000000000003,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"读取字符串：","tagName":"DIV"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "DIV", "score" : 0.01 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":6,
+				"maxObjsPerElector":200,
+				"total":{
+						"text":1,
+						"tagName":6,
+						"leaf":null
+				},
+				"secondaryScore":0.019899801,
+				"totalCandidates":5
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"/html/body/div[2]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{dc4fbf8b-f2cb-4219-b4b6-ea135de26e37}" autoName="Get"><roles><role>element</role><role>focusable</role><role>button</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.4785868,
+"contextObj":"testObj:{77b050cd-8636-4ab8-81a5-4348e37fe237}",
+"implData":{
+	"ctxScore":0.4,
+	"electors":[
+		{ "id" : "input/button/value", "value" : "Get", "score" : 0.3 }, 
+		{ "id" : "input/type", "value" : "button", "score" : 0.05 }, 
+		{ "id" : "tagName", "value" : "INPUT", "score" : 0.1 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+		{ "id" : "border", "value" : {"top":3,"right":3,"bottom":3,"left":3}, "score" : 0.12 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":5,
+				"maxObjsPerElector":200,
+				"total":{
+						"input/button/value":1,
+						"input/type":3,
+						"tagName":5,
+						"leaf":null,
+						"border":null
+				},
+				"secondaryScore":0.25512144876000004,
+				"totalCandidates":3
+		},
+		"testObj:{77b050cd-8636-4ab8-81a5-4348e37fe237}":{
+				"totalObjs":3,
+				"maxObjsPerElector":200,
+				"total":{
+						"input/button/value":1,
+						"input/type":2,
+						"tagName":3,
+						"leaf":null,
+						"border":null
+				},
+				"secondaryScore":0.25512144876000004,
+				"totalCandidates":2
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"/html/body/div[2]/input[2]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{a52b84bb-ef53-472a-8692-f371fa4705cd}" autoName="样例模板"><roles><role>element</role><role>focusable</role><role>tab</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.558955,
+"contextObj":"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"样例模板","tagName":"A"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "A", "score" : 0.01 }, 
+		{ "id" : "a/href", "value" : {"url":"#","protocol":"http:","host":"www.bc_demo.com:","pathname":"/nav.html","search":""}, "score" : 0.25 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":16,
+						"text":1,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		},
+		"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":16,
+						"text":1,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/h3[2]/a"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{86169c7d-7fab-4c11-9047-8e9578961b87}"><roles><role>element</role><role>tabpanel</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.68032529146,
+"contextObj":"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}",
+"implData":{
+	"ctxScore":0.30000000000000004,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"查询以及表编辑 用户管理（主子表） 使用列模板构建表格","tagName":"DIV"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "DIV", "score" : 0.01 }, 
+		{ "id" : "role", "value" : "tabpanel", "score" : 0.05 }, 
+		{ "id" : "class", "value" : "ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active", "score" : 0.15 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+		{ "id" : "style/background-image", "value" : "url(\"http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png\")", "score" : 0.15 }, 
+		{ "id" : "border", "value" : {"top":0,"right":1,"bottom":1,"left":1}, "score" : 0.12 }, 
+		{ "id" : "position", "value" : "relative", "score" : 0.1 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":9,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":6,
+						"role":2,
+						"class":5,
+						"text":1,
+						"leaf":null,
+						"style/background-image":null,
+						"border":null,
+						"position":null
+				},
+				"secondaryScore":0.28770944787675,
+				"totalCandidates":2
+		},
+		"testObj:{62f09262-c920-4ea7-a4df-a05d0d1b9c7b}":{
+				"totalObjs":4,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":2,
+						"role":2,
+						"class":4,
+						"text":1,
+						"leaf":null,
+						"style/background-image":null,
+						"border":null,
+						"position":null
+				},
+				"secondaryScore":0.28770944787675,
+				"totalCandidates":2
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/div[2]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{75f2cd23-9fa7-48ae-a3ca-503734302cc3}" autoName="用户管理（主子表）"><roles><role>element</role><role>focusable</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.558955,
+"contextObj":"testObj:{86169c7d-7fab-4c11-9047-8e9578961b87}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "text", "value" : {"text":"用户管理（主子表）","tagName":"A"}, "score" : 0.4 }, 
+		{ "id" : "tagName", "value" : "A", "score" : 0.01 }, 
+		{ "id" : "a/href", "value" : {"url":"#","protocol":"http:","host":"www.bc_demo.com:","pathname":"/nav.html","search":""}, "score" : 0.25 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":16,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":16,
+						"text":1,
+						"a/href":16,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":16
+		},
+		"testObj:{86169c7d-7fab-4c11-9047-8e9578961b87}":{
+				"totalObjs":3,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":3,
+						"text":1,
+						"a/href":3,
+						"leaf":null
+				},
+				"secondaryScore":0.26492235075000004,
+				"totalCandidates":3
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::div[@id=\"accordion\"]/div[2]/a[2]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}"><roles><role>element</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.5834575000000001,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TABLE", "score" : 0.01 }, 
+		{ "id" : "id", "value" : {"id":"userTable","isValidWord":true}, "score" : 0.5 }, 
+		{ "id" : "class", "value" : "tableRegion", "score" : 0.15 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":5,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":3,
+						"id":1,
+						"class":3,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{444575a1-976b-4828-85a7-cf727357fc2e}"><roles><role>element</role><role>listitem</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6810294249999999,
+"contextObj":"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}",
+"implData":{
+	"ctxScore":0.2,
+	"electors":[
+		{ "id" : "tagName", "value" : "TR", "score" : 0.05 }, 
+		{ "id" : "id", "value" : {"id":"tr_4","isValidWord":true}, "score" : 0.3 }, 
+		{ "id" : "class", "value" : "evenRow", "score" : 0.15 }, 
+		{ "id" : "text", "value" : {"text":"  F高中 测试用户  aa@bbcom   ","tagName":"TR"}, "score" : 0.4 }, 
+		{ "id" : "tr/cols", "value" : 11, "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":13,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":13,
+						"id":10,
+						"class":5,
+						"text":2,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.6810226147057499,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":2,
+				"similarOrdinal":1,
+				"totalCandidates":10
+		},
+		"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"id":10,
+						"class":5,
+						"text":2,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.6810226147057499,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":2,
+				"similarOrdinal":1,
+				"totalCandidates":10
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[2]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{a86aa9b7-722c-4ff4-bb63-7b7ddba88fb6}" autoName="*   /"><roles><role>element</role><role>gridcell</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.059500000000000004,
+"contextObj":"testObj:{444575a1-976b-4828-85a7-cf727357fc2e}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TD", "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":133,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":133,
+						"leaf":null
+				},
+				"secondaryScore":0.059499405000000005,
+				"similarPrimaryScore":0.059499405000000005,
+				"similarSecondaryScore":0,
+				"similarTotal":10,
+				"similarOrdinal":2,
+				"totalCandidates":10
+		},
+		"testObj:{444575a1-976b-4828-85a7-cf727357fc2e}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[2]/td[1]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{81a74698-fa27-4747-92be-60c47bfdeee1}"><roles><role>element</role><role>listitem</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6810294249999999,
+"contextObj":"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}",
+"implData":{
+	"ctxScore":0.2,
+	"electors":[
+		{ "id" : "tagName", "value" : "TR", "score" : 0.05 }, 
+		{ "id" : "id", "value" : {"id":"tr_7","isValidWord":true}, "score" : 0.3 }, 
+		{ "id" : "class", "value" : "oddRow", "score" : 0.15 }, 
+		{ "id" : "text", "value" : {"text":"  F初中 测试用户  aa@bbcom   ","tagName":"TR"}, "score" : 0.4 }, 
+		{ "id" : "tr/cols", "value" : 11, "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":13,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":13,
+						"id":10,
+						"class":5,
+						"text":5,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.5830391695499999,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":5,
+				"similarOrdinal":4,
+				"totalCandidates":10
+		},
+		"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"id":10,
+						"class":5,
+						"text":5,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.5830391695499999,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":5,
+				"similarOrdinal":4,
+				"totalCandidates":10
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[5]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{37a47b8e-ee4d-4dbc-aae2-543d067fbf4e}" autoName="*   /"><roles><role>element</role><role>gridcell</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.059500000000000004,
+"contextObj":"testObj:{81a74698-fa27-4747-92be-60c47bfdeee1}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TD", "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":133,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":133,
+						"leaf":null
+				},
+				"secondaryScore":0.059499405000000005,
+				"similarPrimaryScore":0.059499405000000005,
+				"similarSecondaryScore":0,
+				"similarTotal":10,
+				"similarOrdinal":5,
+				"totalCandidates":10
+		},
+		"testObj:{81a74698-fa27-4747-92be-60c47bfdeee1}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[5]/td[1]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{43770508-60d7-42c8-8cd4-6cee8bb93b02}" autoName="*   /"><roles><role>element</role><role>focusable</role><role>radio</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.407485,
+"contextObj":"testObj:{444575a1-976b-4828-85a7-cf727357fc2e}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "INPUT", "score" : 0.1 }, 
+		{ "id" : "id", "value" : {"id":"_selector_tr_4","isValidWord":true}, "score" : 0.3 }, 
+		{ "id" : "input/type", "value" : "radio", "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":14,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":14,
+						"id":10,
+						"input/type":10,
+						"leaf":null
+				},
+				"secondaryScore":0.40748092515,
+				"similarPrimaryScore":0.40748092515,
+				"similarSecondaryScore":0,
+				"similarTotal":10,
+				"similarOrdinal":2,
+				"totalCandidates":10
+		},
+		"testObj:{444575a1-976b-4828-85a7-cf727357fc2e}":{
+				"totalObjs":1,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":1,
+						"id":1,
+						"input/type":1,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[2]/td[1]/input"
+}
+}]]></ident></idents><methods><![CDATA[{getValue:function () {
+    return find("xpath:string(//label[@for=\"" + this.object.id + "\"])", this.object)[0];
+},
+}]]></methods></testObject><testObject id="testObj:{f3d6281f-c054-4c49-aa49-c5b71ffd1abe}"><roles><role>element</role><role>listitem</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6810294249999999,
+"contextObj":"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}",
+"implData":{
+	"ctxScore":0.2,
+	"electors":[
+		{ "id" : "tagName", "value" : "TR", "score" : 0.05 }, 
+		{ "id" : "id", "value" : {"id":"tr_3","isValidWord":true}, "score" : 0.3 }, 
+		{ "id" : "class", "value" : "oddRow", "score" : 0.15 }, 
+		{ "id" : "text", "value" : {"text":"  F初中 测试用户  aa@bbcom   ","tagName":"TR"}, "score" : 0.4 }, 
+		{ "id" : "tr/cols", "value" : 11, "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":13,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":13,
+						"id":10,
+						"class":5,
+						"text":5,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.5830391695499999,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":5,
+				"similarOrdinal":1,
+				"totalCandidates":10
+		},
+		"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"id":10,
+						"class":5,
+						"text":5,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.5830391695499999,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":5,
+				"similarOrdinal":1,
+				"totalCandidates":10
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[1]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{b058b3b7-a794-4681-b8ac-1cc24b2f8efb}" autoName="*   /"><roles><role>element</role><role>gridcell</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.059500000000000004,
+"contextObj":"testObj:{f3d6281f-c054-4c49-aa49-c5b71ffd1abe}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TD", "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":133,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":133,
+						"leaf":null
+				},
+				"secondaryScore":0.059499405000000005,
+				"similarPrimaryScore":0.059499405000000005,
+				"similarSecondaryScore":0,
+				"similarTotal":10,
+				"similarOrdinal":1,
+				"totalCandidates":10
+		},
+		"testObj:{f3d6281f-c054-4c49-aa49-c5b71ffd1abe}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[1]/td[1]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{f86ac94d-e8dc-4b58-a87e-fde6bacc97ef}" autoName="radiogroup (8)"><roles><role>element</role><role>radiogroup</role><role>listbox</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.0199,
+"contextObj":"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TBODY", "score" : 0.01 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":3,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":3,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		},
+		"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}":{
+				"totalObjs":1,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":1,
+						"leaf":null
+				},
+				"secondaryScore":0,
+				"totalCandidates":1
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{3056bd25-03c1-4e04-9c66-369c8a91b6f7}"><roles><role>element</role><role>listitem</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.6810294249999999,
+"contextObj":"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}",
+"implData":{
+	"ctxScore":0.2,
+	"electors":[
+		{ "id" : "tagName", "value" : "TR", "score" : 0.05 }, 
+		{ "id" : "id", "value" : {"id":"tr_8","isValidWord":true}, "score" : 0.3 }, 
+		{ "id" : "class", "value" : "evenRow", "score" : 0.15 }, 
+		{ "id" : "text", "value" : {"text":"  F高中 测试用户  aa@bbcom   ","tagName":"TR"}, "score" : 0.4 }, 
+		{ "id" : "tr/cols", "value" : 11, "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":43,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":33,
+						"id":30,
+						"class":15,
+						"text":2,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.6810226147057499,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":2,
+				"similarOrdinal":2,
+				"totalCandidates":20
+		},
+		"testObj:{93d403c9-3dad-4f33-a655-a87c9cb1cc66}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"id":10,
+						"class":5,
+						"text":2,
+						"tr/cols":null,
+						"leaf":null
+				},
+				"secondaryScore":0.6810226147057499,
+				"similarPrimaryScore":0.6810226147057499,
+				"similarSecondaryScore":0.46837769117625005,
+				"similarTotal":2,
+				"similarOrdinal":2,
+				"totalCandidates":10
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[6]"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject><testObject id="testObj:{a66d5fac-fa58-46f0-8010-013393368785}" autoName="手机 / 13888888888"><roles><role>element</role><role>gridcell</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.10652500000000001,
+"contextObj":"testObj:{3056bd25-03c1-4e04-9c66-369c8a91b6f7}",
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "TD", "score" : 0.05 }, 
+		{ "id" : "number", "value" : true, "score" : 0.05 }, 
+		{ "id" : "leaf", "value" : true, "score" : 0.01 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":0,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":253,
+						"number":null,
+						"leaf":null
+				},
+				"secondaryScore":1,
+				"totalCandidates":0
+		},
+		"testObj:{3056bd25-03c1-4e04-9c66-369c8a91b6f7}":{
+				"totalObjs":11,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":11,
+						"number":null,
+						"leaf":null
+				},
+				"secondaryScore":0.10652393475000001,
+				"similarPrimaryScore":0.10652393475000001,
+				"similarSecondaryScore":0,
+				"similarTotal":3,
+				"similarOrdinal":3,
+				"totalCandidates":3
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"descendant::table[@id=\"userTable\"]/tbody/tr[6]/td[10]"
+}
+}]]></ident></idents></testObject><testObject id="testObj:{f91f56fa-8fc0-4cd2-b59e-09f6d09de92f}" autoName="主子表演示程序"><roles><role>element</role><role>radiogroup</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.31392999999999993,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "tagName", "value" : "HTML", "score" : 0.01 }, 
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+		{ "id" : "headline", "value" : {"text":"这个使用用来展示管理员编辑图书的过程。这个过程展示了如下几个关于表格的操作：过滤、分页、 上传图片、编辑信息、校验等等。","tagName":"h3"}, "score" : 0.3 }, 
+	],
+	"secondaryData":{
+		"default":{
+				"totalObjs":5,
+				"maxObjsPerElector":200,
+				"total":{
+						"tagName":5,
+						"leaf":null,
+						"headline":null
+				},
+				"secondaryScore":0.019899801,
+				"totalCandidates":5
+		}
+},
+
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"/html"
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () {
+    var inputs = find("xpath:descendant::input[@type='radio']", this.object), labels = [];
+    for (var i = 0; i < inputs.length; i++) {
+        labels.push(find("xpath://label[@for=" + JSON.stringify(inputs[i].id) + "]", this.object)[0] ||
+            inputs[i]);
+    }
+    return labels;
+},
+}]]></methods></testObject></testObjects>
+<transactions/>
+</truScript>

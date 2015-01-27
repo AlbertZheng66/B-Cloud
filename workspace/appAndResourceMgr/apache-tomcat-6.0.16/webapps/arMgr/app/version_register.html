@@ -1,0 +1,101 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理--版本管理--注册</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+    
+    // 加载JS 文件
+    Loader.importJS();
+	
+	// 加载CSS 文件
+    Loader.importCSS();
+	
+</script>
+
+</head>
+<body>
+<form id="versionForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">版本信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd" >版本号:</td>
+				<td class="modifyTd" ><input name="version" width="100%" /></td>
+				<td class="modifyTd" >开发代号:</td>
+				<td class="modifyTd" ><input name="code" /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd" >发布文件:</td>
+				<td class="modifyTd"  >
+				    <input id='deployFile' name="updoadFile" />
+                                </td>
+                                <td class="modifyTd" >上下文路径:</td>
+				<td class="modifyTd" >
+				    <input id='contextPath' name="contextPath" /></td>
+			</tr>			
+            <tr class="searchTable">
+				<td class="modifyTd" >描述信息:</td>
+				<td class="modifyTd" colspan='3'>
+                                    <textarea name="description" style="width: 450px;height: 80px" ></textarea></td>
+			</tr>
+	</table>
+	
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+	            <a onclick="register()" href="#">确定</a>
+                <a onclick="back()" href="#">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+</body>
+<script>
+
+var appService  = ServiceFactory.getService('app.AppService');
+var app         = null;
+var appVersion  = {contextPath:"/"};
+
+var deployedFile = null;
+
+Utils.run(function () {
+    BindUtils.bind('#versionForm', appVersion);	
+    deployedFile = new UploadedFile ('#deployFile');
+
+    // 解析应用参数
+	var params = ParameterHelper.parse(window.location.href);
+	app        = params.app;
+	
+	if (app == null) {
+	    MessageBox.showError("应用参数不能为空。");
+	    return;
+	}
+});
+
+function register() {
+    Utils.run(function() {
+	    appService.onComplete = function (retValue) {  // 业务处理之后
+	        // retValue ? alert('文件上传成功!') : alert('文件上传失败!');
+			back();
+    	}; 
+        appService.registerAppVersion(app, appVersion, deployedFile);
+	});
+}
+
+function back() {
+    var url = ParameterHelper.append('versions.html',
+        	{'app' : app});
+	document.location.href = url;
+}
+
+</script>
+</html>

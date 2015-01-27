@@ -1,0 +1,112 @@
+2012-05-06 11:03:31,377 [com.xt.gt.sys.SystemConfiguration:278] [main] - 正在装载配置文件[E:/work/xthinker/B-Cloud/workspace/servers/server2/apache-tomcat-6.0.16/webapps/serv2/WEB-INF/serv-config.xml]。
+2012-05-06 11:03:31,377 [com.xt.gt.sys.SystemConfiguration:278] [main] - 正在装载配置文件[E:/work/xthinker/B-Cloud/workspace/servers/server2/apache-tomcat-6.0.16/webapps/serv2/WEB-INF/serv-config.xml]。
+2012-05-06 11:03:31,555 [com.xt.gt.sys.SystemConfiguration:222] [main] - 已经加载的系统参数如下：
+2012-05-06 11:03:31,555 [com.xt.gt.sys.SystemConfiguration:222] [main] - 已经加载的系统参数如下：
+2012-05-06 11:03:31,572 [com.xt.gt.sys.SystemConfiguration:261] [main] - appContext=E:/work/xthinker/B-Cloud/workspace/servers/server2/apache-tomcat-6.0.16/webapps/serv2/
+2012-05-06 11:03:31,572 [com.xt.gt.sys.SystemConfiguration:261] [main] - appContext=E:/work/xthinker/B-Cloud/workspace/servers/server2/apache-tomcat-6.0.16/webapps/serv2/
+2012-05-06 11:03:31,575 [com.xt.gt.sys.SystemConfiguration:261] [main] - processorFactories=[com.xt.core.proc.impl.SessionProcessorFactory]
+2012-05-06 11:03:31,575 [com.xt.gt.sys.SystemConfiguration:261] [main] - processorFactories=[com.xt.core.proc.impl.SessionProcessorFactory]
+2012-05-06 11:03:31,576 [com.xt.gt.sys.SystemConfiguration:261] [main] - appLifecycles=[com.xt.bcloud.resource.ServerRegister]
+2012-05-06 11:03:31,576 [com.xt.gt.sys.SystemConfiguration:261] [main] - appLifecycles=[com.xt.bcloud.resource.ServerRegister]
+2012-05-06 11:03:31,578 [com.xt.gt.sys.SystemConfiguration:261] [main] - sererMgr.port=39001
+2012-05-06 11:03:31,578 [com.xt.gt.sys.SystemConfiguration:261] [main] - sererMgr.port=39001
+2012-05-06 11:03:31,580 [com.xt.gt.sys.SystemConfiguration:261] [main] - serverMgr.contextPath=/serv2
+2012-05-06 11:03:31,580 [com.xt.gt.sys.SystemConfiguration:261] [main] - serverMgr.contextPath=/serv2
+2012-05-06 11:03:31,582 [com.xt.gt.sys.SystemConfiguration:261] [main] - serverId=serv-2
+2012-05-06 11:03:31,582 [com.xt.gt.sys.SystemConfiguration:261] [main] - serverId=serv-2
+2012-05-06 11:03:32,127 [com.xt.bcloud.resource.ServerManager:222] [main] - 正在注册服务器[com.xt.bcloud.resource.server.ServerInfo@1f1[oid=null; id=serv-2; name=Albert-Office/192.168.29.252; ip=192.168.29.252; state=null; managerPort=39001; jmxRmiPort=26878; profile=null]], 使用配置[null]
+2012-05-06 11:03:32,127 [com.xt.bcloud.resource.ServerManager:222] [main] - 正在注册服务器[com.xt.bcloud.resource.server.ServerInfo@1f1[oid=null; id=serv-2; name=Albert-Office/192.168.29.252; ip=192.168.29.252; state=null; managerPort=39001; jmxRmiPort=26878; profile=null]], 使用配置[null]
+2012-05-06 11:04:05,717 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - 正在部署应用[com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]], 版本[com.xt.bcloud.app.AppVersion@9ac2552f[oid=646fb6dd-2427-4033-8185-3973c810e565; appOid=00001; version=0.3; contextPath=/demo; state=运行; fileSize=9935314; code=3]]，容量为[com.xt.bcloud.comm.Capacity@5569ba]。
+2012-05-06 11:04:05,717 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - 正在部署应用[com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]], 版本[com.xt.bcloud.app.AppVersion@9ac2552f[oid=646fb6dd-2427-4033-8185-3973c810e565; appOid=00001; version=0.3; contextPath=/demo; state=运行; fileSize=9935314; code=3]]，容量为[com.xt.bcloud.comm.Capacity@5569ba]。
+2012-05-06 11:04:05,717 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - 正在部署应用[com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]], 版本[com.xt.bcloud.app.AppVersion@9ac2552f[oid=646fb6dd-2427-4033-8185-3973c810e565; appOid=00001; version=0.3; contextPath=/demo; state=运行; fileSize=9935314; code=3]]，容量为[com.xt.bcloud.comm.Capacity@5569ba]。
+2012-05-06 11:04:12,574 [com.xt.bcloud.worker.TomcatServerController:80] [http-39001-1] - 启动服务器，信息如下：engineName=Catalina-00001-1336273452571; hostName=Host-00001-1336273452572; resourceBase=E:\work\xthinker\B-Cloud\workspace\temp\a9295f35-ff53-4b63-9396-2a0d02cc7e07; contextPath=/demo; port=29211;
+2012-05-06 11:04:12,574 [com.xt.bcloud.worker.TomcatServerController:80] [http-39001-1] - 启动服务器，信息如下：engineName=Catalina-00001-1336273452571; hostName=Host-00001-1336273452572; resourceBase=E:\work\xthinker\B-Cloud\workspace\temp\a9295f35-ff53-4b63-9396-2a0d02cc7e07; contextPath=/demo; port=29211;
+2012-05-06 11:04:12,596 [com.xt.bcloud.worker.TomcatServerController:278] [http-39001-1] - 开始从应用与资源管理器为应用实例[com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=null]]加载系统参数。
+2012-05-06 11:04:12,596 [com.xt.bcloud.worker.TomcatServerController:278] [http-39001-1] - 开始从应用与资源管理器为应用实例[com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=null]]加载系统参数。
+2012-05-06 11:04:13,756 [com.xt.comm.encoding.EncodingFilter:176] [http-39001-1] - encoding==utf-8
+2012-05-06 11:04:13,935 [com.xt.gt.jt.http.GreenTeaGeneralServlet:160] [http-39001-1] - GreenTeaGeneralServlet: initing.............
+2012-05-06 11:04:13,937 [com.xt.gt.jt.http.GreenTeaGeneralServlet:309] [http-39001-1] - 警告信息:系统未配置SYSTEM_CONFIGERATURE参数，因此未能加载系统配置参数。系统将采用默认的配置文件/WEB-INF/gt-config.xml
+2012-05-06 11:04:13,939 [com.xt.gt.jt.http.GreenTeaGeneralServlet:176] [http-39001-1] - contextPath=E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/
+2012-05-06 11:04:13,945 [com.xt.gt.sys.SystemConfiguration:278] [http-39001-1] - 正在装载配置文件[E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/WEB-INF/gt-config.xml]。
+2012-05-06 11:04:14,126 [com.xt.gt.sys.SystemConfiguration:222] [http-39001-1] - 已经加载的系统参数如下：
+2012-05-06 11:04:14,128 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - appContext=E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/
+2012-05-06 11:04:14,129 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - processorFactories=[com.xt.core.proc.impl.IPOPersistenceProcessorFactory, com.xt.core.proc.impl.SessionProcessorFactory, com.xt.gt.demo.aa.AAProcessorFactory]
+2012-05-06 11:04:14,130 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - paginationPageSize=10
+2012-05-06 11:04:14,132 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - appLifecycles=[com.xt.bcloud.core.ConfLoader, com.xt.comm.db.hsql.Cleaner, com.xt.comm.Cleaner]
+2012-05-06 11:04:14,133 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - AJAX_ENCODING=UTF-8
+2012-05-06 11:04:14,135 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - DATE_FORMAT=yyyy-MM-dd
+2012-05-06 11:04:14,137 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - parsers={databases=com.xt.gt.sys.impl.DataBaseParameterParser}
+2012-05-06 11:04:14,138 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - DATABASE_CONTEXT=com.xt.core.db.conn.DatabaseContext@2efece[id=demo; type=jdbc; databaseName=null; userName=sa; url=jdbc:hsqldb:file:E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/WEB-INF/db/gt_demo; schema=PUBLIC; driverClass=org.hsqldb.jdbcDriver]
+2012-05-06 11:04:17,040 [com.xt.gt.jt.http.GreenTeaGeneralServlet:261] [http-39001-1] - 装载字典文件:=E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/WEB-INF/gt-dics-config.xml
+2012-05-06 11:04:17,057 [com.xt.core.utils.dic.DictionaryFactory:160] [http-39001-1] - 开始装载字典表数据......
+2012-05-06 11:04:17,132 [com.xt.core.utils.dic.DictionaryFactory:222] [http-39001-1] - 开始装载字典[province]...
+2012-05-06 11:04:17,145 [com.xt.core.utils.dic.DictionaryFactory:222] [http-39001-1] - 开始装载字典[city]...
+2012-05-06 11:04:17,151 [com.xt.core.utils.dic.DictionaryFactory:222] [http-39001-1] - 开始装载字典[gender_type]...
+2012-05-06 11:04:17,159 [com.xt.core.utils.dic.DictionaryFactory:222] [http-39001-1] - 开始装载字典[degree_type]...
+2012-05-06 11:04:17,274 [com.xt.gt.jt.http.GreenTeaGeneralServlet:278] [http-39001-1] - 启动生命周期函数[com.xt.bcloud.core.ConfLoader@36ce6] at [2012-05-06T11:04:17.271+0800].........
+2012-05-06 11:04:17,283 [com.xt.gt.jt.http.GreenTeaGeneralServlet:318] [http-39001-1] - SystemLifecycle class[com.xt.bcloud.core.ConfLoader] started at [2012-05-06T11:04:17.282+0800].........
+2012-05-06 11:04:17,396 [com.xt.core.proc.impl.GeneralProcessorFactory:278] [http-39001-1] - 已经加载的处理器工厂:[Lcom.xt.core.proc.ProcessorFactory;@6e6a9f。
+2012-05-06 11:04:17,456 [com.xt.proxy.local.LocalProxy2:261] [http-39001-1] - request=com.xt.proxy.event.Request@192d1d8[sessionId=<null>,service=class com.xt.bcloud.core.ConfLoader,serviceObject=<null>,methodName=onInit,paramTypes={},params={},properties=<null>]
+2012-05-06 11:04:17,478 [com.xt.gt.demo.aa.AAProcessor:278] [http-39001-1] - AAProcessor onCreate context=[com.xt.gt.jt.http.ServletContextWrapper@43f502]
+2012-05-06 11:04:17,497 [com.xt.bcloud.core.ConfLoader:278] [http-39001-1] - ConfLoader onInit...............
+2012-05-06 11:04:17,504 [com.xt.bcloud.core.ConfLoader:176] [http-39001-1] - params=<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+  <system>
+    <param name="arm.url.protocol" value="http" />
+    <param name="arm.url.ip" value="192.168.29.252" />
+    <param name="arm.url.port" value="58080" />
+    <param name="arm.url.context" value="arMgr/" />
+    <param name="processorFactories" type="list" collision="merge">
+      <data value="com.xt.bcloud.session.ClusterSessionProcessorFactory" />
+    </param>
+    <param name="ehcachSession.cacheId" value="cache_fc292bd6-c40e-446f-b5f7-a245a1af3942" />
+    <param name="ehcachSession.appOid" value="00001" />
+    <param name="ehcachSession.appVersionOid" value="646fb6dd-2427-4033-8185-3973c810e565" />
+    <param name="ehcachSession.appInstanceOid" value="ffae7b0f-924a-415f-b8c7-7ae1d19e8690" />
+    <param name="system.session.clustered" value="true" />
+    <param name="system.session.cluster.class" value="com.xt.bcloud.session.EhcacheSession" />
+    <param name="appLifecycles" type="list" collision="merge">
+      <data value="com.xt.bcloud.session.EhcacheLoader" />
+    </param>
+  </system>
+</xt-config>
+
+
+2012-05-06 11:04:17,593 [com.xt.gt.sys.SystemConfiguration:278] [http-39001-1] - 参数[processorFactories]的冲突解决类型是[MERGE]。
+2012-05-06 11:04:17,609 [com.xt.gt.sys.SystemConfiguration:278] [http-39001-1] - 合并参数[processorFactories]，原值=[com.xt.core.proc.impl.IPOPersistenceProcessorFactory, com.xt.core.proc.impl.SessionProcessorFactory, com.xt.gt.demo.aa.AAProcessorFactory]; 新值=[com.xt.bcloud.session.ClusterSessionProcessorFactory]
+2012-05-06 11:04:17,618 [com.xt.gt.sys.SystemConfiguration:278] [http-39001-1] - 参数[appLifecycles]的冲突解决类型是[MERGE]。
+2012-05-06 11:04:17,630 [com.xt.gt.sys.SystemConfiguration:278] [http-39001-1] - 合并参数[appLifecycles]，原值=[com.xt.bcloud.core.ConfLoader, com.xt.comm.db.hsql.Cleaner, com.xt.comm.Cleaner]; 新值=[com.xt.bcloud.session.EhcacheLoader]
+2012-05-06 11:04:17,645 [com.xt.gt.sys.SystemConfiguration:222] [http-39001-1] - 已经加载的系统参数如下：
+2012-05-06 11:04:17,653 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - ehcachSession.appInstanceOid=ffae7b0f-924a-415f-b8c7-7ae1d19e8690
+2012-05-06 11:04:17,662 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - appContext=E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/
+2012-05-06 11:04:17,668 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - ehcachSession.cacheId=cache_fc292bd6-c40e-446f-b5f7-a245a1af3942
+2012-05-06 11:04:17,676 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - arm.url.port=58080
+2012-05-06 11:04:17,683 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - processorFactories=[com.xt.core.proc.impl.IPOPersistenceProcessorFactory, com.xt.core.proc.impl.SessionProcessorFactory, com.xt.gt.demo.aa.AAProcessorFactory, com.xt.bcloud.session.ClusterSessionProcessorFactory]
+2012-05-06 11:04:17,691 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - paginationPageSize=10
+2012-05-06 11:04:17,698 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - appLifecycles=[com.xt.bcloud.core.ConfLoader, com.xt.comm.db.hsql.Cleaner, com.xt.comm.Cleaner, com.xt.bcloud.session.EhcacheLoader]
+2012-05-06 11:04:17,702 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - AJAX_ENCODING=UTF-8
+2012-05-06 11:04:17,711 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - DATE_FORMAT=yyyy-MM-dd
+2012-05-06 11:04:17,716 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - ehcachSession.appOid=00001
+2012-05-06 11:04:17,720 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - ehcachSession.appVersionOid=646fb6dd-2427-4033-8185-3973c810e565
+2012-05-06 11:04:17,728 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - arm.url.protocol=http
+2012-05-06 11:04:17,733 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - parsers={databases=com.xt.gt.sys.impl.DataBaseParameterParser}
+2012-05-06 11:04:17,737 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - arm.url.ip=192.168.29.252
+2012-05-06 11:04:17,744 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - system.session.clustered=true
+2012-05-06 11:04:17,753 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - system.session.cluster.class=com.xt.bcloud.session.EhcacheSession
+2012-05-06 11:04:17,758 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - arm.url.context=arMgr/
+2012-05-06 11:04:17,765 [com.xt.gt.sys.SystemConfiguration:261] [http-39001-1] - DATABASE_CONTEXT=com.xt.core.db.conn.DatabaseContext@2efece[id=demo; type=jdbc; databaseName=null; userName=sa; url=jdbc:hsqldb:file:E:/work/xthinker/B-Cloud/workspace/temp/a9295f35-ff53-4b63-9396-2a0d02cc7e07/WEB-INF/db/gt_demo; schema=PUBLIC; driverClass=org.hsqldb.jdbcDriver]
+2012-05-06 11:04:51,122 [com.xt.core.proc.impl.GeneralProcessorFactory:278] [http-39001-1] - 已经加载的处理器工厂:[Lcom.xt.core.proc.ProcessorFactory;@827845。
+2012-05-06 11:04:51,122 [com.xt.gt.jt.http.GreenTeaGeneralServlet:278] [http-39001-1] - 启动生命周期函数[com.xt.comm.db.hsql.Cleaner@149045] at [2012-05-06T11:04:51.122+0800].........
+2012-05-06 11:04:51,122 [com.xt.gt.jt.http.GreenTeaGeneralServlet:318] [http-39001-1] - SystemLifecycle class[com.xt.comm.db.hsql.Cleaner] started at [2012-05-06T11:04:51.122+0800].........
+2012-05-06 11:04:51,122 [com.xt.proxy.local.LocalProxy2:261] [http-39001-1] - request=com.xt.proxy.event.Request@143346f[sessionId=<null>,service=class com.xt.comm.db.hsql.Cleaner,serviceObject=<null>,methodName=onInit,paramTypes={},params={},properties=<null>]
+2012-05-06 11:04:51,122 [com.xt.gt.demo.aa.AAProcessor:278] [http-39001-1] - AAProcessor onCreate context=[com.xt.gt.jt.http.ServletContextWrapper@1b5265f]
+2012-05-06 11:04:51,122 [com.xt.gt.jt.http.GreenTeaGeneralServlet:278] [http-39001-1] - 启动生命周期函数[com.xt.comm.Cleaner@1b59452] at [2012-05-06T11:04:51.122+0800].........
+2012-05-06 11:04:51,122 [com.xt.gt.jt.http.GreenTeaGeneralServlet:318] [http-39001-1] - SystemLifecycle class[com.xt.comm.Cleaner] started at [2012-05-06T11:04:51.122+0800].........
+2012-05-06 11:04:51,122 [com.xt.proxy.local.LocalProxy2:261] [http-39001-1] - request=com.xt.proxy.event.Request@f8bb7e[sessionId=<null>,service=class com.xt.comm.Cleaner,serviceObject=<null>,methodName=onInit,paramTypes={},params={},properties=<null>]
+2012-05-06 11:04:51,122 [com.xt.gt.demo.aa.AAProcessor:278] [http-39001-1] - AAProcessor onCreate context=[com.xt.gt.jt.http.ServletContextWrapper@a090df]
+2012-05-06 11:04:51,122 [com.xt.gt.jt.http.GreenTeaGeneralServlet:222] [http-39001-1] - GreenTeaGeneralServlet: Initialization complete.....
+2012-05-06 11:05:00,148 [com.xt.bcloud.worker.Ranch:222] [http-39001-1] - 向位于[Albert-Office-31586]的通道[org.jgroups.JChannel@b2c999]发送注册消息[com.xt.bcloud.worker.RanchMessage@c9f2d13d[cattle=com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=null]; load=null; operator=REGISTER; ]]。
+2012-05-06 11:05:00,148 [com.xt.bcloud.worker.Ranch:222] [http-39001-1] - 向位于[Albert-Office-31586]的通道[org.jgroups.JChannel@b2c999]发送注册消息[com.xt.bcloud.worker.RanchMessage@c9f2d13d[cattle=com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=null]; load=null; operator=REGISTER; ]]。
+2012-05-06 11:05:00,156 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - [com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=E:\work\xthinker\B-Cloud\workspace\temp\a9295f35-ff53-4b63-9396-2a0d02cc7e07]]已经成功启动。
+2012-05-06 11:05:00,156 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - [com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=E:\work\xthinker\B-Cloud\workspace\temp\a9295f35-ff53-4b63-9396-2a0d02cc7e07]]已经成功启动。
+2012-05-06 11:05:00,156 [com.xt.bcloud.resource.ServerService:222] [http-39001-1] - [com.xt.bcloud.worker.Cattle@77b35888[id=2a0cb55f-32b6-49c2-9677-a1ed289847fd; app=com.xt.bcloud.app.App@2baf65a[oid=00001; id=app_1; versionOid=646fb6dd-2427-4033-8185-3973c810e565; contextPath=/; hosts=[www.bc_demo1.com, rcp.bc_demo1.com, /sec]; name=test-app-1]; ip=192.168.29.252; port=29211; deployPath=E:\work\xthinker\B-Cloud\workspace\temp\a9295f35-ff53-4b63-9396-2a0d02cc7e07]]已经成功启动。

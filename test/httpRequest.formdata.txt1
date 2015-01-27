@@ -1,0 +1,5 @@
+------WebKitFormBoundaryAhM0eZVmqk9EZiD0
+Content-Disposition: form-data; name="jsonValue"
+
+{"serviceClassName":"com.xt.gt.demo.service.DownloadService","methodName":"downloadExcel","serviceObject":{"className":"com.xt.gt.demo.service.DownloadService","invokedMethods":[]},"type":null,"params":[]}
+------WebKitFormBoundaryAhM0eZVmqk9EZiD0--

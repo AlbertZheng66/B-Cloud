@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>任务分配器模板管理</title>
+
+        <script type="text/javascript" src="../js/boot.js"></script>
+
+        <script type="text/javascript">
+            // 加载JS 文件
+            Loader.importJS();
+	
+            // 加载CSS 文件
+            Loader.importCSS();	
+        </script>
+
+    </head>
+
+    <body style="margin: 0;width:100%;">
+        <table class='listTable' id="tdTemplates" width="100%" >
+            <tr class='listTableTitle'  >
+                <td class='listTableTitle' name="name">名称</td>
+                <td class='listTableTitle' name="version" > 版本号</td>
+                <td class='listTableTitle' name="valid">是否生效</td>
+        <!--
+                <td class='listTableTitle' name="storePath">存储位置</td>
+                <td class='listTableTitle' name="params">参数配置</td>
+                <td class='listTableTitle' name="startupCmd">启动命令模板</td>
+                <td class='listTableTitle' name="stopCmd">停止命令模板</td>
+        -->
+                <td class='listTableTitle' name="fileSize">文件大小</td>
+                <td class='listTableTitle' name="insertTime">创建时间</td>
+            </tr>
+            <tbody>
+                <tr id='rowTemplate'>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1'></td>
+                    <td class='listTableTd1' ></td>
+                    <td class='listTableTd1' ></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <TABLE cellSpacing='1' width="100%" align='center' border='0'>
+            <TR>
+                <TD class='listTableButtonTd' align=right>
+                    <a id='create'  onclick="createTdTemplate()" >创建</a>
+                    <a id='duplicate'   onclick="duplicateTdTemplate()" >复制</a>
+                    <a id='update'  onclick="updateTdTemplate()" >修改</a>
+                    <a id='remove'  onclick="removeTdTemplate()" >删除</a>
+                    <a id='generate'  onclick="generateTdTemplate()" >生成</a>
+                </TD>
+            </TR>
+        </TABLE>
+    </body>
+
+    <script type="text/javascript">
+
+        // 表格的相关配置
+        var tdTableConfig = new TableConfig('mdu.AppServerTemplate');
+
+        // 表的配置参数
+        var tdParams = {methodName : 'listTaskDispatcherServers'};
+
+        var makingService = ServiceFactory.getService('mdu.service.MakingService');
+
+        var tdTable = null;
+        Utils.run(function () {
+            tdTableConfig.createColumnsFromTemplate($('#tdTemplates'));
+            tdTableConfig.renderers = {
+                params : { getRendererComponent:function(gTable,
+                    value, rowIndex, colIndex){
+                        return JSON.stringify(value);
+                    }
+                }
+            };
+            // 表的修饰函数
+            var tu = new TableUtils('tdTemplates', tdTableConfig, 'mdu.service.MakingService', 
+            tdParams);
+            tdTable = tu.autoLoad();
+        });
+
+        /**
+         * 创建一个跳转到指定页面的页面参数
+         */
+        function createTdTemplateUrl (tdTemplate, methodName) {
+            var page= "template_editor.html";
+            var url = ParameterHelper.append(page, {'serverTemplate' : tdTemplate, 
+                'methodName': methodName,
+                'fromPage' : "td_template_list.html"});
+            return url;
+        } 
+
+        /**
+         * 生成一个服务器模板实例
+         */
+        function generateTdTemplate() {
+            Utils.run(function() {
+                var tdTemplate = getTdTemplate();
+                if (tdTemplate != null) {
+                    //mduService.deployAppServerTemplate(tdTemplate);
+                }
+            });
+        }
+
+        /**
+         * 更新任务分派器模板
+         */
+        function updateTdTemplate() {
+            var tdTemplate = getTdTemplate();
+            if (tdTemplate != null) {
+                var url = createTdTemplateUrl(tdTemplate, "updateTaskDispatcher");
+                document.location.href = url;
+            }    
+        }
+
+        /**
+         * 新建任务分派器模板
+         */
+        function createTdTemplate() {
+            var url = createTdTemplateUrl({}, "addTaskDispatcherTemplate");
+            document.location.href = url;
+        }
+
+        /**
+         * 返回当前选中的任务分派器模板
+         */
+        function getTdTemplate() {
+            var tdTemplate = tdTable.getSelectedRow();
+            if (tdTemplate == null) {
+                MessageBox.alert('请选择一个需要处理的应用服务器模板。');
+            }
+            return tdTemplate;
+        }
+
+
+
+        /**
+         * 移除选中的任务分派器模板
+         */
+        function removeTdTemplate() {
+            var tdTemplate = getTdTemplate();    
+            if (tdTemplate != null) {
+                if (MessageBox.confirm("确定删除此模板？")) {
+                    makingService.deleteAppServerTemplate(tdTemplate);
+                    tdTable.deleteRow(tdTable.getSelectedRowNum());
+                }
+            }
+        }
+        
+         /**
+         * 复制选中的应用服务器模板
+         */
+        function duplicateTdTemplate() {
+            var tdTemplate = getTdTemplate();    
+            if (tdTemplate != null) {
+                // clone 一个对象
+                var newTpl = {};
+                newTpl.name = tdTemplate.name;
+                newTpl.version = tdTemplate.version;
+                newTpl.valid = tdTemplate.valid;
+                newTpl.params = tdTemplate.params;
+                newTpl.startupCmd = tdTemplate.startupCmd;
+                newTpl.stopCmd = tdTemplate.stopCmd;
+                var url = createTdTemplateUrl(newTpl, "addTaskDispatcherTemplate");
+                document.location.href = url; 
+            }
+        }
+
+    </script>
+</html>

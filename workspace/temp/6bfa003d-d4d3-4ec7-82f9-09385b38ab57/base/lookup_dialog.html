@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>查找...</title>
+
+    <!-- 启动加载器  -->
+    <script type="text/javascript" src="../js/boot.js"></script>
+
+    <script>
+        // 加载CSS 文件
+        Loader.importCSS();
+		
+        // 加载JS 文件
+        Loader.importJS();
+    </script>
+</head>
+<body>
+    <!-- 内容显示区域 -->
+    <div id="__lookupTable">
+    
+    </div>
+
+    <br/>
+    <br/>
+    &nbsp; &nbsp;<a onclick="lookupOkClicked()" href="#">确定</a>
+    &nbsp; &nbsp;<a onclick="lookupCancelClicked()" href="#">取消</a>
+</body>
+
+
+<script>
+// Lookup 参数
+var _params = null;
+
+Utils.run(function() {
+	// debugger;
+    
+	// 解析参数
+    var href = document.location.href;
+    params = ParameterHelper.parse(href);
+    
+	// 装载页面
+    var url = params['lookupUrl'];
+    jQuery("#__lookupTable").load(url, {}, function() {
+        // 在初始化时注入参数
+        if (lookupInit) {
+            lookupInit(params);
+        }
+    });
+	
+});
+
+    // 弹出修改对话框
+    function lookupOkClicked () {
+        var returnValue = getReturnValue != undefined ? getReturnValue() : null;
+    	if (returnValue == null) {
+	        throw new Error("请选择一条数据。");
+        }	
+        // 使用弹出窗口的Lookup的回调
+	    var _opener = parent.window.opener;
+	    if (_opener != null) {
+	        // 用户自定义确认值
+			if (_opener.window.lookupOkClicked) {
+	            _opener.window.lookupOkClicked(params['name'], returnValue);
+		    } else if (params['feedbacks'] != null){
+			    // 使用通用的回填函数
+				setFeedbacks(_opener.window.document, params['name'], returnValue, params['feedbacks']);
+			}
+	        window.close();
+	    }
+    }
+
+    /**
+            * 通用的回填函数
+            */
+    function setFeedbacks(openerDoc, name, returnValue, feedbacks) {
+	    jQuery.each(feedbacks, function(ctrlId, propertyName) {
+		    var ctrl = openerDoc.getElementById(ctrlId);
+			if (ctrl == null) {
+			    throw new Error('The control which\'s id named [' + ctrlId + '] can not be found.');
+			}
+		    jQuery(ctrl).val(returnValue[propertyName]);
+		});
+    }
+
+    function lookupCancelClicked () {
+        // 使用弹出窗口的Lookup的回调
+	    var _opener = parent.window.opener;
+	    if (_opener != null) {
+	        window.close();
+	    }
+    }
+</script>
+</html>

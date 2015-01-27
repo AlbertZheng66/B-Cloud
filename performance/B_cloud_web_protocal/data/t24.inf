@@ -1,0 +1,13 @@
+[t24]
+FileName1=t24_ui-icons_ef8c08_256x240.png
+URL1=http://www.bc_demo1.com:4900/css/ui-lightness/images/ui-icons_ef8c08_256x240.png
+Total=1
+ContentType=image/png
+SnapshotXmlFile=snapshot_24.xml
+RequestHeaderFile=t24_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t24_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

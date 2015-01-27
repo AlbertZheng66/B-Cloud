@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理--版本管理--版本升级</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+	
+    // 加载JS 文件
+    Loader.importJS();
+	
+    // 加载CSS 文件
+    Loader.importCSS();
+</script>
+
+</head>
+<body>
+<form id="versionForm">
+	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="20%"></colGroup>
+	    <colGroup width="80%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="2">版本升级</TD>
+	    </TR>
+		<tr class="searchTable">
+			<td class="modifyTd">正在运行的版本:</td>
+			<td ><select id="runningVersions" ></select></td>				
+		</tr>			
+        <tr class="searchTable">
+			<td class="modifyTd">可升级的版本:</td><td>
+				<select id="availableVersions" ></select></td>
+		</tr>
+        <tr class="searchTable">
+			<td class="modifyTd">升级模式:</td><td >
+				<select id="mode" ></select></td>
+		</tr>
+	</table>
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+            	<a onclick="upgrade()" href="#">确定</a>
+                <a onclick="back()" href="#">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+</body>
+<script>
+
+var appService  = ServiceFactory.getService('app.AppService');
+var app         = null;
+var appVersion  = null;
+
+Utils.run(function () {
+    // 解析应用参数
+	var params = ParameterHelper.parse(window.location.href);
+	app        = params.app;
+	
+	if (app == null) {
+	    MessageBox.showError("应用及其版本参数均不能为空。");
+	    return;
+	}
+	
+	var _runningVesions    = appService.readRunningVersions(app);
+	var _availableVersions = appService.readAvailableVersions(app);
+	
+	var params = {value:'oid', title:'version', nullable:false};	                              
+	ControlUtils.createComboBox('#runningVersions',   _runningVesions, params);
+	ControlUtils.createComboBox('#availableVersions', _availableVersions, params);
+	DicUtils.decorateComboBox('#mode', 'com.xt.bcloud.app.UpdateMode', false);
+});
+
+/**
+  * 升级到指定版本
+  */
+function upgrade(){
+    if (app == null) {
+	    MessageBox.alert('未选择当前应用。');
+		return;
+	} 
+	var oldVersionOid = jQuery('#runningVersions').val();
+    var newVersionOid = jQuery('#availableVersions').val();
+	if (oldVersionOid == null) {
+	    MessageBox.alert('请选择当前版本。');
+		return;
+	}
+	if (newVersionOid == null) {
+	    MessageBox.alert('请选择新版本。');
+		return;
+	}
+    var	mode = jQuery('#mode').val();
+	appService.upgrade(app, oldVersionOid, newVersionOid, mode);
+	back();
+}
+
+function back() {
+    var url = ParameterHelper.append('versions.html',
+        	{'app' : app});
+	document.location.href = url;
+}
+
+</script>
+</html>

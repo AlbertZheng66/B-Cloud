@@ -1,0 +1,9 @@
+GET /css/ui-lightness/images/ui-icons_ffffff_256x240.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://www.bc_demo1.com:4900/base/test_table_template.html
+Accept-Language: zh-cn
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)
+Accept-Encoding: gzip, deflate
+Host: www.bc_demo1.com:4900
+Connection: Keep-Alive
+

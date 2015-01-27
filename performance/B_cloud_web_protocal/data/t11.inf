@@ -1,0 +1,13 @@
+[t11]
+FileName1=t11_jquery-1.3.2.html
+URL1=http://www.bc_demo1.com:4900/js/core/jquery-1.3.2.js
+Total=1
+ContentType=text/javascript
+SnapshotXmlFile=snapshot_11.xml
+RequestHeaderFile=t11_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t11_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

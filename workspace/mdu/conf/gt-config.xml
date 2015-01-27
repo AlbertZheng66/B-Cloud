@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+   
+    <system>
+	    <param name="arm.urls"  type="list">
+		    <data value="http://192.168.29.252:58080/arMgr/" />
+		    <data value="http://192.168.0.135:58080/arMgr/" />
+		    <data value="http://192.168.0.191:58080/arMgr/" />
+		    <data value="http://127.0.0.1:58080/arMgr/" />
+		</param>
+        <param name="arm.url.ip"                   value="192.168.29.252" />
+		<param name="mdu.backupDir"                value="/opt/pt/temp" />
+        <param name="mduManager.managerPort"       value="12000" />
+        <param name="mdu.heatBeating.interval"     value="5000" />
+        <param name="mdu.registter.retry.interval" value="5000" />
+    </system>
+
+</xt-config>

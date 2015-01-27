@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xt-config>
+    <databases default="B-Cloud">      
+        <database id="B-Cloud" type="jdbc">
+            <param name="user"     value="b_cloud" /> 
+            <param name="password" value="b_cloud" /> 
+            <!-- param name="schema"   value="root" /--> 
+            <param name="url"  value="jdbc:mysql://localhost:3306/b_cloud" /> 
+            <param name="driver"   value="com.mysql.jdbc.Driver" />  
+        </database>
+    </databases>
+   
+    <system>
+        <param name="AJAX_ENCODING"     value="UTF-8" />
+	<param name="locaFileService.rootPath"  value="${appContext}" />
+	<param name="mdu.backupDir"  value="e://temp//mdu//backupDir" />
+	<param name="ehcache.id"  value="appsCache" />
+	<param name="parsers" type="map">
+           <entry key="databases" value="com.xt.gt.sys.impl.DataBaseParameterParser" />
+        </param>
+        <param name="taskDispatcher.uid"     value="taskDispatcher.127.0.0.1" />
+        <param name="processorFactories" type="list">
+            <data value="com.xt.core.proc.impl.fs.FileServiceProcessorFactory" />
+            <data value="com.xt.core.proc.impl.IPOPersistenceProcessorFactory" />
+            <data value="com.xt.core.proc.impl.SessionProcessorFactory" />
+         </param>
+        <param name="commands" type="list">
+            <data value="com.xt.bcloud.mdu.command.DeployCommand" />
+            <data value="com.xt.bcloud.mdu.command.HeatBeatingCommand" />
+            <data value="com.xt.bcloud.mdu.command.KillCommand" />
+            <data value="com.xt.bcloud.mdu.command.ProcessCommand" />
+            <data value="com.xt.bcloud.mdu.command.StartCommand" />
+         </param>
+         <param name="taskDispatcher.publicHosts" type='list'>
+            <data value="b-cloud.com" />
+            <data value="b-cloud0.com" />
+         </param>
+      </system>
+</xt-config>

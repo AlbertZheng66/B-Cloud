@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>应用管理-应用-修改参数</title>
+
+<script type="text/javascript" src="../js/boot.js"></script>
+
+<script>
+	
+    // 加载JS 文件
+    Loader.importJS();
+	
+    // 加载CSS 文件
+    Loader.importCSS();
+</script>
+
+</head>
+<body>
+    <div class="attention"> 注意：参数的修改对已经运行的实例不产生影响。 </div>
+<form id="appForm">
+    	<TABLE width="100%" border="0" align="center" cellspacing="1" class="listTable">
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <colGroup width="15%"></colGroup>
+	    <colGroup width="35%"></colGroup>
+	    <TR>
+		    <TD class="listPageTitleTd" colspan="4">应用信息</TD>
+	    </TR>
+            <tr class="searchTable">
+				<td class="modifyTd">ID:</td>
+                                <td class="modifyTd"><input name="id" width="100%" readonly="true" /></td>
+				<td class="modifyTd">名称:</td>
+				<td class="modifyTd"><input name="name" /></td>
+			</tr>
+			<tr class="searchTable">
+			<td class="modifyTd">上下文路径:</td>
+				<td class="modifyTd" colspan='3'><input name="contextPath" /></td>
+			</tr>
+            <tr class="searchTable">
+				<td class="modifyTd">描述信息:</td>
+				<td class="modifyTd" colspan='3'>
+				    <textarea name="description" ></textarea>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<TABLE cellSpacing='1' width="100%" align='center' border='0'>
+        <TR>
+            <TD class='listTableButtonTd' align=right>
+                <a href="#" onclick="update()">确定</a>
+                <a href="app_list.html" onclick="">返回</a>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+</body>
+<script>
+
+
+		   
+var appService = ServiceFactory.getService('app.AppService');
+var app = null;
+
+Utils.run(function() {
+    // 应用信息// 解析应用参数
+    app = ParameterHelper.parse(window.location.href).app;
+    if (app == null || app.oid == null) {
+	MessageBox.showError("应用参数不能为空。");
+	document.location.href = 'app_list.html';
+    }
+    //var app = appService.findApp(app.oid);
+    //if (app == null) {
+    //    MessageBox.alert("未找到编码为[" + oid + "]的应用。");
+    //    document.location.href = 'app_list.html';
+    //}    
+    BindUtils.bind("appForm", app, {});
+});
+
+// 注册当前应用
+function update () {
+    Utils.run(function() {
+	    appService.updateApp(app);
+	    document.location.href = 'app_list.html';
+    });
+}
+
+
+</script>
+</html>

@@ -1,0 +1,13 @@
+[t35]
+FileName1=t35.htm
+URL1=http://www.bc_demo1.com:4900/jsonClient.action?jsonValue={"serviceClassName":"com.xt.gt.html.service.ClassService","methodName":"loadClass","serviceObject":null,"type":"common","params":["com.xt.gt.demo.aa.LoginService"]}
+Total=1
+RequestHeaderFile=t35_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t35_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_35.xml
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=0
